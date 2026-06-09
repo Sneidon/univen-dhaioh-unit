@@ -51,10 +51,10 @@ export default function ContactPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-[#0d1b35]">Prof Lindiwe Zungu</h2>
                   <p className="text-gray-600 text-sm mt-1 leading-relaxed">
-                    Leading transformative research in Digital Health and Artificial Intelligence for occupational safety.
+                    Leading transformative research in Digital Health and Artificial Intelligence for occupational health.
                   </p>
                   <a
-                    href="mailto:lindiwe.zungu@univen.ac.za"
+                    href="mailto:info@dhaioh-univen.ac.za"
                     className="flex items-center gap-2 mt-3 text-sm text-[#0d1b35] hover:text-[#b8962e] transition-colors"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -183,11 +183,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="border-t border-gray-100 pt-6">
-                  <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">INNOVATION HUB</p>
-                  <h4 className="font-bold text-[#0d1b35]">MINTEK Research Center</h4>
+                  <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">PRETORIA ENGAGEMENT OFFICE</p>
+                  <h4 className="font-bold text-[#0d1b35]">University of Venda — Pretoria Office</h4>
                   <p className="text-gray-600 text-sm mt-1">
                     ERF 181, 56 Florence Street<br />
-                    Colbyn, Pretoria, South Africa
+                    Colbyn, Pretoria<br />
+                    South Africa
                   </p>
                   <a href="https://maps.google.com/?q=56+Florence+Street,+Colbyn,+Pretoria,+South+Africa" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0d1b35] font-semibold mt-2 inline-block hover:text-[#b8962e] transition-colors">
                     Get Directions ↗
@@ -196,31 +197,32 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map placeholder */}
-            <div className="h-56 bg-gray-200 flex flex-col items-center justify-center gap-2">
-              <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1.5"/><circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5"/><path strokeWidth="1.5" d="M21 15l-5-5L5 21"/></svg>
-              <p className="text-gray-400 text-xs tracking-widest uppercase">Image Placeholder</p>
-            </div>
-
             {/* Phone & Social */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white border border-gray-200 p-4 flex items-center gap-3">
-                <svg className="w-5 h-5 text-[#0d1b35]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-                <div>
-                  <p className="text-xs font-bold tracking-wider text-[#b8962e] uppercase">Phone</p>
-                  <p className="text-sm font-semibold text-[#0d1b35]">+27 15 962 8000</p>
-                </div>
+            <div className="bg-white border border-gray-200 p-4 flex items-center gap-3">
+              <svg className="w-5 h-5 text-[#0d1b35]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <div>
+                <p className="text-xs font-bold tracking-wider text-[#b8962e] uppercase">General Enquiries</p>
+                <a href="mailto:info@dhaioh-univen.ac.za" className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e] transition-colors">info@dhaioh-univen.ac.za</a>
               </div>
-              <div className="bg-white border border-gray-200 p-4 flex items-center gap-3">
-                <svg className="w-5 h-5 text-[#0d1b35]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
-                </svg>
-                <div>
-                  <p className="text-xs font-bold tracking-wider text-[#b8962e] uppercase">Social</p>
-                  <p className="text-sm font-semibold text-[#0d1b35]">Connect</p>
-                </div>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 flex items-center gap-3 mt-3">
+              <svg className="w-5 h-5 text-[#0d1b35]" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <div>
+                <p className="text-xs font-bold tracking-wider text-[#b8962e] uppercase">Unit Director</p>
+                <a href="mailto:lindiwe.zungu@univen.ac.za" className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e] transition-colors">lindiwe.zungu@univen.ac.za</a>
+              </div>
+            </div>
+            <div className="bg-white border border-gray-200 p-4 flex items-center gap-3 mt-3">
+              <svg className="w-5 h-5 text-[#0d1b35]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+              </svg>
+              <div>
+                <p className="text-xs font-bold tracking-wider text-[#b8962e] uppercase">Website</p>
+                <a href="https://www.univen.ac.za/dhaioh-unit" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e] transition-colors">www.univen.ac.za/dhaioh-unit</a>
               </div>
             </div>
           </div>
@@ -241,9 +243,7 @@ export default function ContactPage() {
               <p className="text-xs font-bold tracking-widest text-[#0d1b35]">UNIVEN</p>
             </div>
             <div className="text-center">
-              <div className="w-20 h-20 border border-gray-200 flex items-center justify-center mx-auto mb-3">
-                <span className="text-lg font-bold text-[#0d1b35]">Mintek</span>
-              </div>
+              <Image src="/logos/mintek.png" alt="Mintek" width={140} height={60} className="object-contain mx-auto mb-3" />
               <p className="text-xs font-bold tracking-widest text-[#0d1b35]">MINTEK</p>
             </div>
           </div>

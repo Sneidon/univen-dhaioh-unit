@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const pathway = [
   {
@@ -54,18 +55,22 @@ const policyAreas = [
 ];
 
 const metrics = [
-  { value: "15+", label: "Research Institutions", sub: "Collaborative network" },
-  { value: "50k+", label: "Workers Monitored", sub: "Across Southern Africa" },
+  { value: "20+", label: "Years of Research Experience", sub: "Occupational health expertise" },
+  { value: "45+", label: "Graduates Supervised", sub: "Master's & Doctoral" },
   { value: "08", label: "Core Research Themes", sub: "Multidisciplinary" },
-  { value: "ZERO", label: "Harm Target", sub: "Our ultimate objective" },
+  { value: "3", label: "Core Alliance Partners", sub: "SAMRC · UNIVEN · Mintek" },
 ];
 
 export default function ImpactFrameworkPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#0d1b35] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/banners/pexels-tomfisk-2101137.jpg" alt="Aerial view of open-pit mining operations" fill className="object-cover object-top" priority />
+        </div>
+        <div className="absolute inset-0 bg-[#0d1b35]/80" />
+        <div className="relative max-w-7xl mx-auto px-6">
           <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
             Our Impact Pathway
           </p>

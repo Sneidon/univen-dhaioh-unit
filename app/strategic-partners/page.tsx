@@ -24,7 +24,7 @@ const corePartners = [
     role: "Innovation Partner",
     desc: "Leveraging its national leadership in mining research, technology development, and innovation to provide scientific expertise, technical capabilities, industry intelligence, and collaborative platforms that advance digital transformation, occupational health innovation, and sustainable mining practices.",
     gold: true,
-    logo: null,
+    logo: "/logos/mintek.png",
   },
 ];
 
@@ -71,29 +71,39 @@ const univenInternal = [
   "Faculty of Science, Engineering and Agriculture",
   "Faculty of Management, Commerce and Law",
   "Faculty of Humanities, Social Sciences and Education",
+  "Other Research Institutes and Chairs",
   "Technology Transfer Office (TTO)",
   "University Innovation and Commercialisation Centre (UICG)",
   "University ICT Services and Digital Transformation Platforms",
+  "Marketing, Branding and Communications (BMC)",
   "Postgraduate and Research Administration",
   "Community Engagement Directorate",
   "International Relations and Partnerships Office",
+  "Institutional Planning, Monitoring and Evaluation Units",
+  "University Leadership and Governance Structures",
 ];
 
 const collaborationTypes = [
   { title: "Research Collaboration", desc: "Joint research projects, co-authorship, and shared datasets across disciplines and institutions." },
   { title: "Strategic Partnerships", desc: "Long-term alliances that combine expertise, infrastructure, and networks for sustained impact." },
   { title: "Innovation & Commercialisation", desc: "Co-developing technologies, filing joint patents, and scaling solutions to market." },
-  { title: "Technology Development", desc: "Building next-generation occupational health tools in partnership with tech innovators." },
-  { title: "Postgraduate Training", desc: "Hosting students and fellows through collaborative supervision and research programmes." },
+  { title: "Technology Development", desc: "Building next-generation occupational health tools in partnership with technology partners." },
+  { title: "Postgraduate & Postdoctoral Training", desc: "Hosting students and fellows through collaborative supervision and research programmes." },
+  { title: "Capacity Development Initiatives", desc: "Supporting skills development, research training, and capacity building across the occupational health ecosystem." },
   { title: "Policy & Advisory Support", desc: "Contributing expert guidance to government, regulators, and industry bodies." },
+  { title: "National & International Collaboration", desc: "Engaging with national and global partners to advance occupational health research, innovation, and impact." },
 ];
 
 export default function StrategicPartnersPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#0d1b35] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/banners/pexels-manuel-garcia-3090587-32594486.jpg" alt="Underground mine worker" fill className="object-cover object-center" priority />
+        </div>
+        <div className="absolute inset-0 bg-[#0d1b35]/80" />
+        <div className="relative max-w-7xl mx-auto px-6">
           <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
             Building Strategic Alliances
           </p>

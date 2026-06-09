@@ -19,17 +19,17 @@ const innovationAreas = [
 const capabilities = [
   {
     title: "Smart Medical Surveillance",
-    desc: "Automated systems that track long-term health trends and trigger early warnings for respiratory and auditory shifts.",
+    desc: "Designing intelligent surveillance systems that enable rapid identification of health trends, disease outbreaks, and emerging occupational risks.",
     icon: "chart",
   },
   {
     title: "Decision-Support Systems",
-    desc: "Empowering health practitioners with AI-validated data to make informed clinical decisions in industrial settings.",
+    desc: "Transforming research outputs into digital decision-support tools and dashboards that inform evidence-based occupational health management.",
     icon: "cloud",
   },
   {
     title: "Occupational Disease Prevention",
-    desc: "A robust framework utilising digital twin technology to simulate and prevent hazardous exposure scenarios.",
+    desc: "Developing digital tools and predictive models to support the prevention and early detection of occupational diseases through digital health technologies.",
     icon: "shield",
   },
 ];
@@ -39,7 +39,10 @@ export default function InnovationPage() {
     <>
       {/* Hero */}
       <section className="relative bg-[#0d1b35] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0d1b35] via-[#1a2f5a] to-[#0a1628]" />
+        <div className="absolute inset-0">
+          <Image src="/banners/pexels-tara-winstead-8386440.jpg" alt="AI and digital network visualization" fill className="object-cover object-center" priority />
+        </div>
+        <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-36">
           <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
             Future of Occupational Health
@@ -48,21 +51,70 @@ export default function InnovationPage() {
             Transforming Research into Solutions
           </h1>
           <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mb-10">
-            Bridging the gap between scientific discovery and industrial application through AI-driven intelligence and proprietary technologies.
+            Bridging the gap between scientific discovery and industrial application through AI-driven intelligence, digital innovations, and technological advances.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="/research-themes"
               className="bg-[#b8962e] text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
             >
-              Explore Patents
+              Explore Research Themes
             </Link>
             <Link
-              href="#ai-hub"
+              href="/contact"
               className="border border-white/40 text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-white/10 transition-colors"
             >
-              Our AI Hub
+              Engage With Us
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovation mandate intro */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Innovation Mandate</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-6">
+                Transforming Research into Solutions. Transforming Innovation into Impact.
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Innovation and commercialisation lie at the heart of the DHAIOH Unit&apos;s mission. As a
+                future-focused research and innovation platform, the Unit is committed to translating scientific
+                discoveries, digital innovations, and technological advances into practical solutions that improve
+                worker health, strengthen occupational health systems, and create sustainable impact within the
+                mining sector and beyond.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                The Unit serves as a catalyst for innovation by creating an ecosystem that supports the
+                development, testing, validation, adoption, and commercialisation of next-generation occupational
+                health technologies — fostering entrepreneurship, supporting intellectual property development,
+                enabling technology transfer, and facilitating pathways from concept development to market-ready
+                solutions.
+              </p>
+            </div>
+            <div className="bg-[#0d1b35] text-white p-8">
+              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">Creating Value Through Innovation</p>
+              <p className="text-gray-300 text-sm mb-6">Through its innovation and commercialisation activities, the DHAIOH Unit aims to:</p>
+              <ul className="space-y-3">
+                {[
+                  "Accelerate the development of breakthrough occupational health technologies",
+                  "Generate intellectual property and patentable innovations",
+                  "Support technology transfer and industry uptake of research outputs",
+                  "Develop scalable digital solutions for worker health and wellbeing",
+                  "Foster entrepreneurship and innovation-driven economic growth",
+                  "Attract strategic investment and innovation partnerships",
+                  "Strengthen South Africa's leadership in digital occupational health innovation",
+                  "Position the mining sector at the forefront of technology-enabled worker health protection",
+                ].map((aim) => (
+                  <li key={aim} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-[#b8962e] rounded-full flex-shrink-0 mt-2" />
+                    <span className="text-gray-300 text-sm leading-relaxed">{aim}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -71,7 +123,7 @@ export default function InnovationPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-4">Creating Value Through Innovation</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-4">Our Innovation Portfolio</h2>
             <div className="w-16 h-1 bg-[#b8962e] mx-auto" />
           </div>
 
@@ -87,21 +139,9 @@ export default function InnovationPage() {
                   </div>
                   <h3 className="font-bold text-white text-lg self-center">IP Development & Patents</h3>
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed mb-6">
-                  We actively translate academic research into protectable intellectual property. Our portfolio includes specialised algorithms for hazard detection and novel occupational health monitoring frameworks.
+                <p className="text-white/70 text-sm leading-relaxed">
+                  The DHAIOH Unit actively translates academic research into protectable intellectual property, digital health products, and scalable technologies. Our innovation agenda is oriented toward real-world occupational health solutions for the mining sector.
                 </p>
-                <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
-                  {[
-                    { value: "12+", label: "ACTIVE PATENTS" },
-                    { value: "08", label: "IP DISCLOSURES" },
-                    { value: "04", label: "TECH SPIN-OFFS" },
-                  ].map((s) => (
-                    <div key={s.label} className="text-center">
-                      <p className="text-2xl font-bold text-white">{s.value}</p>
-                      <p className="text-[10px] font-bold tracking-wider text-[#b8962e] mt-1">{s.label}</p>
-                    </div>
-                  ))}
-                </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -113,13 +153,13 @@ export default function InnovationPage() {
                   </div>
                   <h3 className="font-bold text-white text-sm mb-2">Sensor Integration</h3>
                   <p className="text-white/60 text-xs leading-relaxed">
-                    Developing wearable technologies that monitor vital signs and environmental exposures in real-time, specifically designed for deep-level mining conditions.
+                    Developing wearable and sensor-based health technologies that support real-time monitoring of occupational exposures and worker health surveillance.
                   </p>
                 </div>
                 <div className="bg-[#0d1b35] text-white p-6">
                   <h3 className="font-bold text-white text-sm mb-2">Strategic Impact Pathway</h3>
                   <p className="text-white/60 text-xs leading-relaxed mb-4">
-                    We partner with leading institutions like the SAMRC and University of Venda to ensure our innovations reach the workers who need them most.
+                    Through strategic partnerships with industry, government, technology developers, and research organisations, the Unit accelerates the translation of research into scalable solutions.
                   </p>
                   <Link
                     href="/about"
@@ -134,10 +174,14 @@ export default function InnovationPage() {
             {/* Right column */}
             <div className="space-y-4">
               <div className="bg-[#0d1b35] text-white p-8" id="ai-hub">
-                <div className="text-2xl mb-4">€</div>
+                <div className="w-10 h-10 border border-white/30 flex items-center justify-center mb-4">
+                  <svg className="w-5 h-5 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
                 <h3 className="font-bold text-xl mb-4">AI Solutions</h3>
                 <p className="text-gray-300 text-sm mb-6">
-                  Predictive modelling and risk forecasting engines tailored for high-risk mining environments.
+                  Leveraging machine learning and advanced analytics to predict occupational health risks, identify emerging hazards, and support proactive interventions.
                 </p>
                 <div className="space-y-2 mb-6">
                   {["Hazard Prediction", "Trend Analytics"].map((item) => (
@@ -148,10 +192,10 @@ export default function InnovationPage() {
                   ))}
                 </div>
                 <Link
-                  href="/contact"
+                  href="/research-themes"
                   className="text-sm font-bold tracking-widest uppercase text-white flex items-center gap-2 hover:text-[#b8962e] transition-colors"
                 >
-                  View Models →
+                  Explore Research Themes →
                 </Link>
               </div>
 
@@ -218,22 +262,6 @@ export default function InnovationPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-12 bg-[#162548] text-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { value: "15", label: "Algorithms Validated" },
-            { value: "4k+", label: "Sensors Deployed" },
-            { value: "92%", label: "Accuracy Rate" },
-            { value: "24/7", label: "Monitoring Support" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl md:text-4xl font-bold">{stat.value}</p>
-              <p className="text-gray-400 text-xs mt-2 tracking-wider uppercase">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

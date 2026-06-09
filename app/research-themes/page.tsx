@@ -41,35 +41,27 @@ const themes = [
 ];
 
 const programmes = [
-  {
-    tag: "ACTIVE",
-    subTag: "Inaugurated 2023",
-    title: "Early Warning & Decision Support",
-    desc: "Translating complex data streams into actionable alerts for mine managers and health officers to prevent incidents in real-time.",
-    cta: "Read Framework →",
-  },
-  {
-    tag: "STRATEGIC",
-    subTag: "Multi-year Study",
-    title: "Smart Medical Surveillance Systems",
-    desc: "Digitising health records and medical screenings to track long-term health outcomes for thousands of mining employees across Africa.",
-    cta: "View Methodology →",
-  },
-  {
-    tag: "PILOT",
-    subTag: "Regional Focus",
-    title: "Digital Innovation for Sustainable Mining",
-    desc: "Developing green digital tools that monitor environmental impact alongside worker health, fostering a holistic approach to zero-harm.",
-    cta: "Explore Portal →",
-  },
+  { tag: "ACTIVE",     subTag: "Flagship Programme",    title: "Occupational Disease Early Warning Systems" },
+  { tag: "STRATEGIC",  subTag: "Multi-year Study",       title: "AI-Powered Worker Health Surveillance" },
+  { tag: "ACTIVE",     subTag: "Gender-Responsive",      title: "Women in Mining Health & Safety" },
+  { tag: "STRATEGIC",  subTag: "Psychosocial Research",  title: "Mental Health in Mining" },
+  { tag: "ACTIVE",     subTag: "Hazard Research",        title: "Biological Hazards in Mining" },
+  { tag: "STRATEGIC",  subTag: "Prevention Focus",       title: "Occupational Cancer Prevention" },
+  { tag: "ACTIVE",     subTag: "Environmental Health",   title: "Climate Change & Worker Health" },
+  { tag: "ACTIVE",     subTag: "Water-Food-Health",      title: "Water-Food-Health Nexus Research" },
+  { tag: "INNOVATION", subTag: "Technology Development", title: "Digital Health Innovation Projects" },
 ];
 
 export default function ResearchThemesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#0d1b35] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/banners/pexels-deyler-rivera-segura-1300296248-29506757.jpg" alt="Open-pit mining operations with dramatic sky" fill className="object-cover object-center" priority />
+        </div>
+        <div className="absolute inset-0 bg-[#0d1b35]/80" />
+        <div className="relative max-w-7xl mx-auto px-6">
           <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">Strategic Framework</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
             Transforming Worker Health Through Digital Intelligence.
@@ -117,32 +109,53 @@ export default function ResearchThemesPage() {
       {/* Flagship Programmes */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-12">Flagship Research Programmes</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {programmes.map((prog) => (
-              <div key={prog.title} className="bg-[#0d1b35] text-white">
-                <div className="h-48 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gray-200 flex flex-col items-center justify-center gap-2">
-                    <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1.5"/><circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5"/><path strokeWidth="1.5" d="M21 15l-5-5L5 21"/></svg>
-                    <p className="text-gray-400 text-xs tracking-widest uppercase">Image Placeholder</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex gap-2 mb-4">
-                    <span className="bg-[#b8962e] text-white text-xs px-2 py-0.5 font-bold tracking-wider">
-                      {prog.tag}
-                    </span>
-                    <span className="text-white/40 text-xs self-center">{prog.subTag}</span>
-                  </div>
-                  <h3 className="font-bold text-white text-lg mb-3">{prog.title}</h3>
-                  <p className="text-white/70 text-sm leading-relaxed mb-5">{prog.desc}</p>
-                  <Link
-                    href="/contact"
-                    className="text-sm font-semibold text-[#b8962e] hover:text-white transition-colors"
+          <div className="mb-12">
+            <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">Active Research Portfolio</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35]">Flagship Research Programmes</h2>
+            <p className="text-gray-500 mt-3 max-w-2xl">
+              The DHAIOH Unit&apos;s research portfolio spans nine flagship programmes that collectively define its
+              scientific identity and real-world impact.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {programmes.map((prog, i) => (
+              <div
+                key={prog.title}
+                className={`p-6 flex flex-col gap-3 ${
+                  i === 8
+                    ? "bg-[#b8962e] text-white"
+                    : i % 3 === 1
+                    ? "bg-[#0d1b35] text-white"
+                    : "bg-white border border-gray-200"
+                }`}
+              >
+                <div className="flex gap-2 items-center">
+                  <span
+                    className={`text-xs px-2 py-0.5 font-bold tracking-wider ${
+                      i === 8
+                        ? "bg-white/20 text-white"
+                        : i % 3 === 1
+                        ? "bg-[#b8962e] text-white"
+                        : "bg-[#0d1b35] text-white"
+                    }`}
                   >
-                    {prog.cta}
-                  </Link>
+                    {prog.tag}
+                  </span>
+                  <span
+                    className={`text-xs ${
+                      i === 8 || i % 3 === 1 ? "text-white/50" : "text-gray-400"
+                    }`}
+                  >
+                    {prog.subTag}
+                  </span>
                 </div>
+                <h3
+                  className={`font-bold text-base leading-snug ${
+                    i === 8 || i % 3 === 1 ? "text-white" : "text-[#0d1b35]"
+                  }`}
+                >
+                  {prog.title}
+                </h3>
               </div>
             ))}
           </div>
@@ -151,12 +164,11 @@ export default function ResearchThemesPage() {
 
       {/* Stats */}
       <section className="py-12 bg-[#0d1b35] text-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
           {[
-            { value: "15+", label: "Research Institutions" },
-            { value: "50k+", label: "Monitored Workers" },
-            { value: "08", label: "Core Themes" },
-            { value: "ZERO", label: "Harm Target" },
+            { value: "08", label: "Core Research Themes" },
+            { value: "20+", label: "Years of Research Experience" },
+            { value: "45+", label: "Graduates Supervised" },
           ].map((stat) => (
             <div key={stat.label}>
               <p className="text-3xl md:text-4xl font-bold">{stat.value}</p>

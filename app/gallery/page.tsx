@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -219,7 +220,7 @@ export default function GalleryPage() {
             Stay connected for the latest field visits, research milestones, and innovation showcases from the DHAIOH Unit.
           </p>
           <a
-            href="https://www.youtube.com/@DHAIOHUnit"
+            href="https://www.youtube.com/@goldfieldssouthdeep520"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"

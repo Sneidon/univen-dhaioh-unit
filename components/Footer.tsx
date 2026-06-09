@@ -1,13 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-[#0d1b35] text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
-          <h3 className="font-bold text-lg mb-3">DHAIOH Unit</h3>
-          <p className="text-gray-400 text-sm leading-relaxed">
-            Transforming worker health through digital intelligence. A partnership of SAMRC, University of Venda, and Mintek.
+          <div className="mb-4 bg-white inline-block p-2">
+            <Image src="/logos/ohs-logo.png" alt="OHS in Mining Research Institute – University of Venda" width={180} height={40} className="object-contain" />
+          </div>
+          <p className="text-[#b8962e] text-xs mb-3">SAMRC Extramural Unit</p>
+          <p className="text-gray-400 text-sm leading-relaxed mb-3">
+            Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector.
+          </p>
+          <p className="text-gray-500 text-xs leading-relaxed italic">
+            &ldquo;Transforming Worker Health Through Digital Intelligence&rdquo;
+          </p>
+          <p className="text-gray-500 text-xs mt-3">
+            A strategic partnership of SAMRC, University of Venda, and Mintek.
           </p>
         </div>
 
@@ -15,9 +25,15 @@ export default function Footer() {
           <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm text-gray-400">
             <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+            <li><Link href="/about" className="hover:text-white transition-colors">About the Unit</Link></li>
+            <li><Link href="/leadership" className="hover:text-white transition-colors">Leadership & Team</Link></li>
             <li><Link href="/research-themes" className="hover:text-white transition-colors">Research Themes</Link></li>
+            <li><Link href="/research-impact" className="hover:text-white transition-colors">Research Impact & Policy</Link></li>
+            <li><Link href="/human-capital" className="hover:text-white transition-colors">Human Capital Development</Link></li>
             <li><Link href="/innovation" className="hover:text-white transition-colors">Innovation</Link></li>
+            <li><Link href="/impact-framework" className="hover:text-white transition-colors">Impact Framework</Link></li>
+            <li><Link href="/strategic-partners" className="hover:text-white transition-colors">Partners</Link></li>
+            <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery & Media</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
           </ul>
         </div>
@@ -35,8 +51,16 @@ export default function Footer() {
         <div>
           <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">Legal</h4>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
+            <li>
+              <a href="https://www.univen.ac.za/privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="https://www.univen.ac.za/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                Terms &amp; Conditions
+              </a>
+            </li>
           </ul>
           <div className="mt-6">
             <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Connect</h4>
@@ -48,7 +72,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
           <p className="text-gray-500 text-xs">
-            © 2024 DHAIOH Unit. Transforming Worker Health Through Digital Intelligence.
+            © 2026 DHAIOH Unit. Transforming Worker Health Through Digital Intelligence.
           </p>
           <div className="flex gap-4 mt-2 md:mt-0">
             <button aria-label="Share" className="text-gray-500 hover:text-white transition-colors">

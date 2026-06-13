@@ -99,15 +99,9 @@ export default function HumanCapitalPage() {
         </div>
         <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">SAMRC Mandate & Unit Vision</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
             Human Capital <span className="text-[#b8962e]">Development</span>
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl">
-            Building the next generation of African digital health scientists is a core pillar of the DHAIOH Unit.
-            We develop research leaders through postgraduate training, postdoctoral programmes, mentorship
-            initiatives, and structured capacity development opportunities across the SAMRC–UNIVEN–MINTEK alliance.
-          </p>
         </div>
       </section>
 

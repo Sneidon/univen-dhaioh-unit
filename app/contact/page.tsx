@@ -25,14 +25,15 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#0d1b35] mb-4">
-            Connect With the DHAIOH Unit
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/banners/pexels-safi-erneste-165511538-35082155.jpg" alt="Mining site" fill className="object-cover object-center" priority />
+        </div>
+        <div className="absolute inset-0 bg-[#0d1b35]/80" />
+        <div className="relative max-w-7xl mx-auto px-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+            Contact Us
           </h1>
-          <p className="text-gray-600 text-lg max-w-2xl leading-relaxed">
-            Advancing occupational health through digital intelligence and strategic partnerships. Our team is ready to discuss collaboration, research inquiries, and innovation solutions.
-          </p>
         </div>
       </section>
 

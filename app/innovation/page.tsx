@@ -44,29 +44,9 @@ export default function InnovationPage() {
         </div>
         <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
-            Future of Occupational Health
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
             Transforming Research into Solutions
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mb-10">
-            Bridging the gap between scientific discovery and industrial application through AI-driven intelligence, digital innovations, and technological advances.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/research-themes"
-              className="bg-[#b8962e] text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
-            >
-              Explore Research Themes
-            </Link>
-            <Link
-              href="/contact"
-              className="border border-white/40 text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-white/10 transition-colors"
-            >
-              Engage With Us
-            </Link>
-          </div>
         </div>
       </section>
 

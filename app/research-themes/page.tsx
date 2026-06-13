@@ -62,15 +62,9 @@ export default function ResearchThemesPage() {
         </div>
         <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">Strategic Framework</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
             Transforming Worker Health Through Digital Intelligence.
           </h1>
-          <div className="max-w-2xl border-l-4 border-[#b8962e] pl-6 mt-8">
-            <p className="text-gray-200 text-lg leading-relaxed font-medium">
-              Bridging the gap from research to healthy and safe mining workplaces.
-            </p>
-          </div>
         </div>
       </section>
 

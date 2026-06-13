@@ -104,15 +104,9 @@ export default function StrategicPartnersPage() {
         </div>
         <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
-            Building Strategic Alliances
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
             Partners & <span className="text-[#b8962e]">Collaborators</span>
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl">
-            The DHAIOH Unit recognises that addressing complex occupational health challenges requires multidisciplinary collaboration, cross-sectoral partnerships, and global engagement. Through strategic alliances, we leverage complementary expertise, resources, technologies, and networks to accelerate innovation and maximise societal impact.
-          </p>
         </div>
       </section>
 

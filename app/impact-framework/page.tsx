@@ -71,16 +71,10 @@ export default function ImpactFrameworkPage() {
         </div>
         <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
-            Our Impact Pathway
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
             From Research to{" "}
             <span className="text-[#b8962e]">Real-World Impact</span>
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl">
-            The DHAIOH Unit integrates scientific research, occupational health surveillance, digital innovation, and artificial intelligence to generate actionable insights that inform policy, strengthen occupational health systems, and support implementation within mining workplaces.
-          </p>
         </div>
       </section>
 

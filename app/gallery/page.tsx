@@ -62,18 +62,16 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#0d1b35] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
-            Media Hub
-          </p>
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/banners/pexels-gunshe-5125104.jpg" alt="Mining site" fill className="object-cover object-center" priority />
+        </div>
+        <div className="absolute inset-0 bg-[#0d1b35]/80" />
+        <div className="relative max-w-7xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
             Gallery &{" "}
             <span className="text-[#b8962e]">Media</span>
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mb-10">
-            Videos, presentations, and photographs documenting the DHAIOH Unit&apos;s research, field visits, and impact across the mining sector.
-          </p>
 
           {/* Tabs */}
           <div className="flex gap-0 border-b border-white/20">

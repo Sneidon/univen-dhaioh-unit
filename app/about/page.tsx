@@ -42,21 +42,9 @@ export default function AboutPage() {
         </div>
         <div className="absolute inset-0 bg-[#0d1b35]/82" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">About the Unit</p>
-          <p className="text-white/60 text-sm md:text-base mb-3 max-w-3xl font-light">
-            Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector
-          </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
             <span className="text-[#b8962e]">DHAIOH</span> Unit
           </h1>
-          <p className="text-gray-300 mt-4 max-w-3xl leading-relaxed text-lg">
-            A flagship SAMRC Extramural Unit hosted by the University of Venda in strategic partnership with Mintek
-            — dedicated to transforming worker health and safety in the mining sector through digital intelligence and scientific
-            innovation.
-          </p>
-          <p className="text-white/50 text-sm mt-4 italic">
-            &ldquo;Transforming Worker Health Through Digital Intelligence&rdquo;
-          </p>
         </div>
       </section>
 

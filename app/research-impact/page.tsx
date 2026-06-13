@@ -75,15 +75,9 @@ export default function ResearchImpactPage() {
         </div>
         <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">From Evidence to Change</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
             Research Impact <span className="text-[#b8962e]">&amp; Policy Influence</span>
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl">
-            The DHAIOH Unit is committed to ensuring that research extends beyond scientific publications to deliver
-            tangible improvements in policy, workplace practice, occupational health systems, and worker wellbeing.
-            Every project is designed with real-world impact in mind.
-          </p>
         </div>
       </section>
 

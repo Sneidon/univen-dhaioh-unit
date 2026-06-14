@@ -72,7 +72,8 @@ export default function ImpactFrameworkPage() {
         <div className="absolute inset-0 bg-[#0d1b35]/80" />
         <div className="relative max-w-7xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
-            From Research to{" "}
+            From Research to
+            <br />
             <span className="text-[#b8962e]">Real-World Impact</span>
           </h1>
         </div>

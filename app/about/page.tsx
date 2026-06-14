@@ -209,7 +209,7 @@ export default function AboutPage() {
             {/* Co-Unit Director */}
             <div className="bg-gray-50 border border-gray-200 p-8">
               <div className="flex flex-col items-center text-center mb-6">
-                <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-[#0d1b35] mb-4">
+                <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-[#d22d20] mb-4">
                   <Image
                     src="/james-headshot.jpg"
                     alt="Dr James Aluha"

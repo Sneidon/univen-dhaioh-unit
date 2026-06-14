@@ -124,7 +124,7 @@ export default function LeadershipPage() {
             {/* Dr James Aluha */}
             <div className="bg-gray-50 border border-gray-200 p-8 md:p-10">
               <div className="flex flex-col sm:flex-row gap-6 items-start mb-8">
-                <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-[#0d1b35] flex-shrink-0">
+                <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-[#d22d20] flex-shrink-0">
                   <Image
                     src="/james-headshot.jpg"
                     alt="Dr James Aluha"

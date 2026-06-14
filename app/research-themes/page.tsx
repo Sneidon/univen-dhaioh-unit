@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 const themes = [
   {
@@ -55,18 +56,11 @@ const programmes = [
 export default function ResearchThemesPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-deyler-rivera-segura-1300296248-29506757.jpg" alt="Open-pit mining operations with dramatic sky" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-            Transforming Worker Health Through Digital Intelligence.
-          </h1>
-        </div>
-      </section>
+      <PageHero src="/banners/hero-research-themes.jpg" alt="Open-pit mining operations with AI monitoring">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+          Transforming Worker Health Through Digital Intelligence.
+        </h1>
+      </PageHero>
 
       {/* Strategic Research Themes */}
       <section className="py-20 bg-white">

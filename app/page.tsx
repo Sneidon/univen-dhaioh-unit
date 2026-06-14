@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 const researchThemes = [
   {
     num: "01",
     title: "Digital Health & Occupational Health Intelligence",
     desc: "Developing integrated digital platforms that support real-time occupational health surveillance, worker monitoring, and evidence-based decision-making.",
-    image: "/banners/pexels-laura-james-6097771.jpg",
+    image: "/banners/hero-research-impact.jpg",
     imageAlt: "Health worker documenting occupational health data",
     featured: true,
     showLink: true,
@@ -15,7 +16,7 @@ const researchThemes = [
     num: "02",
     title: "AI & Predictive Analytics",
     desc: "Leveraging machine learning to predict occupational health risks and support proactive interventions.",
-    image: "/banners/pexels-tara-winstead-8386440.jpg",
+    image: "/banners/hero-innovation.jpg",
     imageAlt: "AI and digital network visualization",
     dark: true,
   },
@@ -23,7 +24,7 @@ const researchThemes = [
     num: "03",
     title: "Occupational Disease Prevention & Early Detection",
     desc: "Digital tools and predictive models for respiratory diseases, cancers, hearing loss and more.",
-    image: "/gallery/mine-6.jpg",
+    image: "/banners/hero-partners.jpg",
     imageAlt: "Underground occupational health assessment",
     gold: true,
   },
@@ -31,21 +32,21 @@ const researchThemes = [
     num: "04",
     title: "Medical Surveillance & Early Warning",
     desc: "Intelligent systems for rapid identification of health trends and emerging occupational risks.",
-    image: "/banners/pexels-tessy-agbonome-521343232-19957221.jpg",
+    image: "/banners/hero-human-capital.jpg",
     imageAlt: "Health professional using digital tablet for surveillance",
   },
   {
     num: "05",
     title: "Women in Mining & Gender-Responsive Health",
     desc: "Innovative solutions addressing the unique occupational health needs of women in mining.",
-    image: "/banners/pexels-joseph-oti-nyametease-2148147873-29941468.jpg",
+    image: "/banners/hero-leadership.jpg",
     imageAlt: "Female health professionals in mining context",
   },
   {
     num: "06–08",
     title: "Mental Health · Climate Change · Innovation",
     desc: "Psychosocial risk management, environmental health, sustainable mining, and commercialisation.",
-    image: "/banners/mine-17.webp",
+    image: "/banners/hero-about.jpg",
     imageAlt: "DHAIOH research team at Mintek",
     dark: true,
   },
@@ -93,14 +94,11 @@ const investmentPartners = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-safi-erneste-165511538-35082155.jpg" alt="Mining workers at mine entrance" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/75" />
-
-        <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-36">
+      <PageHero
+        src="/banners/hero-home.jpg"
+        alt="Futuristic open-pit mining with AI risk monitoring"
+        className="py-24 md:py-36"
+      >
           {/* Institutional badges */}
           <div className="flex flex-wrap items-center gap-3 mb-8">
             <span className="bg-[#b8962e]/20 border border-[#b8962e]/50 text-[#b8962e] text-xs font-bold tracking-widest uppercase px-3 py-1.5">
@@ -154,8 +152,7 @@ export default function HomePage() {
               About the Unit
             </Link>
           </div>
-        </div>
-      </section>
+      </PageHero>
 
       {/* Strategic Alliance */}
       <section className="py-20 bg-white">
@@ -316,16 +313,18 @@ export default function HomePage() {
                     src={theme.image}
                     alt={theme.imageAlt}
                     fill
+                    unoptimized
+                    quality={100}
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div
                     className={`absolute inset-0 ${
                       theme.gold
-                        ? "bg-[#b8962e]/50"
+                        ? "bg-[#b8962e]/25"
                         : theme.dark
-                        ? "bg-[#0d1b35]/55"
-                        : "bg-[#0d1b35]/25"
+                        ? "bg-[#0d1b35]/30"
+                        : "bg-[#0d1b35]/10"
                     }`}
                   />
                 </div>

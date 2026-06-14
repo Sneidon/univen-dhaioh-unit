@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 const corePartners = [
   {
@@ -97,18 +98,11 @@ const collaborationTypes = [
 export default function StrategicPartnersPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-manuel-garcia-3090587-32594486.jpg" alt="Underground mine worker" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
-            Partners & <span className="text-[#b8962e]">Collaborators</span>
-          </h1>
-        </div>
-      </section>
+      <PageHero src="/banners/hero-partners.jpg" alt="Futuristic open-pit mining operations">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
+          Partners & <span className="text-[#b8962e]">Collaborators</span>
+        </h1>
+      </PageHero>
 
       {/* Core Partners */}
       <section className="py-20 bg-white">

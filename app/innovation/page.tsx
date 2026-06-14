@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 const innovationAreas = [
   "Patents and Intellectual Property Development",
@@ -37,18 +38,15 @@ const capabilities = [
 export default function InnovationPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-[#0d1b35] text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-tara-winstead-8386440.jpg" alt="AI and digital network visualization" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
-        <div className="relative max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-            Transforming Research into Solutions
-          </h1>
-        </div>
-      </section>
+      <PageHero
+        src="/banners/hero-innovation.jpg"
+        alt="Digital twin mining haul truck with health analytics"
+        className="py-24 md:py-36"
+      >
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+          Transforming Research into Solutions
+        </h1>
+      </PageHero>
 
       {/* Innovation mandate intro */}
       <section className="py-20 bg-gray-50">

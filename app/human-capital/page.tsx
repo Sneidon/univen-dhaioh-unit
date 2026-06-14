@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 const opportunities = [
   {
@@ -92,18 +93,11 @@ const stats = [
 export default function HumanCapitalPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-tessy-agbonome-521343232-19957221.jpg" alt="African health professional with digital tablet" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-            Human Capital <span className="text-[#b8962e]">Development</span>
-          </h1>
-        </div>
-      </section>
+      <PageHero src="/banners/hero-human-capital.jpg" alt="Mine health doctor with holographic dashboard">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+          Human Capital <span className="text-[#b8962e]">Development</span>
+        </h1>
+      </PageHero>
 
       {/* Stats */}
       <section className="py-12 bg-[#b8962e] text-white">

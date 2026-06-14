@@ -33,11 +33,14 @@ export default function GalleryEventPage() {
             src={photos[0].src}
             alt={event.title}
             fill
+            unoptimized
+            quality={100}
+            sizes="100vw"
             className="object-cover object-center"
             priority
           />
         </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b35]/88 via-[#0d1b35]/52 to-[#0d1b35]/18" />
         <div className="relative max-w-7xl mx-auto px-6">
           <Link
             href="/gallery"

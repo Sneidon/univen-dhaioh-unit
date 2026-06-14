@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 import { useState } from "react";
 import { galleryEvents, galleryVideos } from "@/lib/gallery-data";
 
@@ -21,34 +22,28 @@ export default function GalleryPage() {
 
   return (
     <>
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-gunshe-5125104.jpg" alt="Mining site" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
-            Gallery &{" "}
-            <span className="text-[#b8962e]">Media</span>
-          </h1>
+      <PageHero src="/banners/hero-gallery.jpg" alt="Mining health research laboratory">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
+          Gallery &{" "}
+          <span className="text-[#b8962e]">Media</span>
+        </h1>
 
-          <div className="flex gap-0 border-b border-white/20">
-            {tabs.map(({ key, label }) => (
-              <button
-                key={key}
-                onClick={() => setTab(key)}
-                className={`px-6 py-3 text-sm font-bold tracking-wide transition-colors border-b-2 -mb-px ${
-                  tab === key
-                    ? "text-white border-[#b8962e]"
-                    : "text-gray-400 border-transparent hover:text-white"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
+        <div className="flex gap-0 border-b border-white/20">
+          {tabs.map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => setTab(key)}
+              className={`px-6 py-3 text-sm font-bold tracking-wide transition-colors border-b-2 -mb-px ${
+                tab === key
+                  ? "text-white border-[#b8962e]"
+                  : "text-gray-400 border-transparent hover:text-white"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
-      </section>
+      </PageHero>
 
       {showVideos && (
         <section className="py-20 bg-white">

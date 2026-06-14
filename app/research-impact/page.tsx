@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 const policyAreas = [
   "Occupational Health and Safety Policy Development",
@@ -59,18 +60,11 @@ const metrics = [
 export default function ResearchImpactPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-laura-james-6097771.jpg" alt="Health worker documenting occupational health data" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-            Research Impact <span className="text-[#b8962e]">&amp; Policy Influence</span>
-          </h1>
-        </div>
-      </section>
+      <PageHero src="/banners/hero-research-impact.jpg" alt="Occupational health command center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+          Research Impact <span className="text-[#b8962e]">&amp; Policy Influence</span>
+        </h1>
+      </PageHero>
 
       {/* Metrics */}
       <section className="py-12 bg-[#162548] text-white">

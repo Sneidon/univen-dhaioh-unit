@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 const pillars = [
   { n: "01", title: "Artificial Intelligence & Machine Learning" },
@@ -25,18 +26,11 @@ const thematicAreas = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/mine-17.webp" alt="DHAIOH research team at Mintek" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/82" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-            <span className="text-[#b8962e]">DHAIOH</span> Unit
-          </h1>
-        </div>
-      </section>
+      <PageHero src="/banners/hero-about.jpg" alt="DHAIOH research team at Mintek">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+          <span className="text-[#b8962e]">DHAIOH</span> Unit
+        </h1>
+      </PageHero>
 
       {/* Unit Overview */}
       <section className="py-20 bg-white">

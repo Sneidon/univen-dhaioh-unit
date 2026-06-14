@@ -1,20 +1,14 @@
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
 
 export default function ContactPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-safi-erneste-165511538-35082155.jpg" alt="Mining site" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/80" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-            Contact Us
-          </h1>
-        </div>
-      </section>
+      <PageHero src="/banners/hero-contact.jpg" alt="Connected mining site at sunset">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+          Contact Us
+        </h1>
+      </PageHero>
 
       {/* Main content */}
       <section className="py-16 bg-gray-50">

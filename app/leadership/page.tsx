@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 
 const codirectorshipStrengths = [
   { title: "Transdisciplinary Integration", desc: "Policy-relevant public health research combined with advanced engineering and technological innovation." },
@@ -13,18 +14,11 @@ const codirectorshipStrengths = [
 export default function LeadershipPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/banners/pexels-joseph-oti-nyametease-2148147873-29941468.jpg" alt="African female health professionals" fill className="object-cover object-center" priority />
-        </div>
-        <div className="absolute inset-0 bg-[#0d1b35]/82" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-            Unit Leadership <span className="text-[#b8962e]">&amp; Team</span>
-          </h1>
-        </div>
-      </section>
+      <PageHero src="/banners/hero-leadership.jpg" alt="Mining health excellence team">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+          Unit Leadership <span className="text-[#b8962e]">&amp; Team</span>
+        </h1>
+      </PageHero>
 
       {/* Co-Directorship model */}
       <section className="py-16 bg-[#b8962e] text-white">

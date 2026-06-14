@@ -6,8 +6,14 @@ export default function Footer() {
     <footer className="bg-[#0d1b35] text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
-          <div className="mb-4 bg-white inline-block p-2">
-            <Image src="/logos/ohs-logo.png" alt="OHS in Mining Research Institute – University of Venda" width={180} height={40} className="object-contain" />
+          <div className="mb-4">
+            <Image
+              src="/logos/landscape-08.png"
+              alt="OHS in Mining Research Institute – University of Venda"
+              width={1376}
+              height={618}
+              className="h-[4.5rem] w-auto object-contain"
+            />
           </div>
           <p className="text-[#b8962e] text-xs mb-3">SAMRC Extramural Unit</p>
           <p className="text-gray-400 text-sm leading-relaxed mb-3">

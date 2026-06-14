@@ -145,15 +145,15 @@ export default function GalleryPage() {
         <div className="max-w-xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-3">Follow Our Journey</h2>
           <p className="text-gray-300 text-sm mb-6">
-            Stay connected for the latest field visits, research milestones, and innovation showcases from the DHAIOH Unit.
+            Stay connected for the latest field visits, research milestones, and innovation showcases from the DHAIOH Unit. Subscribe to our channel to get notified whenever we share new videos and updates.
           </p>
           <a
             href="https://www.youtube.com/@goldfieldssouthdeep520"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
+            className="inline-block bg-[#d22d20] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#b8251a] transition-colors"
           >
-            Visit Our Channel
+            Subscribe to Our Channel
           </a>
         </div>
       </section>

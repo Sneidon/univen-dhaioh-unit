@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import CardImageHeader from "@/components/CardImageHeader";
+import { hcdCards } from "@/lib/card-images";
 
 const opportunities = [
   {
@@ -8,6 +9,7 @@ const opportunities = [
     tag: "POSTDOC",
     desc: "Postdoctoral research fellowships in digital health, AI, occupational health surveillance, and related fields within the Unit's multidisciplinary research environment.",
     areas: ["Digital Health & AI", "Occupational Epidemiology", "Sensor & Wearable Technologies", "Health Systems Research"],
+    image: hcdCards[0],
   },
   {
     category: "Doctoral Candidates (PhD)",
@@ -15,18 +17,21 @@ const opportunities = [
     desc: "Full doctoral research programmes addressing the Unit's strategic research themes under joint academic–industry supervision by Prof Lindiwe Zungu, Dr James Aluha, and the broader team.",
     areas: ["AI & Predictive Analytics", "Women in Mining Health", "Mental Health in Mining", "Climate Change & Worker Health"],
     dark: true,
+    image: hcdCards[1],
   },
   {
     category: "Master's Students",
     tag: "MASTERS",
     desc: "Research Master's opportunities across eight strategic themes, combining research mentorship, experiential learning, and collaborative projects.",
     areas: ["Digital Surveillance Systems", "Occupational Disease Prevention", "Medical Surveillance", "Environmental Health"],
+    image: hcdCards[2],
   },
   {
     category: "Emerging & Early-Career Researchers",
     tag: "EARLY-CAREER",
     desc: "Structured development pathways for emerging researchers and occupational health practitioners and professionals seeking to build expertise in digital health, AI, and mining health.",
     areas: ["Occupational Health Practice", "Digital Health", "Research Methodology", "Leadership Development"],
+    image: hcdCards[3],
   },
   {
     category: "Research Interns & Assistants",
@@ -34,12 +39,14 @@ const opportunities = [
     desc: "Structured research internship placements providing exposure to digital health research, occupational health practice, and innovation within the DHAIOH Unit.",
     areas: ["Data Analysis", "Field Research", "Technology Development", "Policy Analysis"],
     dark: true,
+    image: hcdCards[4],
   },
   {
     category: "Occupational Health Practitioners & Professionals",
     tag: "PRACTITIONER",
     desc: "Development opportunities for occupational health practitioners and professionals seeking to build expertise in digital health, artificial intelligence, and advanced occupational health systems.",
     areas: ["Occupational Health Practice", "Digital Health", "Medical Surveillance", "Health Systems"],
+    image: hcdCards[5],
   },
   {
     category: "Future Leaders in Digital Health & AI",
@@ -47,6 +54,7 @@ const opportunities = [
     desc: "Nurturing future leaders equipped to drive scientific discovery, digital transformation, policy influence, and sustainable impact in occupational health.",
     areas: ["Research Leadership", "Digital Innovation", "Policy Influence", "Capacity Development"],
     dark: true,
+    image: hcdCards[6],
   },
 ];
 
@@ -130,8 +138,15 @@ export default function HumanCapitalPage() {
             {opportunities.map((opp) => (
               <div
                 key={opp.category}
-                className={`p-8 ${opp.dark ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
+                className={`overflow-hidden flex flex-col ${opp.dark ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
               >
+                <CardImageHeader
+                  src={opp.image.src}
+                  alt={opp.image.alt}
+                  overlay={opp.dark ? "blue" : "light"}
+                  className="h-32"
+                />
+                <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <span className={`text-xs font-bold tracking-widest uppercase px-3 py-1 ${opp.dark ? "bg-[#b8962e] text-white" : "bg-[#d22d20] text-white"}`}>
                     {opp.tag}
@@ -152,6 +167,7 @@ export default function HumanCapitalPage() {
                       {area}
                     </span>
                   ))}
+                </div>
                 </div>
               </div>
             ))}

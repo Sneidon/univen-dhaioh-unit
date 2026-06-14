@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import CardImageHeader from "@/components/CardImageHeader";
+import { leadershipCards } from "@/lib/card-images";
 
 const codirectorshipStrengths = [
-  { title: "Transdisciplinary Integration", desc: "Policy-relevant public health research combined with advanced engineering and technological innovation." },
-  { title: "Dual Approaches", desc: "Human-centred, gender-responsive approaches paired with AI-driven, data-intensive systems." },
-  { title: "Academic–Industry Bridge", desc: "Academic excellence and research leadership united with industry application and technology transfer." },
-  { title: "End-to-End Impact", desc: "From knowledge generation to policy influence and technology deployment at scale." },
-  { title: "Human Capital Development", desc: "Joint academic–industry mentorship strengthening postgraduate training and capacity development." },
-  { title: "Sustainable Partnerships", desc: "Fostering sustainable partnerships across academia, government, and the mining sector." },
+  { title: "Transdisciplinary Integration", desc: "Policy-relevant public health research combined with advanced engineering and technological innovation.", image: leadershipCards[0] },
+  { title: "Dual Approaches", desc: "Human-centred, gender-responsive approaches paired with AI-driven, data-intensive systems.", image: leadershipCards[1] },
+  { title: "Academic–Industry Bridge", desc: "Academic excellence and research leadership united with industry application and technology transfer.", image: leadershipCards[2] },
+  { title: "End-to-End Impact", desc: "From knowledge generation to policy influence and technology deployment at scale.", image: leadershipCards[3] },
+  { title: "Human Capital Development", desc: "Joint academic–industry mentorship strengthening postgraduate training and capacity development.", image: leadershipCards[4] },
+  { title: "Sustainable Partnerships", desc: "Fostering sustainable partnerships across academia, government, and the mining sector.", image: leadershipCards[5] },
 ];
 
 export default function LeadershipPage() {
@@ -193,12 +195,15 @@ export default function LeadershipPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {codirectorshipStrengths.map((s, i) => (
-              <div key={i} className="border border-white/10 bg-white/5 p-6">
+              <div key={i} className="border border-white/10 bg-white/5 overflow-hidden flex flex-col">
+                <CardImageHeader src={s.image.src} alt={s.image.alt} overlay="blue" className="h-28" />
+                <div className="p-6 flex flex-col flex-1">
                 <div className="w-8 h-8 bg-[#b8962e] flex items-center justify-center mb-4 font-bold text-xs text-white">
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="font-bold text-white text-sm mb-2">{s.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>

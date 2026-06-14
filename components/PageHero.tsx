@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { assetUrl } from "@/lib/asset-url";
 
 type PageHeroProps = {
   src: string;
@@ -23,7 +24,7 @@ export default function PageHero({
     <section className={`relative text-white overflow-hidden ${className}`}>
       <div className="absolute inset-0">
         <Image
-          src={src}
+          src={assetUrl(src)}
           alt={alt}
           fill
           priority={priority}

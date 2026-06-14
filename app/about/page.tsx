@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import CardImageHeader from "@/components/CardImageHeader";
+import { frameworkPillarImages } from "@/lib/card-images";
 
 const pillars = [
   { n: "01", title: "Artificial Intelligence & Machine Learning" },
@@ -160,8 +161,15 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {pillars.map((p) => (
-              <div key={p.n} className="bg-[#314c7a] text-white p-8">
+            {pillars.map((p, i) => (
+              <div key={p.n} className="bg-[#314c7a] text-white overflow-hidden flex flex-col">
+                <CardImageHeader
+                  src={frameworkPillarImages[i].src}
+                  alt={frameworkPillarImages[i].alt}
+                  overlay="blue"
+                  className="h-28"
+                />
+                <div className="p-8 flex flex-col flex-1">
                 <div className="flex justify-between items-start mb-4">
                   <span className="text-2xl font-bold text-[#b8962e]">{p.n}</span>
                   <div className="w-8 h-8 border border-[#b8962e]/40 rounded flex items-center justify-center">
@@ -171,6 +179,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <h3 className="font-bold text-base text-white">{p.title}</h3>
+                </div>
               </div>
             ))}
           </div>

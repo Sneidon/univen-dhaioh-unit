@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import CardImageHeader from "@/components/CardImageHeader";
+import { impactCards } from "@/lib/card-images";
 
 const policyAreas = [
   "Occupational Health and Safety Policy Development",
@@ -22,33 +23,39 @@ const impactAreas = [
     desc: "Translating research evidence into national occupational health policy, Codes of Practice, and regulatory frameworks that protect workers across the mining sector.",
     icon: "P",
     dark: true,
+    image: impactCards[0],
   },
   {
     title: "Codes of Practice",
     desc: "Contributing to the development and revision of industry Codes of Practice for occupational health, safety, and disease prevention in South African mining.",
     icon: "C",
+    image: impactCards[1],
   },
   {
     title: "Women in Mining Policy",
     desc: "Advancing gender-responsive workplace policies, women-specific PPE standards, and guidelines addressing gender-based violence and security in mining.",
     icon: "W",
     gold: true,
+    image: impactCards[2],
   },
   {
     title: "Government Advisory Roles",
     desc: "Providing expert technical advisory support to government departments, regulatory bodies, and national health authorities on occupational health matters.",
     icon: "G",
     dark: true,
+    image: impactCards[3],
   },
   {
     title: "Regulatory Reform",
     desc: "Driving evidence-based regulatory reform through engagement with the Department of Mineral and Petroleum Resources, Department of Health, and the Compensation Fund.",
     icon: "R",
+    image: impactCards[4],
   },
   {
     title: "Evidence-to-Policy Pathways",
     desc: "Developing structured mechanisms for translating peer-reviewed research findings into actionable policy submissions, technical reports, and implementation guidelines.",
     icon: "E",
+    image: impactCards[5],
   },
 ];
 
@@ -105,13 +112,21 @@ export default function ResearchImpactPage() {
             {impactAreas.map((area) => (
               <div
                 key={area.title}
-                className={`p-8 ${area.gold ? "bg-[#b8962e] text-white" : area.dark ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
+                className={`overflow-hidden flex flex-col ${area.gold ? "bg-[#b8962e] text-white" : area.dark ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
               >
+                <CardImageHeader
+                  src={area.image.src}
+                  alt={area.image.alt}
+                  overlay={area.gold ? "gold" : area.dark ? "blue" : "light"}
+                  className="h-32"
+                />
+                <div className="p-8 flex flex-col flex-1">
                 <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${area.gold ? "bg-white/20 text-white" : area.dark ? "bg-[#b8962e] text-white" : "bg-[#314c7a] text-[#b8962e]"}`}>
                   {area.icon}
                 </div>
                 <h3 className={`font-bold text-lg mb-3 ${area.gold || area.dark ? "text-white" : "text-[#0d1b35]"}`}>{area.title}</h3>
                 <p className={`text-sm leading-relaxed ${area.gold ? "text-white/80" : area.dark ? "text-gray-300" : "text-gray-600"}`}>{area.desc}</p>
+                </div>
               </div>
             ))}
           </div>

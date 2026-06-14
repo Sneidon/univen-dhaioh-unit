@@ -2,14 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { flagshipProgrammes } from "@/lib/flagship-programmes";
+import { themeCards } from "@/lib/card-images";
 
 const researchThemes = [
   {
     num: "01",
     title: "Digital Health & Occupational Health Intelligence",
     desc: "Developing integrated digital platforms that support real-time occupational health surveillance, worker monitoring, and evidence-based decision-making.",
-    image: "/banners/hero-research-impact.jpg",
-    imageAlt: "Health worker documenting occupational health data",
+    image: themeCards[0].src,
+    imageAlt: themeCards[0].alt,
     featured: true,
     showLink: true,
   },
@@ -17,38 +18,38 @@ const researchThemes = [
     num: "02",
     title: "AI & Predictive Analytics",
     desc: "Leveraging machine learning to predict occupational health risks and support proactive interventions.",
-    image: "/banners/hero-innovation.jpg",
-    imageAlt: "AI and digital network visualization",
+    image: themeCards[1].src,
+    imageAlt: themeCards[1].alt,
     dark: true,
   },
   {
     num: "03",
     title: "Occupational Disease Prevention & Early Detection",
     desc: "Digital tools and predictive models for respiratory diseases, cancers, hearing loss and more.",
-    image: "/banners/hero-partners.jpg",
-    imageAlt: "Underground occupational health assessment",
+    image: themeCards[2].src,
+    imageAlt: themeCards[2].alt,
     gold: true,
   },
   {
     num: "04",
     title: "Medical Surveillance & Early Warning",
     desc: "Intelligent systems for rapid identification of health trends and emerging occupational risks.",
-    image: "/banners/hero-human-capital.jpg",
-    imageAlt: "Health professional using digital tablet for surveillance",
+    image: themeCards[3].src,
+    imageAlt: themeCards[3].alt,
   },
   {
     num: "05",
     title: "Women in Mining & Gender-Responsive Health",
     desc: "Innovative solutions addressing the unique occupational health needs of women in mining.",
-    image: "/banners/hero-leadership.jpg",
-    imageAlt: "Female health professionals in mining context",
+    image: themeCards[4].src,
+    imageAlt: themeCards[4].alt,
   },
   {
     num: "06–08",
     title: "Mental Health · Climate Change · Innovation",
     desc: "Psychosocial risk management, environmental health, sustainable mining, and commercialisation.",
-    image: "/banners/hero-about.jpg",
-    imageAlt: "DHAIOH research team at Mintek",
+    image: themeCards[7].src,
+    imageAlt: themeCards[7].alt,
     dark: true,
   },
 ];

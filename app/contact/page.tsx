@@ -1,27 +1,6 @@
-"use client";
-
-import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "Research Collaboration",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitted(true);
-  }
-
   return (
     <>
       {/* Hero */}
@@ -55,6 +34,33 @@ export default function ContactPage() {
                     Leading transformative research in Digital Health and Artificial Intelligence for occupational health.
                   </p>
                   <a
+                    href="mailto:lindiwe.zungu@univen.ac.za"
+                    className="flex items-center gap-2 mt-3 text-sm text-[#0d1b35] hover:text-[#b8962e] transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                    lindiwe.zungu@univen.ac.za
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* General inquiries card */}
+            <div className="bg-white border border-gray-200 p-6">
+              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">General Inquiries</p>
+              <div className="flex gap-5 items-start">
+                <div className="w-28 h-36 rounded-sm flex-shrink-0 bg-[#0d1b35] flex items-center justify-center">
+                  <svg className="w-12 h-12 text-[#b8962e]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-[#0d1b35]">DHAIOH Unit</h2>
+                  <p className="text-gray-600 text-sm mt-1 leading-relaxed">
+                    For research collaboration, partnerships, postgraduate opportunities, media requests, and all other general enquiries.
+                  </p>
+                  <a
                     href="mailto:info@dhaioh-univen.ac.za"
                     className="flex items-center gap-2 mt-3 text-sm text-[#0d1b35] hover:text-[#b8962e] transition-colors"
                   >
@@ -65,96 +71,6 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
-            </div>
-
-            {/* Inquiry form */}
-            <div className="bg-white border border-gray-200 p-6">
-              <h3 className="font-bold text-[#0d1b35] text-lg mb-6">Send an Inquiry</h3>
-
-              {submitted ? (
-                <div className="text-center py-8">
-                  <div className="w-12 h-12 bg-[#b8962e] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h4 className="font-bold text-[#0d1b35] mb-2">Thank you for your inquiry</h4>
-                  <p className="text-gray-600 text-sm">We will be in touch shortly.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold tracking-wider uppercase text-gray-500 mb-2">
-                        Full Name
-                      </label>
-                      <input
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="John Doe"
-                        required
-                        className="w-full border-b border-gray-300 pb-2 text-sm outline-none focus:border-[#0d1b35] transition-colors bg-transparent"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold tracking-wider uppercase text-gray-500 mb-2">
-                        Email Address
-                      </label>
-                      <input
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="john@organization.com"
-                        required
-                        className="w-full border-b border-gray-300 pb-2 text-sm outline-none focus:border-[#0d1b35] transition-colors bg-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold tracking-wider uppercase text-gray-500 mb-2">
-                      Subject
-                    </label>
-                    <select
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full border-b border-gray-300 pb-2 text-sm outline-none focus:border-[#0d1b35] transition-colors bg-transparent"
-                    >
-                      <option>Research Collaboration</option>
-                      <option>Strategic Partnership</option>
-                      <option>Innovation & Commercialisation</option>
-                      <option>Postgraduate Opportunities</option>
-                      <option>Media Inquiry</option>
-                      <option>General Enquiry</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold tracking-wider uppercase text-gray-500 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="How can we assist you?"
-                      rows={4}
-                      required
-                      className="w-full border-b border-gray-300 pb-2 text-sm outline-none focus:border-[#0d1b35] transition-colors bg-transparent resize-none"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
-                  >
-                    Submit Inquiry
-                  </button>
-                </form>
-              )}
             </div>
           </div>
 
@@ -197,26 +113,6 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-
-            {/* Phone & Social */}
-            <div className="bg-white border border-gray-200 p-4 flex items-center gap-3">
-              <svg className="w-5 h-5 text-[#0d1b35]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-              <div>
-                <p className="text-xs font-bold tracking-wider text-[#b8962e] uppercase">General Enquiries</p>
-                <a href="mailto:info@dhaioh-univen.ac.za" className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e] transition-colors">info@dhaioh-univen.ac.za</a>
-              </div>
-            </div>
-            <div className="bg-white border border-gray-200 p-4 flex items-center gap-3 mt-3">
-              <svg className="w-5 h-5 text-[#0d1b35]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-              <div>
-                <p className="text-xs font-bold tracking-wider text-[#b8962e] uppercase">Unit Director</p>
-                <a href="mailto:lindiwe.zungu@univen.ac.za" className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e] transition-colors">lindiwe.zungu@univen.ac.za</a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -227,16 +123,13 @@ export default function ContactPage() {
           <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-8">Strategic Alliance for Impact</p>
           <div className="flex justify-center items-center gap-16 flex-wrap">
             <div className="text-center">
-              <Image src="/logos/samrc.svg" alt="SAMRC" width={140} height={60} className="object-contain mx-auto mb-3" />
-              <p className="text-xs font-bold tracking-widest text-[#0d1b35]">SAMRC</p>
+              <Image src="/logos/samrc.svg" alt="SAMRC" width={140} height={60} className="object-contain mx-auto" />
             </div>
             <div className="text-center">
-              <Image src="/logos/univen.png" alt="University of Venda" width={80} height={80} className="object-contain mx-auto mb-3" />
-              <p className="text-xs font-bold tracking-widest text-[#0d1b35]">UNIVEN</p>
+              <Image src="/logos/univen.png" alt="University of Venda" width={80} height={80} className="object-contain mx-auto" />
             </div>
             <div className="text-center">
-              <Image src="/logos/mintek.png" alt="Mintek" width={140} height={60} className="object-contain mx-auto mb-3" />
-              <p className="text-xs font-bold tracking-widest text-[#0d1b35]">MINTEK</p>
+              <Image src="/logos/mintek.png" alt="Mintek" width={140} height={60} className="object-contain mx-auto" />
             </div>
           </div>
         </div>

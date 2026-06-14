@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { assetUrl } from "@/lib/asset-url";
 
@@ -28,9 +26,8 @@ export default function PageHero({
           alt={alt}
           fill
           priority={priority}
-          quality={100}
+          quality={80}
           sizes="100vw"
-          unoptimized
           className={imageClassName}
         />
       </div>

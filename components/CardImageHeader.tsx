@@ -27,9 +27,10 @@ export default function CardImageHeader({
         src={assetUrl(src)}
         alt={alt}
         fill
-        unoptimized
+        loading="lazy"
+        quality={70}
         className="object-cover"
-        sizes="(max-width: 768px) 100vw, 33vw"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
       />
       <div className={`absolute inset-0 ${overlayClass}`} />
     </div>

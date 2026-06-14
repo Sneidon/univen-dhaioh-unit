@@ -125,9 +125,10 @@ export default function ResearchThemesPage() {
                     src={prog.image}
                     alt={prog.imageAlt}
                     fill
-                    unoptimized
+                    loading="lazy"
+                    quality={70}
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
                   />
                   <div
                     className={`absolute inset-0 ${

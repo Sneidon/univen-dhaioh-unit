@@ -40,27 +40,6 @@ const pathway = [
   },
 ];
 
-const policyAreas = [
-  "Occupational Health and Safety Policy Development",
-  "Occupational Health Guidelines and Technical Guidance Documents",
-  "Codes of Practice and Industry Standards",
-  "Digital Health and Artificial Intelligence Governance Frameworks",
-  "Women in Mining Policies and Gender-Responsive Workplace Strategies",
-  "Occupational Disease Prevention and Surveillance Frameworks",
-  "Mental Health and Psychosocial Risk Management Policies",
-  "Government Advisory and Technical Expert Contributions",
-  "Industry Best Practice Frameworks",
-  "Workforce Health and Wellbeing Strategies",
-  "Regulatory Reform and Evidence-Based Decision-Making",
-];
-
-const metrics = [
-  { value: "20+", label: "Years of Research Experience", sub: "Occupational health expertise" },
-  { value: "45+", label: "Graduates Supervised", sub: "Master's & Doctoral" },
-  { value: "08", label: "Core Research Themes", sub: "Multidisciplinary" },
-  { value: "3", label: "Core Alliance Partners", sub: "SAMRC · UNIVEN · Mintek" },
-];
-
 export default function ImpactFrameworkPage() {
   return (
     <>
@@ -137,53 +116,21 @@ export default function ImpactFrameworkPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {metrics.map((m) => (
-            <div key={m.label}>
-              <p className="text-4xl md:text-5xl font-bold text-[#0d1b35]">{m.value}</p>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mt-2">{m.label}</p>
-              <p className="text-gray-500 text-xs mt-1">{m.sub}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Policy Influence */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-4">
-                Areas of Policy & Practice Influence
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                The DHAIOH Unit is committed to ensuring that research extends beyond scientific publications to deliver tangible improvements in policy, workplace practice, occupational health systems, and worker wellbeing.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
-              >
-                Engage With Us
-              </Link>
-            </div>
-            <div className="grid grid-cols-1 gap-2">
-              {policyAreas.map((area, i) => (
-                <div
-                  key={area}
-                  className={`flex items-center gap-4 p-4 border ${i === 0 ? "bg-[#0d1b35] text-white border-[#0d1b35]" : "border-gray-200 bg-white"}`}
-                >
-                  <div className={`w-6 h-6 rounded flex items-center justify-center flex-shrink-0 ${i === 0 ? "bg-[#b8962e]" : "bg-gray-100"}`}>
-                    <svg className={`w-3 h-3 ${i === 0 ? "text-white" : "text-[#b8962e]"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className={`text-sm ${i === 0 ? "text-white font-medium" : "text-gray-700"}`}>{area}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* Policy influence teaser */}
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Policy & Practice</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0d1b35] mb-4">Areas of Policy Influence</h2>
+          <p className="text-gray-600 text-sm leading-relaxed mb-6">
+            The DHAIOH Unit drives systemic change across 11 areas of national policy, regulatory reform, and
+            industry practice — from occupational health guidelines to gender-responsive mining policies.
+          </p>
+          <Link
+            href="/research-impact"
+            className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+          >
+            View Policy & Practice Influence Areas →
+          </Link>
         </div>
       </section>
 

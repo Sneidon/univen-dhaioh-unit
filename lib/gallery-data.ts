@@ -3,6 +3,12 @@ export type GalleryPhoto = {
   caption: string;
 };
 
+export type GalleryVideo = {
+  id: string;
+  title: string;
+  desc: string;
+};
+
 export type GalleryEvent = {
   slug: string;
   title: string;
@@ -37,6 +43,19 @@ export const galleryEvents: GalleryEvent[] = [
     description:
       "A first-hand research visit to South Deep Gold Mine, exploring the frontlines of occupational health in one of the world's deepest gold mines.",
     photos: southDeepPhotos,
+  },
+];
+
+export const galleryVideos: GalleryVideo[] = [
+  {
+    id: "4jLevr_hxpo",
+    title: "Professor Lindiwe Zungu's Visit to South Deep Gold Mine",
+    desc: galleryEvents[0].description,
+  },
+  {
+    id: "9agcYsFIDi8",
+    title: "11th SAMRC Scientific Merit Awards — Research Capacity Development",
+    desc: "Recognising excellence in research and celebrating the DHAIOH Unit's contribution to advancing occupational health science in South Africa.",
   },
 ];
 

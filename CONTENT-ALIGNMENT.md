@@ -7,7 +7,23 @@
 
 ## Summary
 
-All 13 points from the client feedback email and all content sections from the briefing document are implemented. The table below maps every document section and feedback point to its location on the website.
+All 13 points from the client feedback email and all content sections from the briefing document are implemented. Content is organised so each topic has **one canonical page**; other pages use short teasers with links rather than repeating full detail.
+
+---
+
+## Canonical Content Locations (post deduplication)
+
+| Content | Canonical page | Teaser / link on |
+|---|---|---|
+| Leadership bios, positioning, co-directorship strengths | `/leadership` | `/about` (brief intro + CTA) |
+| Digital Transformation Framework (10 pillars) | `/about` | `/` homepage |
+| Strategic Research Themes (8) + Flagship Programmes (9) | `/research-themes` | `/` homepage |
+| Impact Pathway (detailed 5-step) | `/impact-framework` | `/`, `/research-impact` |
+| Policy influence areas (11 items) | `/research-impact` | `/impact-framework` |
+| Strategic partners (full lists) | `/strategic-partners` | `/`, `/about` |
+| Human Capital Development (full opportunities) | `/human-capital` | `/` homepage |
+| Site-wide impact metrics | `/` homepage | — |
+| Gallery videos & photo events | `/gallery`, `lib/gallery-data.ts` | — |
 
 ---
 
@@ -17,11 +33,11 @@ All 13 points from the client feedback email and all content sections from the b
 |---|---|---|---|
 | 1 | Unit Overview — full name, description, interdisciplinary mandate | ✅ | `/about` — Unit Overview section |
 | 2 | Unit Overview — 5 interconnected thematic areas | ✅ | `/about` — "Five Interconnected Thematic Areas" |
-| 3 | Unit Leadership Overview — co-directorship model | ✅ | `/about` — Unit Leadership section |
-| 4 | Joint Co-Directorship — significance, strength, uniqueness | ✅ | `/about` — "Significance, Strength & Uniqueness" section |
-| 5 | Positioning Statement | ✅ | `/about` — gold banner between Vision/Mission and Leadership |
-| 6 | Profile: Prof Lindiwe Zungu — full biosketch, title, awards | ✅ | `/about` — Unit Director card (full bio) |
-| 7 | Profile: Dr James Aluha — full biosketch, title, Mintek role | ✅ | `/about` — Co-Unit Director card (full bio) |
+| 3 | Unit Leadership Overview — co-directorship model | ✅ | `/leadership` — co-directorship model; `/about` teaser + link |
+| 4 | Joint Co-Directorship — significance, strength, uniqueness | ✅ | `/leadership` — "Significance, Strength & Uniqueness" section |
+| 5 | Positioning Statement | ✅ | `/leadership` — gold banner |
+| 6 | Profile: Prof Lindiwe Zungu — full biosketch, title, awards | ✅ | `/leadership` — Unit Director card (full bio) |
+| 7 | Profile: Dr James Aluha — full biosketch, title, Mintek role | ✅ | `/leadership` — Co-Unit Director card (full bio) |
 | 8 | Digital Presence — tagline | ✅ | Homepage hero + `/about` hero |
 | 9 | Directors' Quote (long form) | ✅ | Homepage — "From the Co-Directors" quote section |
 | 10 | Suggested Pull Quote — Prof Zungu | ✅ | Homepage — incorporated in Directors' Quote section |
@@ -35,18 +51,18 @@ All 13 points from the client feedback email and all content sections from the b
 | # | Feedback Point | Status | Implementation |
 |---|---|---|---|
 | 1 | **Landing page identity** — full unit name before acronym, tagline prominent, SAMRC Extramural Unit in opening banner | ✅ | Homepage hero: full name → DHAIOH Unit → tagline; institutional badges in banner |
-| 2 | **SAMRC–UNIVEN–MINTEK Strategic Alliance visibility** — three-way partnership prominent, not UNIVEN-centric | ✅ | Homepage "Strategic Alliance" section; all three partners with logos; Mintek logo displayed |
-| 3 | **Co-Unit Director (Mintek)** — profile, photo, role, side-by-side with Unit Director | ✅ | `/about` Leadership section: Prof Lindiwe Zungu + Dr James Aluha, side-by-side with photos and full bios |
-| 4 | **Digital Transformation Framework** — all 10 pillars prominently showcased | ✅ | Homepage dedicated section (10 pillars); `/about` full framework grid |
-| 5 | **Strategic Research Themes** — all 8 themes as dedicated thematic areas | ✅ | `/research-themes` — 8 themes in full grid; homepage preview showing all 8 |
-| 6 | **Flagship Research Programmes** — all 9 programmes visible | ✅ | `/research-themes` — 9 programme cards; homepage 8-card preview + link |
+| 2 | **SAMRC–UNIVEN–MINTEK Strategic Alliance visibility** — three-way partnership prominent, not UNIVEN-centric | ✅ | Homepage alliance teaser; full partner detail on `/strategic-partners` |
+| 3 | **Co-Unit Director (Mintek)** — profile, photo, role, side-by-side with Unit Director | ✅ | `/leadership` — Prof Lindiwe Zungu + Dr James Aluha, side-by-side with photos and full bios |
+| 4 | **Digital Transformation Framework** — all 10 pillars prominently showcased | ✅ | `/about` full framework grid; homepage teaser + link |
+| 5 | **Strategic Research Themes** — all 8 themes as dedicated thematic areas | ✅ | `/research-themes` — 8 themes in full grid; homepage teaser + link |
+| 6 | **Flagship Research Programmes** — all 9 programmes visible | ✅ | `/research-themes` — 9 programme cards; linked from homepage themes teaser |
 | 7 | **Innovation & Commercialisation Platform** — IP, AI, wearables, platforms, investment | ✅ | `/innovation` — 12 strategic innovation areas, AI Hub, IP metrics |
-| 8 | **Research Impact & Policy Influence** — policy initiatives, codes of practice, advisory roles | ✅ | `/impact-framework` — 11 policy influence areas listed |
-| 9 | **Human Capital Development** — postdocs, doctoral, masters, interns, mentorship | ✅ | Homepage "Human Capital Development" section; 6 categories displayed |
+| 8 | **Research Impact & Policy Influence** — policy initiatives, codes of practice, advisory roles | ✅ | `/research-impact` — 11 policy influence areas listed |
+| 9 | **Human Capital Development** — postdocs, doctoral, masters, interns, mentorship | ✅ | `/human-capital` — full opportunities; homepage teaser + link |
 | 10 | **Partnerships & Collaborations** — SAMRC, Mintek, MHSC, NRF, TIA, CSIR, HSRC, international | ✅ | `/strategic-partners` — national, innovation, international, UNIVEN-internal partner lists |
 | 11 | **Investment & Collaboration Opportunities** — funders, mining cos, tech, development agencies | ✅ | Homepage "Investment & Collaboration" section; 7 partner-type categories |
-| 12 | **DHAIOH Impact Pathway** — Research → Innovation → Policy → Practice → Impact | ✅ | Homepage 5-step pathway strip; `/impact-framework` — full 5-step detailed pathway |
-| 13 | **Research Impact Metrics** — years experience, partnerships, students, publications, policies | ✅ | Homepage metrics bar: 20+ years, 15+ partnerships, 8 themes, 10 pillars |
+| 12 | **DHAIOH Impact Pathway** — Research → Innovation → Policy → Practice → Impact | ✅ | `/impact-framework` — full 5-step detailed pathway; homepage teaser + link |
+| 13 | **Research Impact Metrics** — years experience, partnerships, students, publications, policies | ✅ | Homepage metrics bar: 20+ years, 45+ graduates, 8 themes, 11 policy areas |
 
 ---
 
@@ -70,11 +86,11 @@ All 13 points from the client feedback email and all content sections from the b
 | File | Location | Purpose |
 |---|---|---|
 | `public/logos/ohs-logo.png` | Navbar + Footer | Main site logo (OHS in Mining Research Institute – UNIVEN) |
-| `public/logos/mintek.png` | Homepage, Contact, Strategic Partners | Mintek logo (transparent PNG) |
-| `public/logos/samrc.svg` | Homepage, Contact, Strategic Partners | SAMRC logo |
-| `public/logos/univen.png` | Homepage, Strategic Partners | UNIVEN logo |
-| `public/prof-zungu.jpg` | About, Contact, Homepage quote | Prof Lindiwe Zungu photo |
-| `public/james-headshot.jpg` | About, Homepage quote | Dr James Aluha photo |
+| `public/logos/mintek.png` | Strategic Partners, Contact | Mintek logo (transparent PNG) |
+| `public/logos/samrc.svg` | Strategic Partners, Contact | SAMRC logo |
+| `public/logos/univen.png` | Strategic Partners | UNIVEN logo |
+| `public/prof-zungu.jpg` | Leadership, Contact, Homepage quote | Prof Lindiwe Zungu photo |
+| `public/james-headshot.jpg` | Leadership, Homepage quote | Dr James Aluha photo |
 
 ---
 
@@ -82,14 +98,17 @@ All 13 points from the client feedback email and all content sections from the b
 
 | Page | Route | Content |
 |---|---|---|
-| Home | `/` | Full unit identity, alliance, framework, themes, impact pathway, programmes, HCD, investment, directors' quote |
-| About | `/about` | Unit overview, 5 thematic areas, vision/mission, positioning statement, leadership bios, co-directorship, framework, alliance |
-| Research | `/research-themes` | 8 strategic themes, 9 flagship programmes, stats |
+| Home | `/` | Unit identity, metrics, teasers (alliance, framework, themes, pathway, HCD), investment, directors' quote |
+| About | `/about` | Unit overview, 5 thematic areas, vision/mission, leadership teaser, framework, alliance teaser |
+| Leadership | `/leadership` | Positioning statement, full bios, co-directorship strengths, directors' quote |
+| Research | `/research-themes` | 8 strategic themes, 9 flagship programmes |
 | Innovation | `/innovation` | IP & patents, AI solutions, 12 innovation areas, capabilities |
-| Impact Framework | `/impact-framework` | 5-step pathway, policy influence areas, metrics |
+| Impact Framework | `/impact-framework` | 5-step pathway; link to policy areas |
+| Research Impact | `/research-impact` | Policy influence areas (11), impact areas, page-specific metrics |
 | Partners | `/strategic-partners` | SAMRC/UNIVEN/Mintek + national, innovation, international, UNIVEN-internal partners |
-| Gallery & Media | `/gallery` | Media gallery |
-| Contact | `/contact` | Prof Zungu profile, inquiry form, offices, SAMRC/UNIVEN/Mintek logos |
+| Human Capital | `/human-capital` | Postdoc, PhD, Masters, early-career, intern opportunities |
+| Gallery & Media | `/gallery` | Videos and photo events (`lib/gallery-data.ts`) |
+| Contact | `/contact` | Director card, general inquiries, offices, partner logos |
 
 ---
 

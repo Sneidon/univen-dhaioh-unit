@@ -1,17 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const frameworkPillars = [
-  "Artificial Intelligence and Machine Learning",
-  "Digital Health Technologies",
-  "Big Data Analytics and Health Intelligence",
-  "Predictive Modelling and Risk Forecasting",
-  "Smart Medical Surveillance Systems",
-  "Wearable and Sensor-Based Health Technologies",
-  "Early Warning and Decision-Support Systems",
-  "Occupational Disease Prevention Technologies",
-  "Digital Occupational Health Platforms",
-  "Innovation, Technology Development and Commercialisation",
+const themePreview = [
+  "Digital Health & Occupational Health Intelligence",
+  "Artificial Intelligence & Predictive Analytics",
+  "Women in Mining & Gender-Responsive Health",
 ];
 
 const impactMetrics = [
@@ -19,15 +12,6 @@ const impactMetrics = [
   { value: "45+", label: "Graduates Supervised", sub: "Master's & Doctoral" },
   { value: "08", label: "Core Research Themes", sub: "Multidisciplinary agenda" },
   { value: "11", label: "Policy Influence Areas", sub: "National & regulatory" },
-];
-
-const hcdItems = [
-  { label: "Postdoctoral Fellows", icon: "D" },
-  { label: "Doctoral Candidates", icon: "P" },
-  { label: "Master's Students", icon: "M" },
-  { label: "Emerging & Early-Career Researchers", icon: "E" },
-  { label: "Research Interns & Assistants", icon: "R" },
-  { label: "Occupational Health Practitioners & Professionals", icon: "O" },
 ];
 
 const investmentPartners = [
@@ -108,64 +92,24 @@ export default function HomePage() {
       </section>
 
       {/* Strategic Alliance */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">
-                The SAMRC–UNIVEN–MINTEK Strategic Alliance
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-6">
-                A Jointly Driven Strategic Initiative
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                The DHAIOH Unit was established as a flagship three-way partnership combining strategic
-                investment, academic leadership, and mining innovation to transform worker health through
-                digital intelligence. This alliance is central to the Unit&apos;s identity, credibility, and
-                long-term impact.
-              </p>
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-5 h-5 rounded-full border-2 border-[#b8962e] flex-shrink-0" />
-                <span className="text-sm font-semibold text-[#0d1b35] tracking-wide">
-                  United for a Safer, Healthier Mining Sector
-                </span>
-              </div>
-              <Link
-                href="/strategic-partners"
-                className="text-sm font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#b8962e] pb-0.5 hover:text-[#b8962e] transition-colors"
-              >
-                View All Partners →
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {/* SAMRC */}
-              <div className="p-6 border border-gray-200 bg-white flex flex-col items-start">
-                <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">STRATEGIC FUNDER</p>
-                <Image src="/logos/samrc.svg" alt="SAMRC" width={120} height={50} className="object-contain mb-3" />
-                <p className="font-bold text-[#0d1b35] text-sm">South African Medical Research Council</p>
-              </div>
-
-              {/* UNIVEN */}
-              <div className="p-6 border border-gray-200 bg-white flex flex-col items-start">
-                <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">HOST INSTITUTION</p>
-                <Image src="/logos/univen.png" alt="University of Venda" width={80} height={80} className="object-contain mb-3" />
-                <p className="font-bold text-[#0d1b35] text-sm">University of Venda</p>
-              </div>
-
-              {/* Mintek — full-width row, white bg so black logo is visible */}
-              <div className="col-span-2 p-6 border border-gray-200 bg-white flex items-center gap-6">
-                <div className="flex-1">
-                  <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">STRATEGIC RESEARCH PARTNER</p>
-                  <p className="font-bold text-[#0d1b35] text-lg">Mintek</p>
-                  <p className="text-gray-500 text-sm mt-1">
-                    National leader in mining research, technology development, and innovation
-                  </p>
-                </div>
-                <Image src="/logos/mintek.png" alt="Mintek" width={140} height={56} className="object-contain flex-shrink-0" />
-              </div>
-            </div>
-          </div>
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">
+            The SAMRC–UNIVEN–MINTEK Strategic Alliance
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-4">
+            A Jointly Driven Strategic Initiative
+          </h2>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            A flagship three-way partnership combining strategic investment, academic leadership, and mining
+            innovation to transform worker health through digital intelligence.
+          </p>
+          <Link
+            href="/strategic-partners"
+            className="inline-block text-sm font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#b8962e] pb-0.5 hover:text-[#b8962e] transition-colors"
+          >
+            View Partners →
+          </Link>
         </div>
       </section>
 
@@ -183,261 +127,84 @@ export default function HomePage() {
       </section>
 
       {/* Digital Transformation Framework */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Strategic Architecture</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-3">
-              The DHAIOH Digital Transformation Framework
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              Ten strategic pillars that distinguish DHAIOH from traditional occupational health initiatives
-              and drive our pathway from research to impact.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
-            {frameworkPillars.map((pillar, i) => (
-              <div
-                key={pillar}
-                className={`p-5 flex flex-col gap-3 ${
-                  i === 9
-                    ? "bg-[#b8962e] text-white"
-                    : i % 3 === 0
-                    ? "bg-[#0d1b35] text-white"
-                    : "bg-white border border-gray-200"
-                }`}
-              >
-                <span className="text-xl font-bold text-[#b8962e]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p
-                  className={`text-xs font-semibold leading-snug ${
-                    i === 9 || i % 3 === 0 ? "text-white" : "text-[#0d1b35]"
-                  }`}
-                >
-                  {pillar}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link
-              href="/about"
-              className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
-            >
-              Explore Full Framework
-            </Link>
-          </div>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Strategic Architecture</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-4">
+            The DHAIOH Digital Transformation Framework
+          </h2>
+          <p className="text-gray-500 leading-relaxed mb-8">
+            Ten strategic pillars — from artificial intelligence and digital health technologies to innovation
+            and commercialisation — distinguish DHAIOH from traditional occupational health initiatives.
+          </p>
+          <Link
+            href="/about"
+            className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+          >
+            Explore Framework →
+          </Link>
         </div>
       </section>
 
       {/* Strategic Research Themes */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">Scientific Identity</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-2">Strategic Research Themes</h2>
-              <p className="text-gray-500 text-sm">Eight themes defining the future of digital occupational health.</p>
-            </div>
-            <Link
-              href="/research-themes"
-              className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e] transition-colors whitespace-nowrap"
-            >
-              All Themes →
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="lg:row-span-2 border border-gray-200 bg-white p-8">
-              <p className="text-[#b8962e] text-2xl font-bold mb-4">01</p>
-              <h3 className="font-bold text-[#0d1b35] text-lg mb-3">Digital Health & Occupational Health Intelligence</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-8">
-                Developing integrated digital platforms that support real-time occupational health surveillance,
-                worker monitoring, and evidence-based decision-making.
-              </p>
-              <Link href="/research-themes" className="text-xs font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#0d1b35] pb-0.5">
-                Explore Theme
-              </Link>
-            </div>
-
-            <div className="bg-[#0d1b35] text-white p-8">
-              <p className="text-[#b8962e] text-2xl font-bold mb-4">02</p>
-              <h3 className="font-bold text-lg mb-3">AI & Predictive Analytics</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Leveraging machine learning to predict occupational health risks and support proactive interventions.
-              </p>
-            </div>
-
-            <div className="bg-[#b8962e] text-white p-8 flex flex-col justify-between min-h-40">
-              <div>
-                <p className="text-xs font-bold tracking-widest uppercase mb-3 opacity-80">03</p>
-                <h3 className="font-bold mb-2">Occupational Disease Prevention & Early Detection</h3>
-                <p className="text-sm leading-relaxed text-white/80">
-                  Digital tools and predictive models for respiratory diseases, cancers, hearing loss and more.
-                </p>
-              </div>
-            </div>
-
-            <div className="border border-gray-200 bg-white p-8">
-              <p className="text-[#b8962e] text-2xl font-bold mb-4">04</p>
-              <h3 className="font-bold text-[#0d1b35] text-lg mb-3">Medical Surveillance & Early Warning</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Intelligent systems for rapid identification of health trends and emerging occupational risks.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 bg-white p-8">
-              <p className="text-[#b8962e] text-2xl font-bold mb-4">05</p>
-              <h3 className="font-bold text-[#0d1b35] text-lg mb-3">Women in Mining & Gender-Responsive Health</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Innovative solutions addressing the unique occupational health needs of women in mining.
-              </p>
-            </div>
-
-            <div className="bg-[#0d1b35] text-white p-8">
-              <p className="text-[#b8962e] text-2xl font-bold mb-4">06–08</p>
-              <h3 className="font-bold text-lg mb-3">Mental Health · Climate Change · Innovation</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Psychosocial risk management, environmental health, sustainable mining, and commercialisation.
-              </p>
-            </div>
-          </div>
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Scientific Identity</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-4">Strategic Research Themes</h2>
+          <p className="text-gray-500 text-sm mb-6">
+            Eight multidisciplinary themes and nine flagship programmes defining the future of digital occupational health.
+          </p>
+          <ul className="text-left max-w-md mx-auto space-y-2 mb-8">
+            {themePreview.map((title) => (
+              <li key={title} className="flex items-start gap-3 text-sm text-[#0d1b35]">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#b8962e] mt-2 flex-shrink-0" />
+                {title}
+              </li>
+            ))}
+            <li className="text-sm text-gray-400 pl-5">+ 5 more themes</li>
+          </ul>
+          <Link
+            href="/research-themes"
+            className="inline-block text-sm font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#b8962e] pb-0.5 hover:text-[#b8962e] transition-colors"
+          >
+            All Themes & Programmes →
+          </Link>
         </div>
       </section>
 
       {/* Impact Pathway */}
-      <section className="py-20 bg-[#0d1b35] text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">How We Generate Value</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">The DHAIOH Impact Pathway</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
-              Every initiative within the Unit follows a clear, evidence-driven pathway from scientific discovery
-              to measurable impact for workers, workplaces, and communities.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-0 border border-white/10">
-            {[
-              { label: "Research", sub: "World-class evidence generation" },
-              { label: "Innovation", sub: "AI tools & digital technologies" },
-              { label: "Policy", sub: "Guidelines & regulatory reform" },
-              { label: "Practice", sub: "Implementation at scale" },
-              { label: "Impact", sub: "Healthier workers. Zero Harm.", gold: true },
-            ].map((step, i) => (
-              <div
-                key={step.label}
-                className={`relative flex flex-col items-center text-center p-8 border-r border-white/10 last:border-r-0 ${
-                  step.gold ? "bg-[#b8962e]" : "bg-white/5"
-                }`}
-              >
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold text-sm ${
-                    step.gold ? "bg-white text-[#b8962e]" : "border-2 border-[#b8962e] text-[#b8962e]"
-                  }`}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <p className="font-bold text-base mb-2 text-white">{step.label}</p>
-                <p className={`text-xs leading-relaxed ${step.gold ? "text-white/80" : "text-gray-400"}`}>{step.sub}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/impact-framework"
-              className="inline-block bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
-            >
-              View Full Impact Framework
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Flagship Programmes */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">Active Research Portfolio</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35]">Flagship Research Programmes</h2>
-            </div>
-            <Link href="/research-themes" className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e] transition-colors whitespace-nowrap">
-              All Programmes →
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {[
-              { n: "01", title: "Occupational Disease Early Warning Systems" },
-              { n: "02", title: "AI-Powered Worker Health Surveillance", dark: true },
-              { n: "03", title: "Women in Mining Health & Safety" },
-              { n: "04", title: "Mental Health in Mining", gold: true },
-              { n: "05", title: "Biological Hazards in Mining" },
-              { n: "06", title: "Occupational Cancer Prevention", dark: true },
-              { n: "07", title: "Climate Change & Worker Health" },
-              { n: "08", title: "Water-Food-Health Nexus Research" },
-              { n: "09", title: "Digital Health Innovation Projects", dark: true },
-            ].map((prog) => (
-              <div
-                key={prog.n}
-                className={`p-6 flex flex-col gap-3 ${
-                  prog.gold
-                    ? "bg-[#b8962e] text-white"
-                    : prog.dark
-                    ? "bg-[#0d1b35] text-white"
-                    : "bg-white border border-gray-200"
-                }`}
-              >
-                <span className="text-xl font-bold text-[#b8962e]">{prog.n}</span>
-                <p
-                  className={`text-sm font-semibold leading-snug ${
-                    prog.gold || prog.dark ? "text-white" : "text-[#0d1b35]"
-                  }`}
-                >
-                  {prog.title}
-                </p>
-              </div>
-            ))}
-          </div>
+      <section className="py-16 bg-[#0d1b35] text-white">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">How We Generate Value</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">The DHAIOH Impact Pathway</h2>
+          <p className="text-gray-400 text-sm leading-relaxed mb-8">
+            Every initiative follows a clear pathway from scientific discovery through innovation, policy, and
+            practice to measurable impact for workers, workplaces, and communities.
+          </p>
+          <Link
+            href="/impact-framework"
+            className="inline-block bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
+          >
+            View Impact Framework →
+          </Link>
         </div>
       </section>
 
       {/* Human Capital Development */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">SAMRC Mandate & Unit Vision</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-6">Human Capital Development</h2>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                Building the next generation of African digital health scientists is a core pillar of the DHAIOH Unit.
-                We actively develop research leaders through postgraduate training, postdoctoral programmes, mentorship
-                initiatives, and structured capacity development opportunities.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
-              >
-                Apply or Enquire
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              {hcdItems.map((item) => (
-                <div key={item.label} className="bg-gray-50 border border-gray-200 p-5 flex items-center gap-4">
-                  <div className="w-10 h-10 bg-[#0d1b35] text-[#b8962e] flex items-center justify-center font-bold text-sm flex-shrink-0">
-                    {item.icon}
-                  </div>
-                  <span className="text-sm font-medium text-[#0d1b35] leading-snug">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">SAMRC Mandate & Unit Vision</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-4">Human Capital Development</h2>
+          <p className="text-gray-600 leading-relaxed mb-8">
+            Building the next generation of African digital health scientists through postgraduate training,
+            postdoctoral programmes, mentorship, and structured capacity development opportunities.
+          </p>
+          <Link
+            href="/human-capital"
+            className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+          >
+            Human Capital →
+          </Link>
         </div>
       </section>
 

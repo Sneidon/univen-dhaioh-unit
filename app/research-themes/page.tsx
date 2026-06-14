@@ -149,22 +149,6 @@ export default function ResearchThemesPage() {
           </div>
         </div>
       </section>
-
-      {/* Stats */}
-      <section className="py-12 bg-[#0d1b35] text-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
-          {[
-            { value: "08", label: "Core Research Themes" },
-            { value: "20+", label: "Years of Research Experience" },
-            { value: "45+", label: "Graduates Supervised" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <p className="text-3xl md:text-4xl font-bold">{stat.value}</p>
-              <p className="text-gray-400 text-xs mt-2 tracking-wider uppercase">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

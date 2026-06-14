@@ -51,16 +51,7 @@ const impactAreas = [
   },
 ];
 
-const pathwaySteps = [
-  { step: "01", phase: "Research", title: "Generating High-Impact Evidence", desc: "Producing world-class, peer-reviewed research on occupational health risks in mining.", outputs: ["Peer-reviewed publications", "Technical reports", "Epidemiological datasets", "Systematic reviews"] },
-  { step: "02", phase: "Innovation", title: "Transforming Evidence into Technology", desc: "Translating research findings into AI models, predictive systems, and digital health platforms.", outputs: ["AI algorithms & predictive models", "Wearable sensor systems", "Digital surveillance platforms", "Decision-support tools"] },
-  { step: "03", phase: "Policy & Practice", title: "Influencing Systemic Change", desc: "Translating evidence and implementation learnings into occupational health policy and regulatory frameworks.", outputs: ["Policy submissions", "Regulatory guidelines", "Codes of practice", "Government advisory roles"] },
-  { step: "04", phase: "Impact", title: "Measurable Health & Social Outcomes", desc: "Achieving healthier workers, safer mining workplaces, and stronger occupational health systems.", outputs: ["Reduced disease burden", "Early detection & prevention", "Improved worker wellbeing", "Zero Harm advancement"], gold: true },
-];
-
 const metrics = [
-  { value: "20+", label: "Years of Research", sub: "Occupational health expertise" },
-  { value: "45+", label: "Graduates Supervised", sub: "Master's & Doctoral" },
   { value: "11", label: "Policy Influence Areas", sub: "National & regulatory" },
   { value: "ZERO", label: "Harm Target", sub: "Our ultimate objective" },
 ];
@@ -83,7 +74,7 @@ export default function ResearchImpactPage() {
 
       {/* Metrics */}
       <section className="py-12 bg-[#162548] text-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-lg mx-auto px-6 grid grid-cols-2 gap-8 text-center">
           {metrics.map((m) => (
             <div key={m.label}>
               <p className="text-3xl md:text-4xl font-bold text-[#b8962e]">{m.value}</p>
@@ -94,50 +85,18 @@ export default function ResearchImpactPage() {
         </div>
       </section>
 
-      {/* Impact Pathway */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">How We Generate Value</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-3">
-              Research → Innovation → Policy → Impact
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto text-sm">
-              Our methodology follows a rigorous scientific cycle, ensuring that every discovery translates into
-              meaningful improvements in worker health and workplace safety.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {pathwaySteps.map((item, i) => (
-              <div
-                key={item.step}
-                className={`grid md:grid-cols-12 gap-0 ${item.gold ? "bg-[#b8962e] text-white" : i % 2 === 0 ? "bg-gray-50 border border-gray-200" : "bg-[#0d1b35] text-white"}`}
-              >
-                <div className={`md:col-span-2 p-8 flex items-center justify-center border-r ${item.gold ? "border-white/20" : i % 2 === 0 ? "border-gray-200" : "border-white/10"}`}>
-                  <div className="text-center">
-                    <p className={`text-4xl font-bold ${item.gold || i % 2 !== 0 ? "text-white/30" : "text-gray-200"}`}>{item.step}</p>
-                    <p className="text-xs font-bold tracking-widest uppercase mt-2 text-[#b8962e]">{item.phase}</p>
-                  </div>
-                </div>
-                <div className="md:col-span-6 p-8">
-                  <h3 className={`font-bold text-xl mb-3 ${item.gold || i % 2 !== 0 ? "text-white" : "text-[#0d1b35]"}`}>{item.title}</h3>
-                  <p className={`text-sm leading-relaxed ${item.gold ? "text-white/80" : i % 2 !== 0 ? "text-gray-300" : "text-gray-600"}`}>{item.desc}</p>
-                </div>
-                <div className={`md:col-span-4 p-8 border-l ${item.gold ? "border-white/20" : i % 2 === 0 ? "border-gray-200" : "border-white/10"}`}>
-                  <p className={`text-xs font-bold tracking-widest uppercase mb-3 ${item.gold ? "text-white/60" : "text-gray-400"}`}>Key Outputs</p>
-                  <ul className="space-y-2">
-                    {item.outputs.map((o) => (
-                      <li key={o} className="flex items-center gap-2">
-                        <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${item.gold ? "bg-white" : "bg-[#b8962e]"}`} />
-                        <span className={`text-sm ${item.gold ? "text-white/80" : i % 2 !== 0 ? "text-gray-300" : "text-gray-600"}`}>{o}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Impact pathway teaser */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            See the full Research → Innovation → Policy → Practice → Impact pathway on the Impact Framework page.
+          </p>
+          <Link
+            href="/impact-framework"
+            className="inline-block text-sm font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#b8962e] pb-0.5 hover:text-[#b8962e] transition-colors"
+          >
+            View Impact Framework →
+          </Link>
         </div>
       </section>
 

@@ -126,10 +126,10 @@ export default function ContactPage() {
               <Image src="/logos/samrc.svg" alt="SAMRC" width={140} height={60} className="object-contain mx-auto" />
             </div>
             <div className="text-center">
-              <Image src="/logos/univen.png" alt="University of Venda" width={80} height={80} className="object-contain mx-auto" />
+              <Image src="/logos/univen.png" alt="University of Venda" width={100} height={100} className="object-contain mx-auto" />
             </div>
             <div className="text-center">
-              <Image src="/logos/mintek.png" alt="Mintek" width={140} height={60} className="object-contain mx-auto" />
+              <Image src="/logos/mintek.png" alt="Mintek" width={100} height={100} className="object-contain mx-auto" />
             </div>
           </div>
         </div>

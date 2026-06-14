@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { flagshipProgrammes } from "@/lib/flagship-programmes";
 
 const themes = [
   {
@@ -41,17 +42,7 @@ const themes = [
   },
 ];
 
-const programmes = [
-  { tag: "ACTIVE",     subTag: "Flagship Programme",    title: "Occupational Disease Early Warning Systems" },
-  { tag: "STRATEGIC",  subTag: "Multi-year Study",       title: "AI-Powered Worker Health Surveillance" },
-  { tag: "ACTIVE",     subTag: "Gender-Responsive",      title: "Women in Mining Health & Safety" },
-  { tag: "STRATEGIC",  subTag: "Psychosocial Research",  title: "Mental Health in Mining" },
-  { tag: "ACTIVE",     subTag: "Hazard Research",        title: "Biological Hazards in Mining" },
-  { tag: "STRATEGIC",  subTag: "Prevention Focus",       title: "Occupational Cancer Prevention" },
-  { tag: "ACTIVE",     subTag: "Environmental Health",   title: "Climate Change & Worker Health" },
-  { tag: "ACTIVE",     subTag: "Water-Food-Health",      title: "Water-Food-Health Nexus Research" },
-  { tag: "INNOVATION", subTag: "Technology Development", title: "Digital Health Innovation Projects" },
-];
+const programmes = flagshipProgrammes;
 
 export default function ResearchThemesPage() {
   return (
@@ -74,7 +65,7 @@ export default function ResearchThemesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {themes.map((theme) => (
-              <div key={theme.title} className={`p-8 ${theme.gold ? "bg-[#b8962e]" : "bg-[#0d1b35]"} text-white`}>
+              <div key={theme.title} className={`p-8 ${theme.gold ? "bg-[#b8962e]" : "bg-[#314c7a]"} text-white`}>
                 <div className="w-10 h-10 mb-5 flex items-center justify-center border border-white/30">
                   <svg className="w-5 h-5 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -103,14 +94,30 @@ export default function ResearchThemesPage() {
             {programmes.map((prog, i) => (
               <div
                 key={prog.title}
-                className={`p-6 flex flex-col gap-3 ${
+                className={`overflow-hidden flex flex-col ${
                   i === 8
                     ? "bg-[#b8962e] text-white"
                     : i % 3 === 1
-                    ? "bg-[#0d1b35] text-white"
+                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
               >
+                <div className="relative h-36 w-full flex-shrink-0">
+                  <Image
+                    src={prog.image}
+                    alt={prog.imageAlt}
+                    fill
+                    unoptimized
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div
+                    className={`absolute inset-0 ${
+                      i === 8 ? "bg-[#b8962e]/35" : i % 3 === 1 ? "bg-[#314c7a]/40" : "bg-[#314c7a]/15"
+                    }`}
+                  />
+                </div>
+                <div className="p-6 flex flex-col gap-3 flex-1">
                 <div className="flex gap-2 items-center">
                   <span
                     className={`text-xs px-2 py-0.5 font-bold tracking-wider ${
@@ -118,7 +125,7 @@ export default function ResearchThemesPage() {
                         ? "bg-white/20 text-white"
                         : i % 3 === 1
                         ? "bg-[#b8962e] text-white"
-                        : "bg-[#0d1b35] text-white"
+                        : "bg-[#314c7a] text-white"
                     }`}
                   >
                     {prog.tag}
@@ -138,6 +145,7 @@ export default function ResearchThemesPage() {
                 >
                   {prog.title}
                 </h3>
+                </div>
               </div>
             ))}
           </div>

@@ -65,7 +65,7 @@ export default function GalleryPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="inline-block bg-[#0d1b35] text-white text-xs px-2 py-0.5 font-bold tracking-wider mb-3">
+                    <span className="inline-block bg-[#d22d20] text-white text-xs px-2 py-0.5 font-bold tracking-wider mb-3">
                       VIDEO
                     </span>
                     <h3 className="font-bold text-[#0d1b35] text-base leading-snug mb-2">
@@ -103,8 +103,8 @@ export default function GalleryPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-[#0d1b35]/20 group-hover:bg-[#0d1b35]/40 transition-colors" />
-                    <span className="absolute top-4 left-4 bg-[#0d1b35] text-white text-xs px-2 py-1 font-bold tracking-wider">
+                    <div className="absolute inset-0 bg-[#314c7a]/20 group-hover:bg-[#314c7a]/40 transition-colors" />
+                    <span className="absolute top-4 left-4 bg-[#d22d20] text-white text-xs px-2 py-1 font-bold tracking-wider">
                       {event.photos.length} PHOTOS
                     </span>
                   </div>
@@ -123,7 +123,7 @@ export default function GalleryPage() {
         </section>
       )}
 
-      <section className="py-16 bg-[#0d1b35] text-white text-center">
+      <section className="py-16 bg-[#314c7a] text-white text-center">
         <div className="max-w-xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-3">Follow Our Journey</h2>
           <p className="text-gray-300 text-sm mb-6">
@@ -133,7 +133,7 @@ export default function GalleryPage() {
             href="https://www.youtube.com/@goldfieldssouthdeep520"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#d22d20] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#b8251a] transition-colors"
+            className="btn-cta"
           >
             Subscribe to Our Channel
           </a>

@@ -130,10 +130,10 @@ export default function HumanCapitalPage() {
             {opportunities.map((opp) => (
               <div
                 key={opp.category}
-                className={`p-8 ${opp.dark ? "bg-[#0d1b35] text-white" : "bg-gray-50 border border-gray-200"}`}
+                className={`p-8 ${opp.dark ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className={`text-xs font-bold tracking-widest uppercase px-3 py-1 ${opp.dark ? "bg-[#b8962e] text-white" : "bg-[#0d1b35] text-white"}`}>
+                  <span className={`text-xs font-bold tracking-widest uppercase px-3 py-1 ${opp.dark ? "bg-[#b8962e] text-white" : "bg-[#d22d20] text-white"}`}>
                     {opp.tag}
                   </span>
                 </div>
@@ -170,9 +170,9 @@ export default function HumanCapitalPage() {
             {programmes.map((prog, i) => (
               <div
                 key={prog.title}
-                className={`p-8 ${i === 1 ? "bg-[#0d1b35] text-white" : i === 4 ? "bg-[#b8962e] text-white" : "bg-white border border-gray-200"}`}
+                className={`p-8 ${i === 1 ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : i === 4 ? "bg-[#b8962e] text-white" : "bg-white border border-gray-200"}`}
               >
-                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${i === 1 || i === 4 ? "bg-white/20 text-white" : "bg-[#0d1b35] text-[#b8962e]"}`}>
+                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${i === 1 || i === 4 ? "bg-white/20 text-white" : "bg-[#314c7a] text-[#b8962e]"}`}>
                   {prog.icon}
                 </div>
                 <h3 className={`font-bold text-base mb-3 ${i === 1 || i === 4 ? "text-white" : "text-[#0d1b35]"}`}>
@@ -188,7 +188,7 @@ export default function HumanCapitalPage() {
       </section>
 
       {/* Research themes link */}
-      <section className="py-20 bg-[#0d1b35] text-white">
+      <section className="py-20 bg-[#314c7a] text-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Research Themes</p>
@@ -215,7 +215,7 @@ export default function HumanCapitalPage() {
                 </div>
               ))}
             </div>
-            <Link href="/research-themes" className="inline-block bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors">
+            <Link href="/research-themes" className="inline-block btn-cta">
               Explore Research Themes
             </Link>
           </div>

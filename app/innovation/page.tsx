@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import PageHero from "@/components/PageHero";
 
 const innovationAreas = [
@@ -72,7 +71,7 @@ export default function InnovationPage() {
                 solutions.
               </p>
             </div>
-            <div className="bg-[#0d1b35] text-white p-8">
+            <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-8">
               <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">Creating Value Through Innovation</p>
               <p className="text-gray-300 text-sm mb-6">Through its innovation and commercialisation activities, the DHAIOH Unit aims to:</p>
               <ul className="space-y-3">
@@ -108,7 +107,7 @@ export default function InnovationPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left column */}
             <div>
-              <div className="bg-[#0d1b35] text-white p-8 mb-6">
+              <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-8 mb-6">
                 <div className="flex gap-3 mb-5">
                   <div className="w-10 h-10 border border-white/30 flex items-center justify-center">
                     <svg className="w-5 h-5 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -123,7 +122,7 @@ export default function InnovationPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#0d1b35] text-white p-6">
+                <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-6">
                   <div className="w-8 h-8 border border-white/30 flex items-center justify-center mb-4">
                     <svg className="w-4 h-4 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -134,7 +133,7 @@ export default function InnovationPage() {
                     Developing wearable and sensor-based health technologies that support real-time monitoring of occupational exposures and worker health surveillance.
                   </p>
                 </div>
-                <div className="bg-[#0d1b35] text-white p-6">
+                <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-6">
                   <h3 className="font-bold text-white text-sm mb-2">Strategic Impact Pathway</h3>
                   <p className="text-white/60 text-xs leading-relaxed mb-4">
                     Through strategic partnerships with industry, government, technology developers, and research organisations, the Unit accelerates the translation of research into scalable solutions.
@@ -151,7 +150,7 @@ export default function InnovationPage() {
 
             {/* Right column */}
             <div className="space-y-4">
-              <div className="bg-[#0d1b35] text-white p-8" id="ai-hub">
+              <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-8" id="ai-hub">
                 <div className="w-10 h-10 border border-white/30 flex items-center justify-center mb-4">
                   <svg className="w-5 h-5 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -176,18 +175,13 @@ export default function InnovationPage() {
                   Explore Research Themes →
                 </Link>
               </div>
-
-              <div className="h-56 bg-gray-200 flex flex-col items-center justify-center gap-2">
-                <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1.5"/><circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5"/><path strokeWidth="1.5" d="M21 15l-5-5L5 21"/></svg>
-                <p className="text-gray-400 text-xs tracking-widest uppercase">Image Placeholder</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Digital Intelligence Banner */}
-      <section className="py-20 bg-[#0d1b35] text-white">
+      <section className="py-20 bg-[#314c7a] text-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -209,12 +203,8 @@ export default function InnovationPage() {
               ))}
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="text-center">
-              <div className="w-64 h-56 bg-white/10 border border-white/10 flex flex-col items-center justify-center gap-2 mb-6">
-                <svg className="w-10 h-10 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="1.5"/><circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5"/><path strokeWidth="1.5" d="M21 15l-5-5L5 21"/></svg>
-                <p className="text-white/20 text-xs tracking-widest uppercase">Image Placeholder</p>
-              </div>
+          <div className="flex justify-center md:justify-end">
+            <div className="text-center md:text-right">
               <p className="text-3xl font-bold">ZERO HARM</p>
               <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mt-2">Our Ultimate Objective</p>
             </div>
@@ -231,7 +221,7 @@ export default function InnovationPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {innovationAreas.map((area) => (
-              <div key={area} className="bg-[#0d1b35] text-white px-5 py-4 flex items-center gap-3">
+              <div key={area} className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] px-5 py-4 flex items-center gap-3">
                 <div className="w-2 h-2 bg-[#b8962e] rounded-full flex-shrink-0" />
                 <span className="text-sm text-white/80">{area}</span>
               </div>

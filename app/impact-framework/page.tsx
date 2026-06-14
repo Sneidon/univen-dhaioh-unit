@@ -72,7 +72,7 @@ export default function ImpactFrameworkPage() {
             {pathway.map((item, i) => (
               <div
                 key={item.step}
-                className={`grid md:grid-cols-12 gap-0 ${item.gold ? "bg-[#b8962e] text-white" : i % 2 === 0 ? "bg-gray-50 border border-gray-200" : "bg-[#0d1b35] text-white"}`}
+                className={`grid md:grid-cols-12 gap-0 ${item.gold ? "bg-[#b8962e] text-white" : i % 2 === 0 ? "bg-gray-50 border border-gray-200" : "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"}`}
               >
                 {/* Step number */}
                 <div className={`md:col-span-2 p-8 flex items-center justify-center border-r ${item.gold ? "border-white/20" : i % 2 === 0 ? "border-gray-200" : "border-white/10"}`}>
@@ -125,7 +125,7 @@ export default function ImpactFrameworkPage() {
           </p>
           <Link
             href="/research-impact"
-            className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+            className="btn-cta"
           >
             View Policy & Practice Influence Areas →
           </Link>
@@ -133,7 +133,7 @@ export default function ImpactFrameworkPage() {
       </section>
 
       {/* Zero Harm CTA */}
-      <section className="py-20 bg-[#0d1b35] text-white text-center">
+      <section className="py-20 bg-[#314c7a] text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
           <div className="inline-block bg-white text-[#0d1b35] px-12 py-8 mb-10">
             <p className="text-5xl font-bold">ZERO</p>
@@ -146,7 +146,7 @@ export default function ImpactFrameworkPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/research-themes"
-              className="bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
+              className="btn-cta"
             >
               Explore Research
             </Link>

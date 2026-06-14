@@ -119,7 +119,7 @@ export default function StrategicPartnersPage() {
               <div
                 key={partner.name}
                 className={`p-8 flex flex-col ${
-                  partner.dark ? "bg-[#0d1b35] text-white" : partner.gold ? "bg-[#b8962e] text-white" : "border border-gray-200"
+                  partner.dark ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : partner.gold ? "bg-[#b8962e] text-white" : "border border-gray-200"
                 }`}
               >
                 <p className={`text-xs font-bold tracking-widest uppercase mb-3 ${partner.dark || partner.gold ? "text-white/60" : "text-[#b8962e]"}`}>
@@ -134,7 +134,7 @@ export default function StrategicPartnersPage() {
                   {partner.name}
                 </h3>
                 <span className={`inline-block text-xs font-bold tracking-wider px-2 py-0.5 mb-5 self-start ${
-                  partner.dark ? "bg-[#b8962e] text-white" : partner.gold ? "bg-white/20 text-white" : "bg-[#0d1b35] text-white"
+                  partner.dark ? "bg-[#b8962e] text-white" : partner.gold ? "bg-white/20 text-white" : "bg-[#d22d20] text-white"
                 }`}>
                   {partner.role}
                 </span>
@@ -156,7 +156,7 @@ export default function StrategicPartnersPage() {
               <p className="text-gray-600 leading-relaxed mb-6">
                 As an interdisciplinary and innovation-driven initiative hosted by the University of Venda, the DHAIOH Unit collaborates closely with a range of institutional structures that support research excellence, digital transformation, innovation, and societal impact.
               </p>
-              <div className="bg-[#0d1b35] text-white p-6">
+              <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-6">
                 <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">Partnership Vision</p>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   These institutional partnerships provide the academic, technological, innovation, governance, and commercialisation support required to advance the DHAIOH Unit&apos;s research, innovation, and human capital development agenda.
@@ -194,7 +194,7 @@ export default function StrategicPartnersPage() {
       </section>
 
       {/* Innovation Partners */}
-      <section className="py-20 bg-[#0d1b35] text-white">
+      <section className="py-20 bg-[#314c7a] text-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
           <div>
             <h2 className="text-3xl font-bold mb-4">Innovation & Technology Partners</h2>
@@ -241,7 +241,7 @@ export default function StrategicPartnersPage() {
             {collaborationTypes.map((item, i) => (
               <div
                 key={item.title}
-                className={`p-8 ${i === 0 ? "bg-[#0d1b35] text-white" : i === 3 ? "bg-[#b8962e] text-white" : "bg-white border border-gray-200"}`}
+                className={`p-8 ${i === 0 ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : i === 3 ? "bg-[#b8962e] text-white" : "bg-white border border-gray-200"}`}
               >
                 <h3 className={`font-bold text-base mb-3 ${i === 0 || i === 3 ? "text-white" : "text-[#0d1b35]"}`}>
                   {item.title}
@@ -256,7 +256,7 @@ export default function StrategicPartnersPage() {
           <div className="text-center mt-12">
             <Link
               href="/contact"
-              className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-10 py-4 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+              className="btn-cta px-10 py-4"
             >
               Get In Touch
             </Link>

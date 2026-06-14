@@ -3,8 +3,12 @@
 :root {
   --navy: #0d1b35;
   --navy-light: #162548;
+  --blue: #314c7a;
+  --blue-dark: #273d62;
   --gold: #b8962e;
   --gold-light: #c9a84c;
+  --red: #d22d20;
+  --red-dark: #b8251a;
   --foreground: #1a1a1a;
   --muted: #6b7280;
 }
@@ -17,4 +21,14 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@layer components {
+  .btn-cta {
+    @apply inline-block bg-[#d22d20] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#b8251a] transition-colors;
+  }
+
+  .btn-cta-sm {
+    @apply inline-block bg-[#d22d20] text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-[#b8251a] transition-colors;
+  }
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { flagshipProgrammes } from "@/lib/flagship-programmes";
 
 const researchThemes = [
   {
@@ -135,7 +136,7 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-4 mt-8">
             <Link
               href="/research-themes"
-              className="bg-[#b8962e] text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
+              className="btn-cta-sm"
             >
               Explore Research
             </Link>
@@ -186,19 +187,19 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="p-6 border border-gray-200 bg-white flex flex-col items-start">
+              <div className="p-6 border border-gray-200 border-t-4 border-t-[#d22d20] bg-white flex flex-col items-start">
                 <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">STRATEGIC FUNDER</p>
                 <Image src="/logos/samrc.svg" alt="SAMRC" width={120} height={50} className="object-contain mb-3" />
                 <p className="font-bold text-[#0d1b35] text-sm">South African Medical Research Council</p>
               </div>
 
-              <div className="p-6 border border-gray-200 bg-white flex flex-col items-start">
+              <div className="p-6 border border-gray-200 border-t-4 border-t-[#d22d20] bg-white flex flex-col items-start">
                 <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">HOST INSTITUTION</p>
                 <Image src="/logos/univen.png" alt="University of Venda" width={80} height={80} className="object-contain mb-3" />
                 <p className="font-bold text-[#0d1b35] text-sm">University of Venda</p>
               </div>
 
-              <div className="col-span-2 p-6 border border-gray-200 bg-white flex items-center gap-6">
+              <div className="col-span-2 p-6 border border-gray-200 border-t-4 border-t-[#d22d20] bg-white flex items-center gap-6">
                 <div className="flex-1">
                   <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">STRATEGIC RESEARCH PARTNER</p>
                   <p className="font-bold text-[#0d1b35] text-lg">Mintek</p>
@@ -214,7 +215,7 @@ export default function HomePage() {
       </section>
 
       {/* Impact Metrics */}
-      <section className="py-12 bg-[#0d1b35] text-white">
+      <section className="py-12 bg-[#314c7a] text-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {impactMetrics.map((stat) => (
             <div key={stat.label}>
@@ -248,7 +249,7 @@ export default function HomePage() {
                   i === 9
                     ? "bg-[#b8962e] text-white"
                     : i % 3 === 0
-                    ? "bg-[#0d1b35] text-white"
+                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
               >
@@ -269,7 +270,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/about"
-              className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+              className="btn-cta"
             >
               Explore Full Framework
             </Link>
@@ -304,7 +305,7 @@ export default function HomePage() {
                     : theme.gold
                     ? "bg-[#b8962e] text-white"
                     : theme.dark
-                    ? "bg-[#0d1b35] text-white"
+                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
                     : "border border-gray-200 bg-white"
                 }`}
               >
@@ -323,8 +324,8 @@ export default function HomePage() {
                       theme.gold
                         ? "bg-[#b8962e]/25"
                         : theme.dark
-                        ? "bg-[#0d1b35]/30"
-                        : "bg-[#0d1b35]/10"
+                        ? "bg-[#314c7a]/30"
+                        : "bg-[#314c7a]/10"
                     }`}
                   />
                 </div>
@@ -376,7 +377,7 @@ export default function HomePage() {
       </section>
 
       {/* Impact Pathway */}
-      <section className="py-20 bg-[#0d1b35] text-white">
+      <section className="py-20 bg-[#314c7a] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">How We Generate Value</p>
@@ -417,7 +418,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/impact-framework"
-              className="inline-block bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
+              className="inline-block btn-cta"
             >
               View Full Impact Framework
             </Link>
@@ -439,37 +440,49 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {[
-              { n: "01", title: "Occupational Disease Early Warning Systems" },
-              { n: "02", title: "AI-Powered Worker Health Surveillance", dark: true },
-              { n: "03", title: "Women in Mining Health & Safety" },
-              { n: "04", title: "Mental Health in Mining", gold: true },
-              { n: "05", title: "Biological Hazards in Mining" },
-              { n: "06", title: "Occupational Cancer Prevention", dark: true },
-              { n: "07", title: "Climate Change & Worker Health" },
-              { n: "08", title: "Water-Food-Health Nexus Research" },
-              { n: "09", title: "Digital Health Innovation Projects", dark: true },
-            ].map((prog) => (
+            {flagshipProgrammes.map((prog, i) => {
+              const gold = i === 3;
+              const dark = i === 1 || i === 5 || i === 8;
+
+              return (
               <div
                 key={prog.n}
-                className={`p-6 flex flex-col gap-3 ${
-                  prog.gold
+                className={`overflow-hidden flex flex-col ${
+                  gold
                     ? "bg-[#b8962e] text-white"
-                    : prog.dark
-                    ? "bg-[#0d1b35] text-white"
+                    : dark
+                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
               >
-                <span className="text-xl font-bold text-[#b8962e]">{prog.n}</span>
-                <p
-                  className={`text-sm font-semibold leading-snug ${
-                    prog.gold || prog.dark ? "text-white" : "text-[#0d1b35]"
-                  }`}
-                >
-                  {prog.title}
-                </p>
+                <div className="relative h-28 w-full flex-shrink-0">
+                  <Image
+                    src={prog.image}
+                    alt={prog.imageAlt}
+                    fill
+                    unoptimized
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                  <div
+                    className={`absolute inset-0 ${
+                      gold ? "bg-[#b8962e]/35" : dark ? "bg-[#314c7a]/40" : "bg-[#314c7a]/15"
+                    }`}
+                  />
+                </div>
+                <div className="p-4 flex flex-col gap-2 flex-1">
+                  <span className="text-lg font-bold text-[#b8962e]">{prog.n}</span>
+                  <p
+                    className={`text-sm font-semibold leading-snug ${
+                      gold || dark ? "text-white" : "text-[#0d1b35]"
+                    }`}
+                  >
+                    {prog.title}
+                  </p>
+                </div>
               </div>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
@@ -488,7 +501,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+                className="btn-cta"
               >
                 Apply or Enquire
               </Link>
@@ -497,7 +510,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3">
               {hcdItems.map((item) => (
                 <div key={item.label} className="bg-gray-50 border border-gray-200 p-5 flex items-center gap-4">
-                  <div className="w-10 h-10 bg-[#0d1b35] text-[#b8962e] flex items-center justify-center font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#314c7a] text-[#b8962e] flex items-center justify-center font-bold text-sm flex-shrink-0">
                     {item.icon}
                   </div>
                   <span className="text-sm font-medium text-[#0d1b35] leading-snug">{item.label}</span>
@@ -509,7 +522,7 @@ export default function HomePage() {
       </section>
 
       {/* Investment & Collaboration */}
-      <section className="py-20 bg-[#0d1b35] text-white">
+      <section className="py-20 bg-[#314c7a] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
@@ -524,7 +537,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors"
+                className="inline-block btn-cta"
               >
                 Partner With Us
               </Link>

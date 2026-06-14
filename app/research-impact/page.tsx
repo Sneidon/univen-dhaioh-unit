@@ -67,7 +67,7 @@ export default function ResearchImpactPage() {
       </PageHero>
 
       {/* Metrics */}
-      <section className="py-12 bg-[#162548] text-white">
+      <section className="py-12 bg-[#273d62] text-white">
         <div className="max-w-lg mx-auto px-6 grid grid-cols-2 gap-8 text-center">
           {metrics.map((m) => (
             <div key={m.label}>
@@ -105,9 +105,9 @@ export default function ResearchImpactPage() {
             {impactAreas.map((area) => (
               <div
                 key={area.title}
-                className={`p-8 ${area.gold ? "bg-[#b8962e] text-white" : area.dark ? "bg-[#0d1b35] text-white" : "bg-white border border-gray-200"}`}
+                className={`p-8 ${area.gold ? "bg-[#b8962e] text-white" : area.dark ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
               >
-                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${area.gold ? "bg-white/20 text-white" : area.dark ? "bg-[#b8962e] text-white" : "bg-[#0d1b35] text-[#b8962e]"}`}>
+                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${area.gold ? "bg-white/20 text-white" : area.dark ? "bg-[#b8962e] text-white" : "bg-[#314c7a] text-[#b8962e]"}`}>
                   {area.icon}
                 </div>
                 <h3 className={`font-bold text-lg mb-3 ${area.gold || area.dark ? "text-white" : "text-[#0d1b35]"}`}>{area.title}</h3>
@@ -134,7 +134,7 @@ export default function ResearchImpactPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+                className="btn-cta"
               >
                 Engage With Us
               </Link>
@@ -143,7 +143,7 @@ export default function ResearchImpactPage() {
               {policyAreas.map((area, i) => (
                 <div
                   key={area}
-                  className={`flex items-center gap-4 p-4 border ${i === 0 ? "bg-[#0d1b35] text-white border-[#0d1b35]" : "border-gray-200 bg-white"}`}
+                  className={`flex items-center gap-4 p-4 border border-[#314c7a] ${i === 0 ? "bg-[#314c7a] text-white border-t-4 border-t-[#d22d20]" : "border-gray-200 bg-white"}`}
                 >
                   <div className={`w-6 h-6 rounded flex items-center justify-center flex-shrink-0 ${i === 0 ? "bg-[#b8962e]" : "bg-gray-100"}`}>
                     <svg className={`w-3 h-3 ${i === 0 ? "text-white" : "text-[#b8962e]"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -159,14 +159,14 @@ export default function ResearchImpactPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#0d1b35] text-white text-center">
+      <section className="py-20 bg-[#314c7a] text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Making Every Mine Safe. Every Day.</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-10 text-sm leading-relaxed">
             Every research project, every innovation, every partnership is oriented toward one goal.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/impact-framework" className="bg-[#b8962e] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors">
+            <Link href="/impact-framework" className="btn-cta">
               Full Impact Framework
             </Link>
             <Link href="/strategic-partners" className="border border-white/40 text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-white/10 transition-colors">

@@ -96,7 +96,7 @@ export default function AboutPage() {
       {/* Vision & Mission */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6">
-          <div className="bg-[#0d1b35] text-white p-10">
+          <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-10">
             <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -109,7 +109,7 @@ export default function AboutPage() {
               health through digital innovation, artificial intelligence, and predictive health systems.
             </p>
           </div>
-          <div className="bg-[#0d1b35] text-white p-10">
+          <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-10">
             <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
@@ -137,7 +137,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/leadership"
-            className="inline-block bg-[#0d1b35] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#162548] transition-colors"
+            className="btn-cta"
           >
             Meet the Leadership Team →
           </Link>
@@ -161,7 +161,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pillars.map((p) => (
-              <div key={p.n} className="bg-[#0d1b35] p-8">
+              <div key={p.n} className="bg-[#314c7a] text-white p-8">
                 <div className="flex justify-between items-start mb-4">
                   <span className="text-2xl font-bold text-[#b8962e]">{p.n}</span>
                   <div className="w-8 h-8 border border-[#b8962e]/40 rounded flex items-center justify-center">
@@ -199,11 +199,11 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#0d1b35] text-white text-center">
+      <section className="py-20 bg-[#314c7a] text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-5xl font-bold mb-10">Transforming Health. Protecting Lives.</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/research-themes" className="bg-[#b8962e] text-white text-sm font-bold px-8 py-4 tracking-widest uppercase hover:bg-[#c9a84c] transition-colors">
+            <Link href="/research-themes" className="btn-cta py-4">
               Explore Research
             </Link>
             <Link href="/impact-framework" className="border border-white/40 text-white text-sm font-bold px-8 py-4 tracking-widest uppercase hover:bg-white/10 transition-colors">

@@ -78,15 +78,16 @@ export default function Navbar() {
 
   return (
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-24">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center py-2">
           <Image
             src="/logos/ohs-logo.png"
             alt="OHS in Mining Research Institute – University of Venda"
-            width={200}
-            height={44}
-            className="object-contain"
+            width={1376}
+            height={618}
+            className="h-20 w-auto object-contain"
+            priority
           />
         </Link>
 

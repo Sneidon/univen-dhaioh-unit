@@ -30,7 +30,7 @@ export default function GalleryEventPage() {
       <section className="relative text-white py-28 md:py-40 overflow-hidden bg-[#0d1b35]">
         <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-7xl">
           <Image
-            src={photos[0].src}
+            src={event.cover ?? photos[0].src}
             alt={event.title}
             fill
             priority

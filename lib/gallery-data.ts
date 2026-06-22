@@ -14,6 +14,7 @@ export type GalleryEvent = {
   title: string;
   description: string;
   photos: GalleryPhoto[];
+  cover?: string;
 };
 
 const southDeepPhotos: GalleryPhoto[] = [
@@ -57,6 +58,7 @@ export const galleryEvents: GalleryEvent[] = [
     title: "Open-Pit Mining Operations — Field Reconnaissance",
     description:
       "A comprehensive visual documentation of open-pit mining operations, capturing equipment, personnel, and site conditions that inform the DHAIOH Unit's occupational health research in surface and underground mining environments.",
+    cover: "/banners/hero-open-pit-ops.png",
     photos: openPitOpsPhotos,
   },
   {

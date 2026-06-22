@@ -302,7 +302,7 @@ export default function HomePage() {
                 key={theme.num}
                 className={`overflow-hidden flex flex-col ${
                   theme.featured
-                    ? "lg:row-span-2 border border-gray-200 bg-white"
+                    ? "border border-gray-200 bg-white"
                     : theme.gold
                     ? "bg-[#b8962e] text-white"
                     : theme.dark
@@ -310,7 +310,7 @@ export default function HomePage() {
                     : "border border-gray-200 bg-white"
                 }`}
               >
-                <div className={`relative w-full flex-shrink-0 ${theme.featured ? "h-80 lg:h-96" : "h-72"}`}>
+                <div className={`relative w-full flex-shrink-0 ${"h-72"}`}>
                   <Image
                     src={theme.image}
                     alt={theme.imageAlt}
@@ -356,7 +356,7 @@ export default function HomePage() {
                           : theme.gold
                           ? "text-white/80"
                           : "text-gray-600"
-                      } ${theme.featured ? "mb-8" : ""}`}
+                      }`}
                     >
                       {theme.desc}
                     </p>

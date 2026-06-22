@@ -17,6 +17,25 @@ export type GalleryEvent = {
   cover?: string;
 };
 
+const dolomiteMinePhotos: GalleryPhoto[] = [
+  { src: "/gallery/dolomite-1.jpg",  caption: "Dolomite Mine — open-pit overview with processing facilities" },
+  { src: "/gallery/dolomite-2.jpg",  caption: "Field assessment — researcher and site manager at crane" },
+  { src: "/gallery/dolomite-3.jpg",  caption: "DHAIOH team at Dolomite Mine — open pit in background" },
+  { src: "/gallery/dolomite-4.jpg",  caption: "Researcher descending mine access stairs" },
+  { src: "/gallery/dolomite-5.jpg",  caption: "Site walkthrough — researcher alongside haul truck" },
+  { src: "/gallery/dolomite-6.jpg",  caption: "Partnership engagement — researcher and site representative" },
+  { src: "/gallery/dolomite-7.jpg",  caption: "Field visit — researcher with XCMG wheel loader" },
+  { src: "/gallery/dolomite-8.jpg",  caption: "Active wheel loader operations — dust exposure observation" },
+  { src: "/gallery/dolomite-10.jpg", caption: "Researcher conducting walkthrough — mine haulage area" },
+  { src: "/gallery/dolomite-17.jpg", caption: "Dust generation during loading operations" },
+  { src: "/gallery/dolomite-18.jpg", caption: "Wheel loader at work — material handling and dust exposure" },
+  { src: "/gallery/dolomite-19.jpg", caption: "Equipment inspection — welding machinery assessment" },
+  { src: "/gallery/dolomite-20.jpg", caption: "Collaborative equipment review inside mine facility" },
+  { src: "/gallery/dolomite-21.jpg", caption: "Dolomite Mine — full site panorama with conveyor systems" },
+  { src: "/gallery/dolomite-22.jpg", caption: "Terraced open-pit face with haulage and processing infrastructure" },
+  { src: "/gallery/dolomite-25.jpg", caption: "Elevated site view — conveyor bridge and haulage routes" },
+];
+
 const southDeepPhotos: GalleryPhoto[] = [
   { src: "/gallery/mine-1.jpg", caption: "Underground field visit — South Deep Gold Mine" },
   { src: "/gallery/mine-2.jpg", caption: "Research team underground at South Deep" },
@@ -53,6 +72,14 @@ const openPitOpsPhotos: GalleryPhoto[] = [
 ];
 
 export const galleryEvents: GalleryEvent[] = [
+  {
+    slug: "dolomite-mine-field-visit",
+    title: "Dolomite Mine Field Visit",
+    description:
+      "A hands-on research visit to a Dolomite Mine, examining occupational health conditions, dust exposure, equipment hazards, and worker safety in surface mining operations.",
+    cover: "/gallery/dolomite-1.jpg",
+    photos: dolomiteMinePhotos,
+  },
   {
     slug: "open-pit-mining-operations",
     title: "Open-Pit Mining Operations — Field Reconnaissance",

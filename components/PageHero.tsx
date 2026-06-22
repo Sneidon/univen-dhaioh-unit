@@ -19,19 +19,23 @@ export default function PageHero({
   priority = true,
 }: PageHeroProps) {
   return (
-    <section className={`relative text-white overflow-hidden ${className}`}>
-      <div className="absolute inset-0">
+    <section className={`relative text-white overflow-hidden bg-[#0d1b35] ${className}`}>
+      {/* image constrained to max-w-7xl, centered */}
+      <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-7xl">
         <Image
           src={assetUrl(src)}
           alt={alt}
           fill
           priority={priority}
           quality={80}
-          sizes="100vw"
+          sizes="1280px"
           className={imageClassName}
         />
+        {/* gradient: transparent at center, darkens toward both edges */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #0d1b35 0%, transparent 50%, #0d1b35 100%)" }} />
+        {/* extra left overlay for text legibility */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,53,0.65) 0%, transparent 55%)" }} />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b35]/88 via-[#0d1b35]/52 to-[#0d1b35]/18" />
       <div className="relative max-w-7xl mx-auto px-6">{children}</div>
     </section>
   );

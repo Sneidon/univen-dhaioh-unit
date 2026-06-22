@@ -320,15 +320,6 @@ export default function HomePage() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
                   />
-                  <div
-                    className={`absolute inset-0 ${
-                      theme.gold
-                        ? "bg-[#b8962e]/25"
-                        : theme.dark
-                        ? "bg-[#164076]/30"
-                        : "bg-[#164076]/10"
-                    }`}
-                  />
                 </div>
 
                 <div className={`p-8 flex flex-col flex-1 ${theme.gold ? "justify-between min-h-40" : ""}`}>
@@ -456,7 +447,7 @@ export default function HomePage() {
                     : "bg-white border border-gray-200"
                 }`}
               >
-                <div className="relative h-28 w-full flex-shrink-0">
+                <div className="relative h-44 w-full flex-shrink-0">
                   <Image
                     src={prog.image}
                     alt={prog.imageAlt}
@@ -465,11 +456,6 @@ export default function HomePage() {
                     quality={70}
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 320px"
-                  />
-                  <div
-                    className={`absolute inset-0 ${
-                      gold ? "bg-[#b8962e]/35" : dark ? "bg-[#164076]/40" : "bg-[#164076]/15"
-                    }`}
                   />
                 </div>
                 <div className="p-4 flex flex-col gap-2 flex-1">

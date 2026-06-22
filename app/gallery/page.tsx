@@ -120,7 +120,7 @@ export default function GalleryPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-[#164076]/20 group-hover:bg-[#164076]/40 transition-colors" />
+                    
                     <span className="absolute top-4 left-4 bg-[#d22d20] text-white text-xs px-2 py-1 font-bold tracking-wider">
                       {event.photos.length} PHOTOS
                     </span>

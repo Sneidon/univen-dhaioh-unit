@@ -120,7 +120,7 @@ export default function ResearchThemesPage() {
                     : "bg-white border border-gray-200"
                 }`}
               >
-                <div className="relative h-36 w-full flex-shrink-0">
+                <div className="relative h-52 w-full flex-shrink-0">
                   <Image
                     src={prog.image}
                     alt={prog.imageAlt}
@@ -130,11 +130,7 @@ export default function ResearchThemesPage() {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
                   />
-                  <div
-                    className={`absolute inset-0 ${
-                      i === 8 ? "bg-[#b8962e]/35" : i % 3 === 1 ? "bg-[#164076]/40" : "bg-[#164076]/15"
-                    }`}
-                  />
+
                 </div>
                 <div className="p-6 flex flex-col gap-3 flex-1">
                 <div className="flex gap-2 items-center">

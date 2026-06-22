@@ -11,16 +11,8 @@ type CardImageHeaderProps = {
 export default function CardImageHeader({
   src,
   alt,
-  overlay = "light",
   className = "h-72",
 }: CardImageHeaderProps) {
-  const overlayClass =
-    overlay === "gold"
-      ? "bg-[#b8962e]/35"
-      : overlay === "blue"
-      ? "bg-[#164076]/40"
-      : "bg-[#164076]/15";
-
   return (
     <div className={`relative w-full flex-shrink-0 ${className}`}>
       <Image
@@ -32,7 +24,6 @@ export default function CardImageHeader({
         className="object-cover"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
       />
-      <div className={`absolute inset-0 ${overlayClass}`} />
     </div>
   );
 }

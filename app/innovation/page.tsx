@@ -139,7 +139,7 @@ export default function InnovationPage() {
             {/* Left column */}
             <div>
               <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden mb-6">
-                <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} overlay="blue" className="h-36" />
+                <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} overlay="blue" className="h-48" />
                 <div className="p-8">
                 <div className="flex gap-3 mb-5">
                   <div className="w-10 h-10 border border-white/30 flex items-center justify-center">
@@ -157,7 +157,7 @@ export default function InnovationPage() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden">
-                  <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} overlay="blue" className="h-28" />
+                  <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} overlay="blue" className="h-48" />
                   <div className="p-6">
                   <div className="w-8 h-8 border border-white/30 flex items-center justify-center mb-4">
                     <svg className="w-4 h-4 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,7 +171,7 @@ export default function InnovationPage() {
                   </div>
                 </div>
                 <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden">
-                  <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} overlay="blue" className="h-28" />
+                  <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} overlay="blue" className="h-48" />
                   <div className="p-6">
                   <h3 className="font-bold text-white text-sm mb-2">{portfolioCards.pathway.title}</h3>
                   <p className="text-white/60 text-xs leading-relaxed mb-4">
@@ -191,7 +191,7 @@ export default function InnovationPage() {
             {/* Right column */}
             <div className="space-y-4">
               <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden" id="ai-hub">
-                <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} overlay="blue" className="h-40" />
+                <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} overlay="blue" className="h-52" />
                 <div className="p-8">
                 <div className="w-10 h-10 border border-white/30 flex items-center justify-center mb-4">
                   <svg className="w-5 h-5 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -27,8 +27,8 @@ export default function GalleryEventPage() {
 
   return (
     <>
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative text-white py-28 md:py-40 overflow-hidden bg-[#0d1b35]">
+        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full max-w-7xl">
           <Image
             src={photos[0].src}
             alt={event.title}
@@ -36,10 +36,11 @@ export default function GalleryEventPage() {
             priority
             quality={80}
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-top"
           />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #0d1b35 0%, transparent 25%, transparent 75%, #0d1b35 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(13,27,53,0.65) 0%, transparent 55%)" }} />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d1b35]/88 via-[#0d1b35]/52 to-[#0d1b35]/18" />
         <div className="relative max-w-7xl mx-auto px-6">
           <Link
             href="/gallery"

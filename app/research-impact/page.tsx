@@ -118,7 +118,7 @@ export default function ResearchImpactPage() {
                   src={area.image.src}
                   alt={area.image.alt}
                   overlay={area.gold ? "gold" : area.dark ? "blue" : "light"}
-                  className="h-32"
+                  className="h-44"
                 />
                 <div className="p-8 flex flex-col flex-1">
                 <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${area.gold ? "bg-white/20 text-white" : area.dark ? "bg-[#b8962e] text-white" : "bg-[#164076] text-[#b8962e]"}`}>

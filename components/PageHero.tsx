@@ -28,7 +28,7 @@ export default function PageHero({
           fill
           priority={priority}
           quality={80}
-          sizes="1280px"
+          sizes="100vw"
           className={imageClassName}
         />
         {/* gradient: transparent at center, darkens toward both edges */}

@@ -36,7 +36,29 @@ const southDeepPhotos: GalleryPhoto[] = [
   { src: "/gallery/mine-17.jpg", caption: "Technical briefing — mining equipment" },
 ];
 
+const openPitOpsPhotos: GalleryPhoto[] = [
+  { src: "/gallery/ops-1.png", caption: "Haulage operations — excavator loading at the mine face" },
+  { src: "/gallery/ops-2.png", caption: "Aerial overview of open-pit mine terracing" },
+  { src: "/gallery/ops-3.png", caption: "Bird's-eye view of active excavation and haulage routes" },
+  { src: "/gallery/ops-4.png", caption: "Worker health observation — mine processing facility" },
+  { src: "/gallery/ops-5.png", caption: "Surface mining infrastructure from above" },
+  { src: "/gallery/ops-6.png", caption: "Site supervisor at haulage area — open-pit mine" },
+  { src: "/gallery/ops-7.png", caption: "Excavator and haul truck operations — surface mine" },
+  { src: "/gallery/ops-8.png", caption: "Mine workers conducting site patrol — open-pit operations" },
+  { src: "/gallery/ops-9.png", caption: "Mine headframe at dusk — surface winding infrastructure" },
+  { src: "/gallery/ops-10.png", caption: "Underground tunnel assessment — deep-level mine" },
+  { src: "/gallery/ops-11.png", caption: "Heavy haulage fleet at surface — mine transport operations" },
+  { src: "/gallery/ops-12.png", caption: "Wheel loader at the quarry rock face — surface operations" },
+];
+
 export const galleryEvents: GalleryEvent[] = [
+  {
+    slug: "open-pit-mining-operations",
+    title: "Open-Pit Mining Operations — Field Reconnaissance",
+    description:
+      "A comprehensive visual documentation of open-pit mining operations, capturing equipment, personnel, and site conditions that inform the DHAIOH Unit's occupational health research in surface and underground mining environments.",
+    photos: openPitOpsPhotos,
+  },
   {
     slug: "south-deep-gold-mine",
     title: "South Deep Gold Mine Field Visit",

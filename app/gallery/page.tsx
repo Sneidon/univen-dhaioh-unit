@@ -55,15 +55,32 @@ export default function GalleryPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {galleryVideos.map((video) => (
                 <article key={video.id} className="bg-white border border-gray-200 overflow-hidden">
-                  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                    <iframe
-                      className="absolute inset-0 w-full h-full"
-                      src={`https://www.youtube.com/embed/${video.id}`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
+                  <a
+                    href={`https://www.youtube.com/watch?v=${video.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative w-full group"
+                    style={{ paddingBottom: "56.25%" }}
+                  >
+                    <Image
+                      src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                      alt={video.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      unoptimized
                     />
-                  </div>
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                      <div className="w-16 h-16 bg-[#d22d20] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <span className="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 font-bold tracking-wider">
+                      YOUTUBE
+                    </span>
+                  </a>
                   <div className="p-6">
                     <span className="inline-block bg-[#d22d20] text-white text-xs px-2 py-0.5 font-bold tracking-wider mb-3">
                       VIDEO

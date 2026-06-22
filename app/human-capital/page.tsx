@@ -144,7 +144,7 @@ export default function HumanCapitalPage() {
                   src={opp.image.src}
                   alt={opp.image.alt}
                   overlay={opp.dark ? "blue" : "light"}
-                  className="h-44"
+                  className="h-72"
                 />
                 <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">

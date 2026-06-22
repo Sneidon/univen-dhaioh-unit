@@ -80,7 +80,7 @@ export default function ResearchThemesPage() {
                   src={theme.image.src}
                   alt={theme.image.alt}
                   overlay={theme.gold ? "gold" : "blue"}
-                  className="h-36"
+                  className="h-64"
                 />
                 <div className="p-8">
                 <div className="w-10 h-10 mb-5 flex items-center justify-center border border-white/30">

@@ -196,7 +196,7 @@ export default function LeadershipPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {codirectorshipStrengths.map((s, i) => (
               <div key={i} className="border border-white/10 bg-white/5 overflow-hidden flex flex-col">
-                <CardImageHeader src={s.image.src} alt={s.image.alt} overlay="blue" className="h-36" />
+                <CardImageHeader src={s.image.src} alt={s.image.alt} overlay="blue" className="h-64" />
                 <div className="p-6 flex flex-col flex-1">
                 <div className="w-8 h-8 bg-[#b8962e] flex items-center justify-center mb-4 font-bold text-xs text-white">
                   {String(i + 1).padStart(2, "0")}

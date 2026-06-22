@@ -12,7 +12,7 @@ export default function CardImageHeader({
   src,
   alt,
   overlay = "light",
-  className = "h-44",
+  className = "h-72",
 }: CardImageHeaderProps) {
   const overlayClass =
     overlay === "gold"

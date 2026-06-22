@@ -167,7 +167,7 @@ export default function AboutPage() {
                   src={frameworkPillarImages[i].src}
                   alt={frameworkPillarImages[i].alt}
                   overlay="blue"
-                  className="h-28"
+                  className="h-44"
                 />
                 <div className="p-8 flex flex-col flex-1">
                 <div className="flex justify-between items-start mb-4">

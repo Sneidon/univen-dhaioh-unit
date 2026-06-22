@@ -310,7 +310,7 @@ export default function HomePage() {
                     : "border border-gray-200 bg-white"
                 }`}
               >
-                <div className={`relative w-full flex-shrink-0 ${theme.featured ? "h-64 lg:h-80" : "h-52"}`}>
+                <div className={`relative w-full flex-shrink-0 ${theme.featured ? "h-80 lg:h-96" : "h-72"}`}>
                   <Image
                     src={theme.image}
                     alt={theme.imageAlt}

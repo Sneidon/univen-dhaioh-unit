@@ -98,7 +98,7 @@ const collaborationTypes = [
 export default function StrategicPartnersPage() {
   return (
     <>
-      <PageHero src="/banners/hero-partners.jpg" alt="Futuristic open-pit mining operations" imageClassName="object-cover object-top">
+      <PageHero src="/banners/hero-partners.jpg" alt="Futuristic open-pit mining operations">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
           Partners & <span className="text-[#b8962e]">Collaborators</span>
         </h1>

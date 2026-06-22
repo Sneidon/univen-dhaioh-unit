@@ -101,7 +101,7 @@ const stats = [
 export default function HumanCapitalPage() {
   return (
     <>
-      <PageHero src="/banners/hero-human-capital.jpg" alt="Mine health doctor with holographic dashboard" imageClassName="object-cover object-top">
+      <PageHero src="/banners/hero-human-capital.jpg" alt="Mine health doctor with holographic dashboard">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
           Human Capital <span className="text-[#b8962e]">Development</span>
         </h1>

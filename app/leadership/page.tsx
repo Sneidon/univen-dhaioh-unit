@@ -16,7 +16,7 @@ const codirectorshipStrengths = [
 export default function LeadershipPage() {
   return (
     <>
-      <PageHero src="/banners/hero-leadership.jpg" alt="Mining health excellence team">
+      <PageHero src="/banners/hero-leadership.jpg" alt="Mining health excellence team" imageClassName="object-cover object-top">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
           Unit Leadership <span className="text-[#b8962e]">&amp; Team</span>
         </h1>
@@ -44,7 +44,7 @@ export default function LeadershipPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Prof Lindiwe Zungu */}
-            <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-8 md:p-10">
+            <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-8 md:p-10">
               <div className="flex flex-col sm:flex-row gap-6 items-start mb-8">
                 <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-[#b8962e] flex-shrink-0">
                   <Image
@@ -171,7 +171,7 @@ export default function LeadershipPage() {
                     "Real-Time Monitoring",
                     "Technology Transfer",
                   ].map((exp) => (
-                    <span key={exp} className="bg-[#314c7a]/5 text-[#0d1b35] text-xs px-3 py-1 border border-[#0d1b35]/10">
+                    <span key={exp} className="bg-[#164076]/5 text-[#0d1b35] text-xs px-3 py-1 border border-[#0d1b35]/10">
                       {exp}
                     </span>
                   ))}
@@ -183,7 +183,7 @@ export default function LeadershipPage() {
       </section>
 
       {/* Co-Directorship Strengths */}
-      <section className="py-20 bg-[#314c7a] text-white">
+      <section className="py-20 bg-[#164076] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Joint Co-Directorship</p>
@@ -229,7 +229,7 @@ export default function LeadershipPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#314c7a] text-white text-center">
+      <section className="py-16 bg-[#164076] text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Explore the Unit&apos;s Work</h2>
           <div className="flex flex-wrap justify-center gap-4">

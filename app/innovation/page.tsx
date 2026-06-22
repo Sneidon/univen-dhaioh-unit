@@ -102,7 +102,7 @@ export default function InnovationPage() {
                 solutions.
               </p>
             </div>
-            <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-8">
+            <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-8">
               <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">Creating Value Through Innovation</p>
               <p className="text-gray-300 text-sm mb-6">Through its innovation and commercialisation activities, the DHAIOH Unit aims to:</p>
               <ul className="space-y-3">
@@ -138,7 +138,7 @@ export default function InnovationPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left column */}
             <div>
-              <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] overflow-hidden mb-6">
+              <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden mb-6">
                 <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} overlay="blue" className="h-36" />
                 <div className="p-8">
                 <div className="flex gap-3 mb-5">
@@ -156,7 +156,7 @@ export default function InnovationPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] overflow-hidden">
+                <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden">
                   <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} overlay="blue" className="h-28" />
                   <div className="p-6">
                   <div className="w-8 h-8 border border-white/30 flex items-center justify-center mb-4">
@@ -170,7 +170,7 @@ export default function InnovationPage() {
                   </p>
                   </div>
                 </div>
-                <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] overflow-hidden">
+                <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden">
                   <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} overlay="blue" className="h-28" />
                   <div className="p-6">
                   <h3 className="font-bold text-white text-sm mb-2">{portfolioCards.pathway.title}</h3>
@@ -190,7 +190,7 @@ export default function InnovationPage() {
 
             {/* Right column */}
             <div className="space-y-4">
-              <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] overflow-hidden" id="ai-hub">
+              <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden" id="ai-hub">
                 <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} overlay="blue" className="h-40" />
                 <div className="p-8">
                 <div className="w-10 h-10 border border-white/30 flex items-center justify-center mb-4">
@@ -224,7 +224,7 @@ export default function InnovationPage() {
       </section>
 
       {/* Digital Intelligence Banner */}
-      <section className="py-20 bg-[#314c7a] text-white">
+      <section className="py-20 bg-[#164076] text-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -264,7 +264,7 @@ export default function InnovationPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {innovationAreas.map((area) => (
-              <div key={area} className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] px-5 py-4 flex items-center gap-3">
+              <div key={area} className="bg-[#164076] text-white border-t-4 border-[#d22d20] px-5 py-4 flex items-center gap-3">
                 <div className="w-2 h-2 bg-[#b8962e] rounded-full flex-shrink-0" />
                 <span className="text-sm text-white/80">{area}</span>
               </div>

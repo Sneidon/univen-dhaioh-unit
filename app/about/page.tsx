@@ -27,7 +27,7 @@ const thematicAreas = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero src="/banners/hero-about.jpg" alt="DHAIOH research team at Mintek">
+      <PageHero src="/banners/hero-about.jpg" alt="DHAIOH research team at Mintek" imageClassName="object-cover object-top">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
           <span className="text-[#b8962e]">DHAIOH</span> Unit
         </h1>
@@ -97,7 +97,7 @@ export default function AboutPage() {
       {/* Vision & Mission */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6">
-          <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-10">
+          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
             <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -110,7 +110,7 @@ export default function AboutPage() {
               health through digital innovation, artificial intelligence, and predictive health systems.
             </p>
           </div>
-          <div className="bg-[#314c7a] text-white border-t-4 border-[#d22d20] p-10">
+          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
             <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
               <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
@@ -162,7 +162,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pillars.map((p, i) => (
-              <div key={p.n} className="bg-[#314c7a] text-white overflow-hidden flex flex-col">
+              <div key={p.n} className="bg-[#164076] text-white overflow-hidden flex flex-col">
                 <CardImageHeader
                   src={frameworkPillarImages[i].src}
                   alt={frameworkPillarImages[i].alt}
@@ -208,7 +208,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#314c7a] text-white text-center">
+      <section className="py-20 bg-[#164076] text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-5xl font-bold mb-10">Transforming Health. Protecting Lives.</h2>
           <div className="flex flex-wrap justify-center gap-4">

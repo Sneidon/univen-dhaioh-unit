@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 export default function ContactPage() {
   return (
     <>
-      <PageHero src="/banners/hero-contact.jpg" alt="Connected mining site at sunset">
+      <PageHero src="/banners/hero-contact.jpg" alt="Connected mining site at sunset" imageClassName="object-cover object-top">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
           Contact Us
         </h1>
@@ -44,7 +44,7 @@ export default function ContactPage() {
             <div className="bg-white border border-gray-200 p-6">
               <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">General Inquiries</p>
               <div className="flex gap-5 items-start">
-                <div className="w-28 h-36 rounded-sm flex-shrink-0 bg-[#314c7a] flex items-center justify-center">
+                <div className="w-28 h-36 rounded-sm flex-shrink-0 bg-[#164076] flex items-center justify-center">
                   <svg className="w-12 h-12 text-[#b8962e]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>

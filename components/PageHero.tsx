@@ -14,7 +14,7 @@ export default function PageHero({
   src,
   alt,
   children,
-  className = "py-24 md:py-32",
+  className = "py-28 md:py-40",
   imageClassName = "object-cover object-center",
   priority = true,
 }: PageHeroProps) {

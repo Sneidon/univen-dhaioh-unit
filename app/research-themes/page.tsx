@@ -75,7 +75,7 @@ export default function ResearchThemesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {themes.map((theme) => (
-              <div key={theme.title} className={`overflow-hidden flex flex-col ${theme.gold ? "bg-[#b8962e]" : "bg-[#314c7a]"} text-white`}>
+              <div key={theme.title} className={`overflow-hidden flex flex-col ${theme.gold ? "bg-[#b8962e]" : "bg-[#164076]"} text-white`}>
                 <CardImageHeader
                   src={theme.image.src}
                   alt={theme.image.alt}
@@ -116,7 +116,7 @@ export default function ResearchThemesPage() {
                   i === 8
                     ? "bg-[#b8962e] text-white"
                     : i % 3 === 1
-                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
+                    ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
               >
@@ -132,7 +132,7 @@ export default function ResearchThemesPage() {
                   />
                   <div
                     className={`absolute inset-0 ${
-                      i === 8 ? "bg-[#b8962e]/35" : i % 3 === 1 ? "bg-[#314c7a]/40" : "bg-[#314c7a]/15"
+                      i === 8 ? "bg-[#b8962e]/35" : i % 3 === 1 ? "bg-[#164076]/40" : "bg-[#164076]/15"
                     }`}
                   />
                 </div>
@@ -144,7 +144,7 @@ export default function ResearchThemesPage() {
                         ? "bg-white/20 text-white"
                         : i % 3 === 1
                         ? "bg-[#b8962e] text-white"
-                        : "bg-[#314c7a] text-white"
+                        : "bg-[#164076] text-white"
                     }`}
                   >
                     {prog.tag}

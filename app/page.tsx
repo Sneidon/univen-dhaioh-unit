@@ -216,7 +216,7 @@ export default function HomePage() {
       </section>
 
       {/* Impact Metrics */}
-      <section className="py-12 bg-[#314c7a] text-white">
+      <section className="py-12 bg-[#164076] text-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {impactMetrics.map((stat) => (
             <div key={stat.label}>
@@ -250,7 +250,7 @@ export default function HomePage() {
                   i === 9
                     ? "bg-[#b8962e] text-white"
                     : i % 3 === 0
-                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
+                    ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
               >
@@ -306,7 +306,7 @@ export default function HomePage() {
                     : theme.gold
                     ? "bg-[#b8962e] text-white"
                     : theme.dark
-                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
+                    ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
                     : "border border-gray-200 bg-white"
                 }`}
               >
@@ -325,8 +325,8 @@ export default function HomePage() {
                       theme.gold
                         ? "bg-[#b8962e]/25"
                         : theme.dark
-                        ? "bg-[#314c7a]/30"
-                        : "bg-[#314c7a]/10"
+                        ? "bg-[#164076]/30"
+                        : "bg-[#164076]/10"
                     }`}
                   />
                 </div>
@@ -378,7 +378,7 @@ export default function HomePage() {
       </section>
 
       {/* Impact Pathway */}
-      <section className="py-20 bg-[#314c7a] text-white">
+      <section className="py-20 bg-[#164076] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">How We Generate Value</p>
@@ -452,7 +452,7 @@ export default function HomePage() {
                   gold
                     ? "bg-[#b8962e] text-white"
                     : dark
-                    ? "bg-[#314c7a] text-white border-t-4 border-[#d22d20]"
+                    ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
               >
@@ -468,7 +468,7 @@ export default function HomePage() {
                   />
                   <div
                     className={`absolute inset-0 ${
-                      gold ? "bg-[#b8962e]/35" : dark ? "bg-[#314c7a]/40" : "bg-[#314c7a]/15"
+                      gold ? "bg-[#b8962e]/35" : dark ? "bg-[#164076]/40" : "bg-[#164076]/15"
                     }`}
                   />
                 </div>
@@ -512,7 +512,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-3">
               {hcdItems.map((item) => (
                 <div key={item.label} className="bg-gray-50 border border-gray-200 p-5 flex items-center gap-4">
-                  <div className="w-10 h-10 bg-[#314c7a] text-[#b8962e] flex items-center justify-center font-bold text-sm flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#164076] text-[#b8962e] flex items-center justify-center font-bold text-sm flex-shrink-0">
                     {item.icon}
                   </div>
                   <span className="text-sm font-medium text-[#0d1b35] leading-snug">{item.label}</span>
@@ -524,7 +524,7 @@ export default function HomePage() {
       </section>
 
       {/* Investment & Collaboration */}
-      <section className="py-20 bg-[#314c7a] text-white">
+      <section className="py-20 bg-[#164076] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>

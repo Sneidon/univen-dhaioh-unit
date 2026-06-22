@@ -18,8 +18,8 @@ export default function CardImageHeader({
     overlay === "gold"
       ? "bg-[#b8962e]/35"
       : overlay === "blue"
-      ? "bg-[#314c7a]/40"
-      : "bg-[#314c7a]/15";
+      ? "bg-[#164076]/40"
+      : "bg-[#164076]/15";
 
   return (
     <div className={`relative w-full flex-shrink-0 ${className}`}>

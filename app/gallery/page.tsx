@@ -22,7 +22,7 @@ export default function GalleryPage() {
 
   return (
     <>
-      <PageHero src="/banners/hero-gallery.jpg" alt="Mining health research laboratory">
+      <PageHero src="/banners/hero-gallery.jpg" alt="Mining health research laboratory" imageClassName="object-cover object-top">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
           Gallery &{" "}
           <span className="text-[#b8962e]">Media</span>
@@ -103,7 +103,7 @@ export default function GalleryPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-[#314c7a]/20 group-hover:bg-[#314c7a]/40 transition-colors" />
+                    <div className="absolute inset-0 bg-[#164076]/20 group-hover:bg-[#164076]/40 transition-colors" />
                     <span className="absolute top-4 left-4 bg-[#d22d20] text-white text-xs px-2 py-1 font-bold tracking-wider">
                       {event.photos.length} PHOTOS
                     </span>
@@ -123,7 +123,7 @@ export default function GalleryPage() {
         </section>
       )}
 
-      <section className="py-16 bg-[#314c7a] text-white text-center">
+      <section className="py-16 bg-[#164076] text-white text-center">
         <div className="max-w-xl mx-auto px-6">
           <h2 className="text-2xl font-bold mb-3">Follow Our Journey</h2>
           <p className="text-gray-300 text-sm mb-6">

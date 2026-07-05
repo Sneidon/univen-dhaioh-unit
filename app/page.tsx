@@ -11,7 +11,6 @@ const researchThemes = [
     desc: "Developing integrated digital platforms that support real-time occupational health surveillance, worker monitoring, and evidence-based decision-making.",
     image: themeCards[0].src,
     imageAlt: themeCards[0].alt,
-    featured: true,
     showLink: true,
   },
   {
@@ -20,7 +19,6 @@ const researchThemes = [
     desc: "Leveraging machine learning to predict occupational health risks and support proactive interventions.",
     image: themeCards[1].src,
     imageAlt: themeCards[1].alt,
-    dark: true,
   },
   {
     num: "03",
@@ -28,7 +26,6 @@ const researchThemes = [
     desc: "Digital tools and predictive models for respiratory diseases, cancers, hearing loss and more.",
     image: themeCards[2].src,
     imageAlt: themeCards[2].alt,
-    gold: true,
   },
   {
     num: "04",
@@ -50,7 +47,6 @@ const researchThemes = [
     desc: "Psychosocial risk management, environmental health, sustainable mining, and commercialisation.",
     image: themeCards[7].src,
     imageAlt: themeCards[7].alt,
-    dark: true,
   },
 ];
 
@@ -124,7 +120,9 @@ export default function HomePage() {
 
           {/* Tagline */}
           <p className="text-2xl md:text-3xl font-semibold text-white/90 leading-snug mb-6 max-w-2xl">
-            Transforming Worker <span className="text-[#b8962e]">Health Through</span> Digital Intelligence
+            Transforming Worker <span className="text-[#b8962e]">Health Through</span>
+            <br />
+            <span className="whitespace-nowrap">Digital Intelligence</span>
           </p>
 
           <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-6 max-w-3xl">
@@ -243,29 +241,26 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
-            {frameworkPillars.map((pillar, i) => (
-              <div
-                key={pillar}
-                className={`p-5 flex flex-col gap-3 ${
-                  i === 9
-                    ? "bg-[#b8962e] text-white"
-                    : i % 3 === 0
-                    ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
-                    : "bg-white border border-gray-200"
-                }`}
-              >
-                <span className="text-xl font-bold text-[#b8962e]">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p
-                  className={`text-xs font-semibold leading-snug ${
-                    i === 9 || i % 3 === 0 ? "text-white" : "text-[#0d1b35]"
+            {frameworkPillars.map((pillar, i) => {
+              const isBlue = i % 2 === 1;
+              return (
+                <div
+                  key={pillar}
+                  className={`p-5 flex flex-col gap-3 ${
+                    isBlue
+                      ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
+                      : "bg-white border border-gray-200"
                   }`}
                 >
-                  {pillar}
-                </p>
-              </div>
-            ))}
+                  <span className="text-xl font-bold text-[#b8962e]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className={`text-xs font-semibold leading-snug ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
+                    {pillar}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           <div className="text-center">
@@ -297,73 +292,54 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {researchThemes.map((theme) => (
-              <div
-                key={theme.num}
-                className={`overflow-hidden flex flex-col ${
-                  theme.featured
-                    ? "border border-gray-200 bg-white"
-                    : theme.gold
-                    ? "bg-[#b8962e] text-white"
-                    : theme.dark
-                    ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
-                    : "border border-gray-200 bg-white"
-                }`}
-              >
-                <div className={`relative w-full flex-shrink-0 ${"h-72"}`}>
-                  <Image
-                    src={theme.image}
-                    alt={theme.imageAlt}
-                    fill
-                    loading="lazy"
-                    quality={75}
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
-                  />
-                </div>
-
-                <div className={`p-8 flex flex-col flex-1 ${theme.gold ? "justify-between min-h-40" : ""}`}>
-                  <div>
-                    <p
-                      className={`font-bold mb-4 ${
-                        theme.gold
-                          ? "text-xs tracking-widest uppercase opacity-80"
-                          : "text-2xl text-[#b8962e]"
-                      }`}
-                    >
-                      {theme.num}
-                    </p>
-                    <h3
-                      className={`font-bold text-lg mb-3 ${
-                        theme.dark || theme.gold ? "text-white" : "text-[#0d1b35]"
-                      }`}
-                    >
-                      {theme.title}
-                    </h3>
-                    <p
-                      className={`text-sm leading-relaxed ${
-                        theme.dark
-                          ? "text-gray-300"
-                          : theme.gold
-                          ? "text-white/80"
-                          : "text-gray-600"
-                      }`}
-                    >
-                      {theme.desc}
-                    </p>
+            {researchThemes.map((theme, i) => {
+              const isBlue = i % 2 === 1;
+              return (
+                <div
+                  key={theme.num}
+                  className={`overflow-hidden flex flex-col ${
+                    isBlue
+                      ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
+                      : "border border-gray-200 bg-white"
+                  }`}
+                >
+                  <div className="relative w-full flex-shrink-0 h-72">
+                    <Image
+                      src={theme.image}
+                      alt={theme.imageAlt}
+                      fill
+                      loading="lazy"
+                      quality={75}
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 480px"
+                    />
                   </div>
 
-                  {theme.showLink && (
-                    <Link
-                      href="/research-themes"
-                      className="text-xs font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#0d1b35] pb-0.5 w-fit"
-                    >
-                      Explore Theme
-                    </Link>
-                  )}
+                  <div className="p-8 flex flex-col flex-1">
+                    <div>
+                      <p className="font-bold mb-4 text-2xl text-[#b8962e]">{theme.num}</p>
+                      <h3 className={`font-bold text-lg mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
+                        {theme.title}
+                      </h3>
+                      <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
+                        {theme.desc}
+                      </p>
+                    </div>
+
+                    {theme.showLink && (
+                      <Link
+                        href="/research-themes"
+                        className={`text-xs font-bold tracking-widest uppercase border-b-2 pb-0.5 w-fit mt-4 ${
+                          isBlue ? "text-white border-white" : "text-[#0d1b35] border-[#0d1b35]"
+                        }`}
+                      >
+                        Explore Theme
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -386,23 +362,17 @@ export default function HomePage() {
               { label: "Innovation", sub: "AI tools & digital technologies" },
               { label: "Policy", sub: "Guidelines & regulatory reform" },
               { label: "Practice", sub: "Implementation at scale" },
-              { label: "Impact", sub: "Healthier workers. Zero Harm.", gold: true },
+              { label: "Impact", sub: "Healthier workers. Zero Harm." },
             ].map((step, i) => (
               <div
                 key={step.label}
-                className={`relative flex flex-col items-center text-center p-8 border-r border-white/10 last:border-r-0 ${
-                  step.gold ? "bg-[#b8962e]" : "bg-white/5"
-                }`}
+                className="relative flex flex-col items-center text-center p-8 border-r border-white/10 last:border-r-0 bg-white/5"
               >
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold text-sm ${
-                    step.gold ? "bg-white text-[#b8962e]" : "border-2 border-[#b8962e] text-[#b8962e]"
-                  }`}
-                >
+                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold text-sm border-2 border-[#b8962e] text-[#b8962e]">
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <p className="font-bold text-base mb-2 text-white">{step.label}</p>
-                <p className={`text-xs leading-relaxed ${step.gold ? "text-white/80" : "text-gray-400"}`}>{step.sub}</p>
+                <p className="text-xs leading-relaxed text-gray-400">{step.sub}</p>
               </div>
             ))}
           </div>
@@ -433,16 +403,15 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {flagshipProgrammes.map((prog, i) => {
-              const gold = i === 3;
-              const dark = i === 1 || i === 5 || i === 8;
+              const row = Math.floor(i / 4);
+              const col = i % 4;
+              const isBlue = (row + col) % 2 === 1;
 
               return (
               <div
                 key={prog.n}
                 className={`overflow-hidden flex flex-col ${
-                  gold
-                    ? "bg-[#b8962e] text-white"
-                    : dark
+                  isBlue
                     ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
@@ -460,11 +429,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-4 flex flex-col gap-2 flex-1">
                   <span className="text-lg font-bold text-[#b8962e]">{prog.n}</span>
-                  <p
-                    className={`text-sm font-semibold leading-snug ${
-                      gold || dark ? "text-white" : "text-[#0d1b35]"
-                    }`}
-                  >
+                  <p className={`text-sm font-semibold leading-snug ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
                     {prog.title}
                   </p>
                 </div>
@@ -532,12 +497,10 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 gap-2">
-              {investmentPartners.map((partner, i) => (
+              {investmentPartners.map((partner) => (
                 <div
                   key={partner}
-                  className={`flex items-center gap-4 p-4 border ${
-                    i === 0 ? "bg-[#b8962e] border-[#b8962e]" : "border-white/10 bg-white/5"
-                  }`}
+                  className="flex items-center gap-4 p-4 border border-white/10 bg-white/5"
                 >
                   <div className="w-2 h-2 rounded-full bg-[#b8962e] flex-shrink-0" />
                   <span className="text-sm text-white/80">{partner}</span>
@@ -565,8 +528,8 @@ export default function HomePage() {
             </blockquote>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 border-t border-gray-100 pt-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#b8962e]">
-                  <Image src="/prof-zungu.jpg" alt="Prof Lindiwe Zungu" width={40} height={40} className="object-cover w-full h-full" />
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#b8962e]">
+                  <Image src="/prof-zungu.jpg" alt="Prof Lindiwe Zungu" width={80} height={80} className="object-cover w-full h-full" />
                 </div>
                 <div>
                   <p className="font-bold text-[#0d1b35] text-sm">Prof Lindiwe Zungu</p>
@@ -575,8 +538,8 @@ export default function HomePage() {
               </div>
               <span className="text-gray-300 hidden sm:block">|</span>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#d22d20]">
-                  <Image src="/james-headshot.jpg" alt="Dr James Aluha" width={40} height={40} className="object-cover object-top w-full h-full" />
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-[#d22d20]">
+                  <Image src="/james-headshot.jpg" alt="Dr James Aluha" width={80} height={80} className="object-cover object-top w-full h-full" />
                 </div>
                 <div>
                   <p className="font-bold text-[#0d1b35] text-sm">Dr James Aluha</p>

@@ -18,7 +18,7 @@ export default function LeadershipPage() {
     <>
       <PageHero src="/banners/hero-leadership.jpg" alt="Mining health excellence team" imageClassName="object-cover object-top">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-          Unit Leadership <span className="text-[#b8962e]">&amp; Team</span>
+          Unit <span className="text-[#b8962e]">Leadership</span>
         </h1>
       </PageHero>
 
@@ -213,7 +213,7 @@ export default function LeadershipPage() {
       {/* Directors' Quote */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase text-center mb-8">From the Co-Directors</p>
+          <p className="text-[#b8962e] text-base font-bold tracking-widest uppercase text-center mb-8">From the Co-Directors</p>
           <blockquote className="text-[#0d1b35] text-lg md:text-xl leading-relaxed font-medium mb-8 border-l-4 border-[#b8962e] pl-8">
             &ldquo;The establishment of the DHAIOH Extramural Unit by the SAMRC represents a defining moment in
             the evolution of occupational health research, innovation, and practice in South Africa and beyond.

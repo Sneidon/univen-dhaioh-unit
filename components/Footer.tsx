@@ -12,7 +12,7 @@ export default function Footer() {
               alt="OHS in Mining Research Institute – University of Venda"
               width={1376}
               height={618}
-              className="h-[4.5rem] w-auto object-contain"
+              className="h-[5.5rem] w-auto object-contain"
             />
           </div>
           <p className="text-[#b8962e] text-xs mb-3">SAMRC Extramural Unit</p>

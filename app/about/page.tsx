@@ -29,9 +29,41 @@ export default function AboutPage() {
     <>
       <PageHero src="/banners/hero-about.jpg" alt="DHAIOH research team at Mintek" imageClassName="object-cover object-top">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-          <span className="text-[#b8962e]">DHAIOH</span> Unit
+          About the <span className="text-[#b8962e]">Unit</span>
         </h1>
       </PageHero>
+
+      {/* Vision & Mission */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6">
+          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
+            <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+            <p className="text-gray-300 leading-relaxed">
+              To become a globally recognised centre of excellence leading the transformation of occupational
+              health through digital innovation, artificial intelligence, and predictive health systems.
+            </p>
+          </div>
+          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
+            <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
+              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+            <p className="text-gray-300 leading-relaxed">
+              To generate world-class research, develop innovative technologies, build future research leaders,
+              influence policy, and create scalable digital health solutions that improve occupational health
+              outcomes in mining and other high-risk sectors.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Unit Overview */}
       <section className="py-20 bg-white">
@@ -90,38 +122,6 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision & Mission */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6">
-          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
-            <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </div>
-            <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
-            <p className="text-gray-300 leading-relaxed">
-              To become a globally recognised centre of excellence leading the transformation of occupational
-              health through digital innovation, artificial intelligence, and predictive health systems.
-            </p>
-          </div>
-          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
-            <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
-              </svg>
-            </div>
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-            <p className="text-gray-300 leading-relaxed">
-              To generate world-class research, develop innovative technologies, build future research leaders,
-              influence policy, and create scalable digital health solutions that improve occupational health
-              outcomes in mining and other high-risk sectors.
-            </p>
           </div>
         </div>
       </section>
@@ -209,8 +209,10 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-20 bg-[#164076] text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl md:text-5xl font-bold mb-10">Transforming Health. Protecting Lives.</h2>
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-10 sm:whitespace-nowrap">
+            Transforming Health. Protecting Lives.
+          </h2>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/research-themes" className="btn-cta py-4">
               Explore Research

@@ -14,7 +14,7 @@ const navLinks: NavItem[] = [
   {
     label: "About",
     children: [
-      { href: "/about", label: "About the Unit" },
+      { href: "/about", label: "About Unit" },
       { href: "/leadership", label: "Leadership" },
       { href: "/strategic-partners", label: "Partners" },
     ],

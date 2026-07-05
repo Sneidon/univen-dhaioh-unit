@@ -88,3 +88,26 @@ export const programmeCards = [
   img("/cards/card-programme-08-water-food-health.jpg", "Water quality testing near mining community"),
   img("/cards/card-programme-09-digital-innovation.jpg", "Digital health innovation project development"),
 ] as const satisfies readonly CardImage[];
+
+// Alternate images for the homepage previews, so they don't show the exact
+// same photo as the dedicated /research-themes page.
+export const themeCardsHome = [
+  img("/cards/card-theme-01-digital-health-alt.jpg", "Occupational health command room overlooking an open-pit mine"),
+  img("/cards/card-theme-02-ai-analytics-alt.jpg", "Aerial view of haul truck convoy with predictive analytics overlay"),
+  img("/cards/card-theme-03-disease-prevention-alt.jpg", "Mobile mine-site health screening unit"),
+  img("/cards/card-theme-04-medical-surveillance-alt.jpg", "Underground control point monitoring worker biometric wearables"),
+  img("/cards/card-theme-05-women-in-mining-alt.jpg", "Women reviewing a health and safety heatmap over a mine model"),
+  img("/cards/card-theme-08-innovation-commercialisation-alt.jpg", "Innovation workshop bench with wearable sensor prototype"),
+] as const satisfies readonly CardImage[];
+
+export const programmeCardsHome = [
+  img("/cards/card-programme-01-early-warning-alt.jpg", "Night-shift operations room monitoring outbreak trends"),
+  img("/cards/card-programme-02-ai-surveillance-alt.jpg", "Haul truck cab interior with AI biometric-tracking overlay"),
+  img("/cards/card-programme-03-women-mining-health-alt.jpg", "Field clinic tent fitting a monitoring wristband on a woman miner"),
+  img("/cards/card-programme-04-mental-health-alt.jpg", "Wellbeing room conversation near a mine change-house"),
+  img("/cards/card-programme-05-biological-hazards-alt.jpg", "Researcher collecting an air-quality sample underground"),
+  img("/cards/card-programme-06-cancer-prevention-alt.jpg", "Mobile diagnostic van cancer screening near a mine gate"),
+  img("/cards/card-programme-07-climate-worker-health-alt.jpg", "Solar-powered environmental sensor stations at a mine perimeter"),
+  img("/cards/card-programme-08-water-food-health-alt.jpg", "Scientist testing a water sample near a mining community"),
+  img("/cards/card-programme-09-digital-innovation-alt.jpg", "Cross-functional team prototyping a wearable health device"),
+] as const satisfies readonly CardImage[];

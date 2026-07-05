@@ -1,52 +1,52 @@
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import { flagshipProgrammes } from "@/lib/flagship-programmes";
-import { themeCards } from "@/lib/card-images";
+import { flagshipProgrammesHome } from "@/lib/flagship-programmes";
+import { themeCardsHome } from "@/lib/card-images";
 
 const researchThemes = [
   {
     num: "01",
     title: "Digital Health & Occupational Health Intelligence",
     desc: "Developing integrated digital platforms that support real-time occupational health surveillance, worker monitoring, and evidence-based decision-making.",
-    image: themeCards[0].src,
-    imageAlt: themeCards[0].alt,
+    image: themeCardsHome[0].src,
+    imageAlt: themeCardsHome[0].alt,
     showLink: true,
   },
   {
     num: "02",
     title: "AI & Predictive Analytics",
     desc: "Leveraging machine learning to predict occupational health risks and support proactive interventions.",
-    image: themeCards[1].src,
-    imageAlt: themeCards[1].alt,
+    image: themeCardsHome[1].src,
+    imageAlt: themeCardsHome[1].alt,
   },
   {
     num: "03",
     title: "Occupational Disease Prevention & Early Detection",
     desc: "Digital tools and predictive models for respiratory diseases, cancers, hearing loss and more.",
-    image: themeCards[2].src,
-    imageAlt: themeCards[2].alt,
+    image: themeCardsHome[2].src,
+    imageAlt: themeCardsHome[2].alt,
   },
   {
     num: "04",
     title: "Medical Surveillance & Early Warning",
     desc: "Intelligent systems for rapid identification of health trends and emerging occupational risks.",
-    image: themeCards[3].src,
-    imageAlt: themeCards[3].alt,
+    image: themeCardsHome[3].src,
+    imageAlt: themeCardsHome[3].alt,
   },
   {
     num: "05",
     title: "Women in Mining & Gender-Responsive Health",
     desc: "Innovative solutions addressing the unique occupational health needs of women in mining.",
-    image: themeCards[4].src,
-    imageAlt: themeCards[4].alt,
+    image: themeCardsHome[4].src,
+    imageAlt: themeCardsHome[4].alt,
   },
   {
     num: "06–08",
     title: "Mental Health · Climate Change · Innovation",
     desc: "Psychosocial risk management, environmental health, sustainable mining, and commercialisation.",
-    image: themeCards[7].src,
-    imageAlt: themeCards[7].alt,
+    image: themeCardsHome[5].src,
+    imageAlt: themeCardsHome[5].alt,
   },
 ];
 
@@ -149,7 +149,7 @@ export default function HomePage() {
               href="/about"
               className="border border-[#b8962e]/60 text-[#b8962e] text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-[#b8962e]/10 transition-colors"
             >
-              About the Unit
+              About Unit
             </Link>
           </div>
       </PageHero>
@@ -402,7 +402,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {flagshipProgrammes.map((prog, i) => {
+            {flagshipProgrammesHome.map((prog, i) => {
               const row = Math.floor(i / 4);
               const col = i % 4;
               const isBlue = (row + col) % 2 === 1;

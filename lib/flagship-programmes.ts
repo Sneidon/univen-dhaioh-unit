@@ -1,4 +1,4 @@
-import { programmeCards } from "@/lib/card-images";
+import { programmeCards, programmeCardsHome } from "@/lib/card-images";
 
 export type FlagshipProgramme = {
   n: string;
@@ -83,3 +83,11 @@ export const flagshipProgrammes: FlagshipProgramme[] = [
     imageAlt: programmeCards[8].alt,
   },
 ];
+
+// Alternate image set for the homepage preview, so it doesn't show the exact
+// same photos as the dedicated /research-themes page.
+export const flagshipProgrammesHome: FlagshipProgramme[] = flagshipProgrammes.map((prog, i) => ({
+  ...prog,
+  image: programmeCardsHome[i].src,
+  imageAlt: programmeCardsHome[i].alt,
+}));

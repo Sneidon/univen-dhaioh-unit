@@ -31,7 +31,7 @@ export default function Footer() {
           <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm text-white/80">
             <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-white transition-colors">About the Unit</Link></li>
+            <li><Link href="/about" className="hover:text-white transition-colors">About Unit</Link></li>
             <li><Link href="/leadership" className="hover:text-white transition-colors">Leadership & Team</Link></li>
             <li><Link href="/research-themes" className="hover:text-white transition-colors">Research Themes</Link></li>
             <li><Link href="/research-impact" className="hover:text-white transition-colors">Research Impact & Policy</Link></li>

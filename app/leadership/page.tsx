@@ -213,7 +213,7 @@ export default function LeadershipPage() {
       {/* Directors' Quote */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-[#b8962e] text-base font-bold tracking-widest uppercase text-center mb-8">From the Co-Directors</p>
+          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase text-center mb-8">From the Co-Directors</p>
           <blockquote className="text-[#0d1b35] text-lg md:text-xl leading-relaxed font-medium mb-8 border-l-4 border-[#b8962e] pl-8">
             &ldquo;The establishment of the DHAIOH Extramural Unit by the SAMRC represents a defining moment in
             the evolution of occupational health research, innovation, and practice in South Africa and beyond.
@@ -234,7 +234,7 @@ export default function LeadershipPage() {
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Explore the Unit&apos;s Work</h2>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/about" className="btn-cta-sm">
-              About the Unit
+              About Unit
             </Link>
             <Link href="/research-themes" className="border border-white/40 text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-white/10 transition-colors">
               Research Themes

@@ -100,7 +100,7 @@ export default function StrategicPartnersPage() {
     <>
       <PageHero src="/banners/hero-partners.jpg" alt="Futuristic open-pit mining operations">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
-          Partners & <span className="text-[#b8962e]">Collaborators</span>
+          <span className="text-[#b8962e]">Partners</span>
         </h1>
       </PageHero>
 
@@ -238,19 +238,22 @@ export default function StrategicPartnersPage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {collaborationTypes.map((item, i) => (
-              <div
-                key={item.title}
-                className={`p-8 ${i === 0 ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : i === 3 ? "bg-[#b8962e] text-white" : "bg-white border border-gray-200"}`}
-              >
-                <h3 className={`font-bold text-base mb-3 ${i === 0 || i === 3 ? "text-white" : "text-[#0d1b35]"}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${i === 0 ? "text-gray-300" : i === 3 ? "text-white/80" : "text-gray-600"}`}>
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+            {collaborationTypes.map((item, i) => {
+              const isBlue = i % 2 === 1;
+              return (
+                <div
+                  key={item.title}
+                  className={`p-8 ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
+                >
+                  <h3 className={`font-bold text-base mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
+                    {item.title}
+                  </h3>
+                  <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
+                    {item.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           <div className="text-center mt-12">

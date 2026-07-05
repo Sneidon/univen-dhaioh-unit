@@ -74,7 +74,7 @@ export default function InnovationPage() {
         className="py-24 md:py-36"
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-          Transforming Research into Solutions
+          <span className="text-[#b8962e]">Innovation</span>
         </h1>
       </PageHero>
 
@@ -135,88 +135,80 @@ export default function InnovationPage() {
             <div className="w-16 h-1 bg-[#b8962e] mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Left column */}
-            <div>
-              <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden mb-6">
-                <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} overlay="blue" className="h-72" />
-                <div className="p-8">
-                <div className="flex gap-3 mb-5">
-                  <div className="w-10 h-10 border border-white/30 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-bold text-white text-lg self-center">{portfolioCards.ip.title}</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* IP Development & Patents — white */}
+            <div className="overflow-hidden flex flex-col bg-gray-50 border border-gray-200" id="ip">
+              <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} overlay="light" className="h-64" />
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-[#164076] text-[#b8962e]">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  {portfolioCards.ip.desc}
-                </p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden">
-                  <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} overlay="blue" className="h-72" />
-                  <div className="p-6">
-                  <div className="w-8 h-8 border border-white/30 flex items-center justify-center mb-4">
-                    <svg className="w-4 h-4 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-bold text-white text-sm mb-2">{portfolioCards.sensor.title}</h3>
-                  <p className="text-white/60 text-xs leading-relaxed">
-                    {portfolioCards.sensor.desc}
-                  </p>
-                  </div>
-                </div>
-                <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden">
-                  <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} overlay="blue" className="h-72" />
-                  <div className="p-6">
-                  <h3 className="font-bold text-white text-sm mb-2">{portfolioCards.pathway.title}</h3>
-                  <p className="text-white/60 text-xs leading-relaxed mb-4">
-                    {portfolioCards.pathway.desc}
-                  </p>
-                  <Link
-                    href={portfolioCards.pathway.link!.href}
-                    className="text-xs font-bold tracking-widest uppercase text-[#b8962e] border-b border-[#b8962e] pb-0.5"
-                  >
-                    {portfolioCards.pathway.link!.label}
-                  </Link>
-                  </div>
-                </div>
+                <h3 className="font-bold text-lg mb-3 text-[#0d1b35]">{portfolioCards.ip.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-600">{portfolioCards.ip.desc}</p>
               </div>
             </div>
 
-            {/* Right column */}
-            <div className="space-y-4">
-              <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] overflow-hidden" id="ai-hub">
-                <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} overlay="blue" className="h-80" />
-                <div className="p-8">
-                <div className="w-10 h-10 border border-white/30 flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* Sensor Integration — blue */}
+            <div className="overflow-hidden flex flex-col bg-[#164076] text-white border-t-4 border-[#d22d20]" id="sensor">
+              <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} overlay="blue" className="h-64" />
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-white/20 text-white">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg mb-3 text-white">{portfolioCards.sensor.title}</h3>
+                <p className="text-sm leading-relaxed text-white/70">{portfolioCards.sensor.desc}</p>
+              </div>
+            </div>
+
+            {/* Strategic Impact Pathway — blue */}
+            <div className="overflow-hidden flex flex-col bg-[#164076] text-white border-t-4 border-[#d22d20]" id="pathway">
+              <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} overlay="blue" className="h-64" />
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-white/20 text-white">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8L11 17l-4-4-6 6" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-lg mb-3 text-white">{portfolioCards.pathway.title}</h3>
+                <p className="text-sm leading-relaxed text-white/70 mb-5">{portfolioCards.pathway.desc}</p>
+                <Link
+                  href={portfolioCards.pathway.link!.href}
+                  className="text-xs font-bold tracking-widest uppercase text-[#b8962e] border-b border-[#b8962e] pb-0.5 w-fit mt-auto"
+                >
+                  {portfolioCards.pathway.link!.label}
+                </Link>
+              </div>
+            </div>
+
+            {/* AI Solutions — white */}
+            <div className="overflow-hidden flex flex-col bg-gray-50 border border-gray-200" id="ai-hub">
+              <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} overlay="light" className="h-64" />
+              <div className="p-8 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-[#164076] text-[#b8962e]">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-xl mb-4">{portfolioCards.ai.title}</h3>
-                <p className="text-gray-300 text-sm mb-6">
-                  {portfolioCards.ai.desc}
-                </p>
-                <div className="space-y-2 mb-6">
+                <h3 className="font-bold text-lg mb-3 text-[#0d1b35]">{portfolioCards.ai.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-600 mb-5">{portfolioCards.ai.desc}</p>
+                <div className="space-y-2 mb-5">
                   {portfolioCards.ai.items!.map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <div className="w-4 h-4 rounded-full border border-[#b8962e]" />
-                      <span className="text-sm font-bold tracking-wider uppercase text-gray-300">{item}</span>
+                      <div className="w-4 h-4 rounded-full border border-[#164076]" />
+                      <span className="text-sm font-bold tracking-wider uppercase text-gray-600">{item}</span>
                     </div>
                   ))}
                 </div>
                 <Link
                   href="/research-themes"
-                  className="text-sm font-bold tracking-widest uppercase text-white flex items-center gap-2 hover:text-[#b8962e] transition-colors"
+                  className="text-sm font-bold tracking-widest uppercase text-[#0d1b35] flex items-center gap-2 hover:text-[#b8962e] transition-colors mt-auto"
                 >
                   Explore Research Themes →
                 </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -225,32 +217,24 @@ export default function InnovationPage() {
 
       {/* Digital Intelligence Banner */}
       <section className="py-20 bg-[#164076] text-white">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Digital Intelligence for Healthier, Safer Workplaces
-            </h2>
-            <div className="space-y-6">
-              {capabilities.map((cap) => (
-                <div key={cap.title} className="flex gap-4 items-start">
-                  <div className="w-10 h-10 bg-[#b8962e] flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-[#b8962e] mb-1">{cap.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{cap.desc}</p>
-                  </div>
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-bold mb-8 sm:whitespace-nowrap">
+            Digital Intelligence for Healthier, Safer Workplaces
+          </h2>
+          <div className="space-y-6">
+            {capabilities.map((cap) => (
+              <div key={cap.title} className="flex gap-4 items-start">
+                <div className="w-10 h-10 bg-[#b8962e] flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                  </svg>
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex justify-center md:justify-end">
-            <div className="text-center md:text-right">
-              <p className="text-3xl font-bold">ZERO HARM</p>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mt-2">Our Ultimate Objective</p>
-            </div>
+                <div>
+                  <h3 className="font-bold text-[#b8962e] mb-1">{cap.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{cap.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

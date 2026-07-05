@@ -16,8 +16,8 @@ export default function GalleryPage() {
 
   const tabs: { key: Tab; label: string }[] = [
     { key: "all", label: "All" },
-    { key: "videos", label: "Videos" },
     { key: "photos", label: "Photos" },
+    { key: "videos", label: "Videos" },
   ];
 
   return (
@@ -45,8 +45,51 @@ export default function GalleryPage() {
         </div>
       </PageHero>
 
-      {showVideos && (
+      {showPhotos && (
         <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex items-center gap-3 mb-10">
+              <div className="w-1 h-6 bg-[#b8962e]" />
+              <h2 className="text-2xl font-bold text-[#0d1b35]">Photo Events</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {galleryEvents.map((event) => (
+                <Link
+                  key={event.slug}
+                  href={`/gallery/${event.slug}`}
+                  className="group bg-white border border-gray-200 overflow-hidden hover:border-[#b8962e] transition-colors"
+                >
+                  <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                    <Image
+                      src={event.photos[0].src}
+                      alt={event.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+
+                    <span className="absolute top-4 left-4 bg-[#d22d20] text-white text-xs px-2 py-1 font-bold tracking-wider">
+                      {event.photos.length} PHOTOS
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-bold text-[#0d1b35] text-base leading-snug mb-2 group-hover:text-[#b8962e] transition-colors">
+                      {event.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                      {event.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {showVideos && (
+        <section className={`py-20 ${showPhotos ? "bg-gray-50" : "bg-white"}`}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center gap-3 mb-10">
               <div className="w-1 h-6 bg-[#b8962e]" />
@@ -91,49 +134,6 @@ export default function GalleryPage() {
                     <p className="text-gray-600 text-sm leading-relaxed">{video.desc}</p>
                   </div>
                 </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {showPhotos && (
-        <section className={`py-20 ${showVideos ? "bg-gray-50" : "bg-white"}`}>
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="w-1 h-6 bg-[#b8962e]" />
-              <h2 className="text-2xl font-bold text-[#0d1b35]">Photo Events</h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryEvents.map((event) => (
-                <Link
-                  key={event.slug}
-                  href={`/gallery/${event.slug}`}
-                  className="group bg-white border border-gray-200 overflow-hidden hover:border-[#b8962e] transition-colors"
-                >
-                  <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
-                    <Image
-                      src={event.photos[0].src}
-                      alt={event.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    
-                    <span className="absolute top-4 left-4 bg-[#d22d20] text-white text-xs px-2 py-1 font-bold tracking-wider">
-                      {event.photos.length} PHOTOS
-                    </span>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-bold text-[#0d1b35] text-base leading-snug mb-2 group-hover:text-[#b8962e] transition-colors">
-                      {event.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
-                      {event.description}
-                    </p>
-                  </div>
-                </Link>
               ))}
             </div>
           </div>

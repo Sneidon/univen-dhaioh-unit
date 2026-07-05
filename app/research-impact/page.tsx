@@ -22,7 +22,6 @@ const impactAreas = [
     title: "Policy Influence",
     desc: "Translating research evidence into national occupational health policy, Codes of Practice, and regulatory frameworks that protect workers across the mining sector.",
     icon: "P",
-    dark: true,
     image: impactCards[0],
   },
   {
@@ -35,14 +34,12 @@ const impactAreas = [
     title: "Women in Mining Policy",
     desc: "Advancing gender-responsive workplace policies, women-specific PPE standards, and guidelines addressing gender-based violence and security in mining.",
     icon: "W",
-    gold: true,
     image: impactCards[2],
   },
   {
     title: "Government Advisory Roles",
     desc: "Providing expert technical advisory support to government departments, regulatory bodies, and national health authorities on occupational health matters.",
     icon: "G",
-    dark: true,
     image: impactCards[3],
   },
   {
@@ -69,7 +66,7 @@ export default function ResearchImpactPage() {
     <>
       <PageHero src="/banners/hero-research-impact.jpg" alt="Occupational health command center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-          Research Impact <span className="text-[#b8962e]">&amp; Policy Influence</span>
+          Research <span className="text-[#b8962e]">Impact</span>
         </h1>
       </PageHero>
 
@@ -109,26 +106,29 @@ export default function ResearchImpactPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35]">How We Drive Change</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {impactAreas.map((area) => (
+            {impactAreas.map((area, i) => {
+              const isBlue = i % 2 === 1;
+              return (
               <div
                 key={area.title}
-                className={`overflow-hidden flex flex-col ${area.gold ? "bg-[#b8962e] text-white" : area.dark ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
+                className={`overflow-hidden flex flex-col ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
               >
                 <CardImageHeader
                   src={area.image.src}
                   alt={area.image.alt}
-                  overlay={area.gold ? "gold" : area.dark ? "blue" : "light"}
+                  overlay={isBlue ? "blue" : "light"}
                   className="h-72"
                 />
                 <div className="p-8 flex flex-col flex-1">
-                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${area.gold ? "bg-white/20 text-white" : area.dark ? "bg-[#b8962e] text-white" : "bg-[#164076] text-[#b8962e]"}`}>
+                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${isBlue ? "bg-[#b8962e] text-white" : "bg-[#164076] text-[#b8962e]"}`}>
                   {area.icon}
                 </div>
-                <h3 className={`font-bold text-lg mb-3 ${area.gold || area.dark ? "text-white" : "text-[#0d1b35]"}`}>{area.title}</h3>
-                <p className={`text-sm leading-relaxed ${area.gold ? "text-white/80" : area.dark ? "text-gray-300" : "text-gray-600"}`}>{area.desc}</p>
+                <h3 className={`font-bold text-lg mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>{area.title}</h3>
+                <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>{area.desc}</p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -155,17 +155,14 @@ export default function ResearchImpactPage() {
               </Link>
             </div>
             <div className="grid grid-cols-1 gap-2">
-              {policyAreas.map((area, i) => (
-                <div
-                  key={area}
-                  className={`flex items-center gap-4 p-4 border border-[#164076] ${i === 0 ? "bg-[#164076] text-white border-t-4 border-t-[#d22d20]" : "border-gray-200 bg-white"}`}
-                >
-                  <div className={`w-6 h-6 rounded flex items-center justify-center flex-shrink-0 ${i === 0 ? "bg-[#b8962e]" : "bg-gray-100"}`}>
-                    <svg className={`w-3 h-3 ${i === 0 ? "text-white" : "text-[#b8962e]"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {policyAreas.map((area) => (
+                <div key={area} className="flex items-center gap-4 p-4 border border-gray-200 bg-white">
+                  <div className="w-6 h-6 rounded flex items-center justify-center flex-shrink-0 bg-gray-100">
+                    <svg className="w-3 h-3 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className={`text-sm ${i === 0 ? "text-white font-medium" : "text-gray-700"}`}>{area}</span>
+                  <span className="text-sm text-gray-700">{area}</span>
                 </div>
               ))}
             </div>

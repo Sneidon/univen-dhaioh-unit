@@ -16,7 +16,6 @@ const opportunities = [
     tag: "PHD",
     desc: "Full doctoral research programmes addressing the Unit's strategic research themes under joint academic–industry supervision by Prof Lindiwe Zungu, Dr James Aluha, and the broader team.",
     areas: ["AI & Predictive Analytics", "Women in Mining Health", "Mental Health in Mining", "Climate Change & Worker Health"],
-    dark: true,
     image: hcdCards[1],
   },
   {
@@ -38,7 +37,6 @@ const opportunities = [
     tag: "INTERN",
     desc: "Structured research internship placements providing exposure to digital health research, occupational health practice, and innovation within the DHAIOH Unit.",
     areas: ["Data Analysis", "Field Research", "Technology Development", "Policy Analysis"],
-    dark: true,
     image: hcdCards[4],
   },
   {
@@ -53,7 +51,6 @@ const opportunities = [
     tag: "LEADERSHIP",
     desc: "Nurturing future leaders equipped to drive scientific discovery, digital transformation, policy influence, and sustainable impact in occupational health.",
     areas: ["Research Leadership", "Digital Innovation", "Policy Influence", "Capacity Development"],
-    dark: true,
     image: hcdCards[6],
   },
 ];
@@ -102,7 +99,7 @@ export default function HumanCapitalPage() {
   return (
     <>
       <PageHero src="/banners/hero-human-capital.jpg" alt="Mine health doctor with holographic dashboard">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:whitespace-nowrap">
           Human Capital <span className="text-[#b8962e]">Development</span>
         </h1>
       </PageHero>
@@ -135,34 +132,38 @@ export default function HumanCapitalPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
-            {opportunities.map((opp) => (
+            {opportunities.map((opp, i) => {
+              const row = Math.floor(i / 2);
+              const col = i % 2;
+              const isBlue = (row + col) % 2 === 1;
+              return (
               <div
                 key={opp.category}
-                className={`overflow-hidden flex flex-col ${opp.dark ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
+                className={`overflow-hidden flex flex-col ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
               >
                 <CardImageHeader
                   src={opp.image.src}
                   alt={opp.image.alt}
-                  overlay={opp.dark ? "blue" : "light"}
+                  overlay={isBlue ? "blue" : "light"}
                   className="h-72"
                 />
                 <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className={`text-xs font-bold tracking-widest uppercase px-3 py-1 ${opp.dark ? "bg-[#b8962e] text-white" : "bg-[#d22d20] text-white"}`}>
+                  <span className={`text-xs font-bold tracking-widest uppercase px-3 py-1 ${isBlue ? "bg-[#b8962e] text-white" : "bg-[#d22d20] text-white"}`}>
                     {opp.tag}
                   </span>
                 </div>
-                <h3 className={`font-bold text-xl mb-3 ${opp.dark ? "text-white" : "text-[#0d1b35]"}`}>
+                <h3 className={`font-bold text-xl mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
                   {opp.category}
                 </h3>
-                <p className={`text-sm leading-relaxed mb-5 ${opp.dark ? "text-gray-300" : "text-gray-600"}`}>
+                <p className={`text-sm leading-relaxed mb-5 ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
                   {opp.desc}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {opp.areas.map((area) => (
                     <span
                       key={area}
-                      className={`text-xs px-3 py-1 border ${opp.dark ? "border-white/20 text-white/70" : "border-gray-300 text-gray-600"}`}
+                      className={`text-xs px-3 py-1 border ${isBlue ? "border-white/20 text-white/70" : "border-gray-300 text-gray-600"}`}
                     >
                       {area}
                     </span>
@@ -170,7 +171,8 @@ export default function HumanCapitalPage() {
                 </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -183,22 +185,25 @@ export default function HumanCapitalPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35]">Development Programmes</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {programmes.map((prog, i) => (
-              <div
-                key={prog.title}
-                className={`p-8 ${i === 1 ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : i === 4 ? "bg-[#b8962e] text-white" : "bg-white border border-gray-200"}`}
-              >
-                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${i === 1 || i === 4 ? "bg-white/20 text-white" : "bg-[#164076] text-[#b8962e]"}`}>
-                  {prog.icon}
+            {programmes.map((prog, i) => {
+              const isBlue = i % 2 === 1;
+              return (
+                <div
+                  key={prog.title}
+                  className={`p-8 ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
+                >
+                  <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${isBlue ? "bg-white/20 text-white" : "bg-[#164076] text-[#b8962e]"}`}>
+                    {prog.icon}
+                  </div>
+                  <h3 className={`font-bold text-base mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
+                    {prog.title}
+                  </h3>
+                  <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
+                    {prog.desc}
+                  </p>
                 </div>
-                <h3 className={`font-bold text-base mb-3 ${i === 1 || i === 4 ? "text-white" : "text-[#0d1b35]"}`}>
-                  {prog.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${i === 1 ? "text-gray-300" : i === 4 ? "text-white/80" : "text-gray-600"}`}>
-                  {prog.desc}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

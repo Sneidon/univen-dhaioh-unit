@@ -37,7 +37,6 @@ const pathway = [
     title: "Measurable Health & Social Outcomes",
     desc: "Achieving the DHAIOH Unit's ultimate objective — healthier workers, safer mining workplaces, stronger occupational health systems, and a tangible contribution to Zero Harm.",
     outputs: ["Reduced occupational disease burden", "Early detection & prevention", "Improved worker wellbeing", "Zero Harm advancement"],
-    gold: true,
   },
 ];
 
@@ -50,9 +49,7 @@ export default function ImpactFrameworkPage() {
         imageClassName="object-cover object-top"
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
-          From Research to
-          <br />
-          <span className="text-[#b8962e]">Real-World Impact</span>
+          Impact <span className="text-[#b8962e]">Framework</span>
         </h1>
       </PageHero>
 
@@ -61,7 +58,7 @@ export default function ImpactFrameworkPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-3">
-              Evidence → Policy → Practice → Impact
+              Evidence <span className="text-[#d22d20]">→</span> Policy <span className="text-[#d22d20]">→</span> Practice <span className="text-[#d22d20]">→</span> Impact
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
               Our methodology follows a rigorous scientific cycle, ensuring that every discovery translates into meaningful improvements in worker health and workplace safety.
@@ -69,16 +66,18 @@ export default function ImpactFrameworkPage() {
           </div>
 
           <div className="space-y-4">
-            {pathway.map((item, i) => (
+            {pathway.map((item, i) => {
+              const isBlue = i % 2 !== 0;
+              return (
               <div
                 key={item.step}
-                className={`grid md:grid-cols-12 gap-0 ${item.gold ? "bg-[#b8962e] text-white" : i % 2 === 0 ? "bg-gray-50 border border-gray-200" : "bg-[#164076] text-white border-t-4 border-[#d22d20]"}`}
+                className={`grid md:grid-cols-12 gap-0 ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
               >
                 {/* Step number */}
-                <div className={`md:col-span-2 p-8 flex items-center justify-center border-r ${item.gold ? "border-white/20" : i % 2 === 0 ? "border-gray-200" : "border-white/10"}`}>
+                <div className={`md:col-span-2 p-8 flex items-center justify-center border-r ${isBlue ? "border-white/10" : "border-gray-200"}`}>
                   <div className="text-center">
-                    <p className={`text-4xl font-bold ${item.gold || i % 2 !== 0 ? "text-white/30" : "text-gray-200"}`}>{item.step}</p>
-                    <p className={`text-xs font-bold tracking-widest uppercase mt-2 ${item.gold ? "text-white/70" : i % 2 !== 0 ? "text-[#b8962e]" : "text-[#b8962e]"}`}>
+                    <p className={`text-4xl font-bold ${isBlue ? "text-white/30" : "text-gray-200"}`}>{item.step}</p>
+                    <p className="text-xs font-bold tracking-widest uppercase mt-2 text-[#b8962e]">
                       {item.phase}
                     </p>
                   </div>
@@ -86,30 +85,31 @@ export default function ImpactFrameworkPage() {
 
                 {/* Content */}
                 <div className="md:col-span-6 p-8">
-                  <h3 className={`font-bold text-xl mb-3 ${item.gold || i % 2 !== 0 ? "text-white" : "text-[#0d1b35]"}`}>
+                  <h3 className={`font-bold text-xl mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
                     {item.title}
                   </h3>
-                  <p className={`text-sm leading-relaxed ${item.gold ? "text-white/80" : i % 2 !== 0 ? "text-gray-300" : "text-gray-600"}`}>
+                  <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
                     {item.desc}
                   </p>
                 </div>
 
                 {/* Outputs */}
-                <div className={`md:col-span-4 p-8 border-l ${item.gold ? "border-white/20" : i % 2 === 0 ? "border-gray-200" : "border-white/10"}`}>
-                  <p className={`text-xs font-bold tracking-widest uppercase mb-3 ${item.gold ? "text-white/60" : i % 2 !== 0 ? "text-gray-400" : "text-gray-400"}`}>
+                <div className={`md:col-span-4 p-8 border-l ${isBlue ? "border-white/10" : "border-gray-200"}`}>
+                  <p className="text-xs font-bold tracking-widest uppercase mb-3 text-gray-400">
                     Key Outputs
                   </p>
                   <ul className="space-y-2">
                     {item.outputs.map((o) => (
                       <li key={o} className="flex items-center gap-2">
-                        <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${item.gold ? "bg-white" : i % 2 !== 0 ? "bg-[#b8962e]" : "bg-[#b8962e]"}`} />
-                        <span className={`text-sm ${item.gold ? "text-white/80" : i % 2 !== 0 ? "text-gray-300" : "text-gray-600"}`}>{o}</span>
+                        <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-[#b8962e]" />
+                        <span className={`text-sm ${isBlue ? "text-gray-300" : "text-gray-600"}`}>{o}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function ImpactFrameworkPage() {
       {/* Policy influence teaser */}
       <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Policy & Practice</p>
+          <p className="text-[#b8962e] text-sm font-bold tracking-widest uppercase mb-3">Policy & Practice</p>
           <h2 className="text-2xl md:text-3xl font-bold text-[#0d1b35] mb-4">Areas of Policy Influence</h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-6">
             The DHAIOH Unit drives systemic change across 11 areas of national policy, regulatory reform, and

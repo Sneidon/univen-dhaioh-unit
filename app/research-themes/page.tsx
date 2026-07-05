@@ -47,7 +47,6 @@ const themes = [
   {
     title: "Innovation, Commercialisation & Technology Development",
     desc: "Transforming research outputs into patents, digital products, health technologies, decision-support systems, and scalable solutions with industry impact.",
-    gold: true,
     image: themeCards[7],
   },
 ];
@@ -59,7 +58,7 @@ export default function ResearchThemesPage() {
     <>
       <PageHero src="/banners/hero-research-themes.jpg" alt="Open-pit mining operations with AI monitoring">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-          Transforming Worker Health Through Digital Intelligence.
+          Research <span className="text-[#b8962e]">Themes</span>
         </h1>
       </PageHero>
 
@@ -75,11 +74,11 @@ export default function ResearchThemesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {themes.map((theme) => (
-              <div key={theme.title} className={`overflow-hidden flex flex-col ${theme.gold ? "bg-[#b8962e]" : "bg-[#164076]"} text-white`}>
+              <div key={theme.title} className="overflow-hidden flex flex-col bg-[#164076] text-white">
                 <CardImageHeader
                   src={theme.image.src}
                   alt={theme.image.alt}
-                  overlay={theme.gold ? "gold" : "blue"}
+                  overlay="blue"
                   className="h-64"
                 />
                 <div className="p-8">
@@ -109,13 +108,13 @@ export default function ResearchThemesPage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {programmes.map((prog, i) => (
+            {programmes.map((prog, i) => {
+              const isBlue = i % 2 === 1;
+              return (
               <div
                 key={prog.title}
                 className={`overflow-hidden flex flex-col ${
-                  i === 8
-                    ? "bg-[#b8962e] text-white"
-                    : i % 3 === 1
+                  isBlue
                     ? "bg-[#164076] text-white border-t-4 border-[#d22d20]"
                     : "bg-white border border-gray-200"
                 }`}
@@ -135,34 +134,27 @@ export default function ResearchThemesPage() {
                 <div className="p-6 flex flex-col gap-3 flex-1">
                 <div className="flex gap-2 items-center">
                   <span
-                    className={`text-xs px-2 py-0.5 font-bold tracking-wider ${
-                      i === 8
-                        ? "bg-white/20 text-white"
-                        : i % 3 === 1
-                        ? "bg-[#b8962e] text-white"
-                        : "bg-[#164076] text-white"
+                    className={`text-xs px-2 py-0.5 font-bold tracking-wider text-white ${
+                      prog.tag === "ACTIVE"
+                        ? "bg-[#b8962e]"
+                        : prog.tag === "STRATEGIC"
+                        ? "bg-[#d22d20]"
+                        : "bg-[#164076]"
                     }`}
                   >
                     {prog.tag}
                   </span>
-                  <span
-                    className={`text-xs ${
-                      i === 8 || i % 3 === 1 ? "text-white/50" : "text-gray-400"
-                    }`}
-                  >
+                  <span className={`text-xs ${isBlue ? "text-white/50" : "text-gray-400"}`}>
                     {prog.subTag}
                   </span>
                 </div>
-                <h3
-                  className={`font-bold text-base leading-snug ${
-                    i === 8 || i % 3 === 1 ? "text-white" : "text-[#0d1b35]"
-                  }`}
-                >
+                <h3 className={`font-bold text-base leading-snug ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
                   {prog.title}
                 </h3>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

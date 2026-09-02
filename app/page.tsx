@@ -73,13 +73,26 @@ export default function HomePage() {
   return (
     <>
       {/* Hero — Strategic Alliance */}
-      <section
-        className="relative overflow-hidden text-white"
-        style={{
-          background: "linear-gradient(135deg, #0d1b35 0%, #164076 50%, #0d1b35 100%)",
-        }}
-      >
-        <div className="sec !py-16 md:!py-24">
+      <section className="relative overflow-hidden text-white">
+        <div className="absolute inset-0">
+          <Image
+            src="/banners/hero-home-field-team.jpg"
+            alt="DHAIOH researchers and partners in full protective gear during a mine site visit"
+            fill
+            priority
+            quality={90}
+            sizes="100vw"
+            className="object-cover object-[center_35%]"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(105deg, rgba(13,27,53,0.94) 0%, rgba(13,27,53,0.82) 42%, rgba(22,64,118,0.72) 68%, rgba(13,27,53,0.78) 100%)",
+            }}
+          />
+        </div>
+        <div className="relative sec !py-16 md:!py-24">
           <div className="sec-in grid items-start gap-10 lg:grid-cols-[1.35fr_0.85fr]">
             <div>
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">

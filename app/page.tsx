@@ -1,25 +1,45 @@
 import Link from "next/link";
 import Image from "next/image";
 import { flagshipProgrammes } from "@/lib/flagship-programmes";
-import { researchThemes } from "@/lib/research-themes";
 import { newsArticles } from "@/lib/news-data";
+import { themeCardsHome } from "@/lib/card-images";
 
 const latestNews = newsArticles[0];
 const landmarkProgrammes = flagshipProgrammes.slice(0, 4);
-const themeChips = [
-  "Digital Health",
-  "AI & Analytics",
-  "Disease Prevention",
-  "Women in Mining",
-  "Mental Health",
-  "Innovation",
+
+/** Homepage theme teasers — original site copy (not rewritten). */
+const researchThemes = [
+  {
+    title: "Digital Health & Occupational Health Intelligence",
+    desc: "Developing integrated digital platforms that support real-time occupational health surveillance, worker monitoring, and evidence-based decision-making.",
+  },
+  {
+    title: "AI & Predictive Analytics",
+    desc: "Leveraging machine learning to predict occupational health risks and support proactive interventions.",
+  },
+  {
+    title: "Occupational Disease Prevention & Early Detection",
+    desc: "Digital tools and predictive models for respiratory diseases, cancers, hearing loss and more.",
+  },
+  {
+    title: "Medical Surveillance & Early Warning",
+    desc: "Intelligent systems for rapid identification of health trends and emerging occupational risks.",
+  },
+  {
+    title: "Women in Mining & Gender-Responsive Health",
+    desc: "Innovative solutions addressing the unique occupational health needs of women in mining.",
+  },
+  {
+    title: "Mental Health · Climate Change · Innovation",
+    desc: "Psychosocial risk management, environmental health, sustainable mining, and commercialisation.",
+  },
 ];
 
 const stats = [
-  { value: "20+", label: "Years of Research Experience" },
-  { value: "08", label: "Core Research Themes" },
-  { value: "45+", label: "Graduates Supervised" },
-  { value: "11", label: "Policy Influence Areas" },
+  { value: "20+", label: "Years of Research Experience", sub: "Occupational health expertise" },
+  { value: "45+", label: "Graduates Supervised", sub: "Master's & Doctoral" },
+  { value: "08", label: "Core Research Themes", sub: "Multidisciplinary agenda" },
+  { value: "11", label: "Policy Influence Areas", sub: "National & regulatory" },
 ];
 
 const partners = [
@@ -39,71 +59,91 @@ export default function HomePage() {
         }}
       >
         <div className="sec !py-16 md:!py-24">
-          <div className="sec-in grid items-center gap-12 lg:grid-cols-[1.3fr_1fr]">
+          <div className="sec-in grid items-center gap-10 lg:grid-cols-[1.35fr_0.85fr]">
             <div>
-              <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
-                SAMRC Extramural Unit · Hosted by UNIVEN
-              </span>
-              <h1 className="mb-3 text-[clamp(1.75rem,3.5vw,2.875rem)] font-bold leading-[1.15]">
-                Transforming Worker Health Through{" "}
-                <span className="text-[#b8962e]">Digital Intelligence</span>
+              <p className="mb-3 text-sm font-light leading-relaxed text-white/70 md:text-base">
+                Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector
+              </p>
+              <h1 className="mb-4 text-[clamp(2rem,5vw,3.75rem)] font-bold leading-tight">
+                <span className="text-[#b8962e]">DHAIOH</span> Unit
               </h1>
-              <p className="mb-5 text-sm italic tracking-wide text-[#b8962e]/90">
-                Digital Health · AI · Occupational Health · Mining
+              <p className="mb-6 max-w-2xl text-2xl font-semibold leading-snug text-white/90 md:text-3xl">
+                Transforming Worker <span className="text-[#b8962e]">Health Through</span>
+                <br />
+                <span className="whitespace-nowrap">Digital Intelligence</span>
               </p>
-              <p className="mb-8 max-w-xl text-base leading-relaxed text-white/80">
-                The DHAIOH Unit advances digital health and artificial intelligence for occupational
-                health in mining — building predictive systems that protect workers across South Africa
-                and beyond.
+              <p className="mb-8 max-w-3xl text-sm leading-relaxed text-white/75 md:text-base">
+                A pioneering research and innovation platform dedicated to transforming occupational health
+                through cutting-edge digital technologies, artificial intelligence, advanced analytics, and
+                predictive health systems — positioned to become a continental and global leader in
+                next-generation occupational health solutions for mining and other high-risk work environments.
               </p>
-              <div className="mb-8 flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3">
                 <Link href="/research-themes" className="bt">
-                  Our Research →
+                  Explore Research
                 </Link>
-                <Link href="/about" className="bot !border-white/40 !text-white hover:!bg-white/10">
-                  About DHAIOH
+                <Link href="/impact-framework" className="bot !border-white/40 !text-white hover:!bg-white/10">
+                  Impact Framework
                 </Link>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {themeChips.map((chip) => (
-                  <span
-                    key={chip}
-                    className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs text-white/75"
-                  >
-                    {chip}
-                  </span>
-                ))}
+                <Link href="/about" className="bot !border-[#b8962e]/60 !text-[#b8962e] hover:!bg-[#b8962e]/10">
+                  About Unit
+                </Link>
               </div>
             </div>
 
-            <div className="card-soft overflow-hidden border-white/10 bg-white/10 p-6 backdrop-blur-sm">
-              <div className="mb-4 flex items-center gap-4">
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-[#b8962e]/50">
-                  <Image
-                    src="/prof-zungu.jpg"
-                    alt="Professor Lindiwe Zungu"
-                    fill
-                    className="object-cover"
-                    sizes="80px"
-                  />
-                </div>
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
-                    Co-Director
-                  </p>
-                  <p className="text-lg font-bold text-white">Prof Lindiwe Zungu</p>
-                  <p className="text-sm text-white/70">OHS in Mining Research Institute</p>
+            {/* Co-Directors — IPGH-style cards */}
+            <div className="space-y-4">
+              <div className="rounded-[12px] border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+                <div className="flex gap-4 items-start">
+                  <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#b8962e]">
+                    <Image
+                      src="/prof-zungu.jpg"
+                      alt="Prof Lindiwe Zungu"
+                      fill
+                      className="object-cover object-top"
+                      sizes="72px"
+                    />
+                  </div>
+                  <div>
+                    <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
+                      Unit Director
+                    </p>
+                    <p className="mb-1 text-lg font-bold text-white">Prof Lindiwe Zungu</p>
+                    <p className="text-xs leading-relaxed text-white/60">
+                      Director: OHS in Mining Research Institute | UNIVEN
+                    </p>
+                  </div>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-white/75">
-                Leading research on digital occupational health, women in mining, and evidence-based
-                policy for safer workplaces.
-              </p>
+
+              <div className="rounded-[12px] border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+                <div className="flex gap-4 items-start">
+                  <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#d22d20]">
+                    <Image
+                      src="/james-headshot.jpg"
+                      alt="Dr James Aluha"
+                      fill
+                      className="object-cover object-top"
+                      sizes="72px"
+                    />
+                  </div>
+                  <div>
+                    <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
+                      Co-Unit Director
+                    </p>
+                    <p className="mb-1 text-lg font-bold text-white">Dr James Aluha</p>
+                    <p className="text-xs leading-relaxed text-white/60">
+                      Chief Research Scientist | Mintek
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <Link
                 href="/leadership"
-                className="mt-4 inline-flex text-sm font-semibold text-[#b8962e] hover:underline"
+                className="inline-flex text-sm font-semibold text-[#b8962e] hover:underline"
               >
-                Meet the leadership →
+                Meet the Leadership Team →
               </Link>
             </div>
           </div>
@@ -117,53 +157,65 @@ export default function HomePage() {
             {stats.map((s) => (
               <div key={s.label} className="text-center md:text-left">
                 <p className="text-3xl font-bold text-[#b8962e] md:text-4xl">{s.value}</p>
-                <p className="mt-1 text-sm text-white/75">{s.label}</p>
+                <p className="mt-1 text-sm font-semibold text-white">{s.label}</p>
+                <p className="mt-0.5 text-xs text-white/60">{s.sub}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Research themes — teasers */}
+      {/* Research themes — teasers (original home theme copy) */}
       <section className="sec bg-white">
         <div className="sec-in">
-          <p className="slbl">Priority Areas</p>
-          <h2 className="stit">Our Research</h2>
-          <p className="ssub">
-            Eight strategic themes spanning digital health, AI, disease prevention, and gender-responsive
-            mining health systems.
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {researchThemes.map((theme) => (
+          <p className="slbl">Scientific Identity</p>
+          <h2 className="stit">Strategic Research Themes</h2>
+          <p className="ssub">Eight themes defining the future of digital occupational health.</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {researchThemes.map((theme, i) => (
               <Link
                 key={theme.title}
                 href="/research-themes"
-                className="card-soft group p-5 transition-colors hover:border-[#b8962e]"
+                className="card-soft group overflow-hidden transition-colors hover:border-[#b8962e]"
               >
-                <h3 className="mb-2 text-[15px] font-bold leading-snug text-[#0d1b35] group-hover:text-[#164076]">
-                  {theme.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-[#5a7184]">{theme.short}</p>
+                <div className="relative aspect-[5/4] min-h-[200px] w-full">
+                  <Image
+                    src={themeCardsHome[i].src}
+                    alt={themeCardsHome[i].alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="mb-2 text-[15px] font-bold leading-snug text-[#0d1b35] group-hover:text-[#164076]">
+                    {theme.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[#5a7184]">{theme.desc}</p>
+                </div>
               </Link>
             ))}
           </div>
           <div className="mt-8">
             <Link href="/research-themes" className="bt-blue">
-              Explore All Research →
+              All Themes →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Flagship — 4 landmarks */}
+      {/* Flagship — 4 landmarks (avoids duplicating full programme grid) */}
       <section className="sec bg-[#f5f8fa]">
         <div className="sec-in">
-          <p className="slbl">Flagship Projects</p>
-          <h2 className="stit">Landmark Initiatives</h2>
-          <p className="ssub">
-            Selected programmes driving early warning, AI surveillance, women in mining health, and
-            psychosocial research.
-          </p>
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="slbl">Active Research Portfolio</p>
+              <h2 className="stit !mb-0">Flagship Research Programmes</h2>
+            </div>
+            <Link href="/research-themes" className="text-sm font-semibold text-[#0d1b35] hover:text-[#b8962e]">
+              All Programmes →
+            </Link>
+          </div>
           <div className="grid gap-5 md:grid-cols-2">
             {landmarkProgrammes.map((prog) => (
               <Link
@@ -200,7 +252,7 @@ export default function HomePage() {
         <div className="sec-in">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="slbl">Latest</p>
+              <p className="slbl">Latest Highlight</p>
               <h2 className="stit !mb-0">News &amp; Events</h2>
             </div>
             <Link href="/news" className="text-sm font-semibold text-[#164076] hover:text-[#b8962e]">
@@ -211,7 +263,7 @@ export default function HomePage() {
             href={`/news/${latestNews.slug}`}
             className="card-soft group grid overflow-hidden md:grid-cols-2"
           >
-            <div className="relative min-h-[300px] md:min-h-full aspect-[5/4] md:aspect-auto">
+            <div className="relative min-h-[360px] w-full aspect-[4/3] md:min-h-[420px] md:aspect-auto">
               <Image
                 src={latestNews.cover}
                 alt={latestNews.coverAlt}
@@ -236,13 +288,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Partners logos */}
+      {/* Partners — teaser with original alliance copy */}
       <section className="sec bg-[#eef3f7]">
         <div className="sec-in">
-          <p className="slbl">Strategic Alliance</p>
-          <h2 className="stit">Research Partners</h2>
+          <p className="slbl">The SAMRC–UNIVEN–MINTEK Strategic Alliance</p>
+          <h2 className="stit">A Jointly Driven Strategic Initiative</h2>
           <p className="ssub">
-            SAMRC, University of Venda, and Mintek form the institutional foundation of the DHAIOH Unit.
+            The DHAIOH Unit was established as a flagship three-way partnership combining strategic
+            investment, academic leadership, and mining innovation to transform worker health through
+            digital intelligence. This alliance is central to the Unit&apos;s identity, credibility, and
+            long-term impact.
           </p>
           <div className="mb-8 flex flex-wrap items-center justify-center gap-10 md:gap-16">
             {partners.map((p) => (
@@ -262,17 +317,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Short callout */}
+      {/* Collaboration CTA — original investment copy */}
       <section className="bg-[#0d1b35] text-white">
         <div className="sec">
           <div className="sec-in max-w-3xl">
-            <p className="slbl !text-[#b8962e]">Zero Harm</p>
+            <p className="slbl !text-[#b8962e]">Sustainability &amp; Growth</p>
             <h2 className="mb-4 text-[clamp(1.5rem,3vw,2.25rem)] font-bold leading-tight text-white">
-              Every worker should return home healthy, safe, and treated with dignity.
+              Investment &amp; Collaboration Opportunities
             </h2>
             <p className="mb-8 text-base leading-relaxed text-white/75">
-              From gender-responsive mining health to predictive surveillance, our work translates
-              research into safer workplaces across the South African mining industry.
+              The DHAIOH Unit actively positions itself as a platform for strategic collaboration and
+              investment. We welcome engagement from visionary partners who share our commitment to
+              healthier workers, safer workplaces, and a sustainable mining future.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/contact" className="bt">

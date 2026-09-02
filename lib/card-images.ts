@@ -30,7 +30,7 @@ export const themeCards = [
   img("/cards/card-theme-02-ai-analytics.jpg", "Digital twin mining truck with predictive analytics"),
   img("/cards/card-theme-03-disease-prevention.jpg", "Occupational health screening in mining clinic"),
   img("/cards/card-theme-04-medical-surveillance.jpg", "Underground miner with wearable health monitoring"),
-  img("/cards/card-theme-05-women-in-mining.jpg", "Confident woman mining engineer at open-pit site"),
+  img("/gallery/women-in-mining-indaba-2026/delegates-speakers-stage.jpg", "Delegates at the 2026 MHSC National Women in Mining Indaba"),
   img("/cards/card-theme-06-mental-health.jpg", "Psychosocial support in mining workplace setting"),
   img("/cards/card-theme-07-climate-environment.jpg", "Environmental health monitoring at mining landscape"),
   img("/cards/card-theme-08-innovation-commercialisation.jpg", "Innovation team developing mining health technology"),
@@ -39,7 +39,7 @@ export const themeCards = [
 export const impactCards = [
   img("/cards/card-impact-policy-influence.jpg", "Health experts and officials reviewing policy evidence"),
   img("/cards/card-impact-codes-of-practice.jpg", "Safety inspector and mine manager reviewing standards"),
-  img("/cards/card-impact-women-mining-policy.jpg", "Diverse group of women in mining and health roles"),
+  img("/gallery/women-in-mining-indaba-2026/speakers-womens-month.jpg", "Speakers and delegates at the MHSC Women in Mining Indaba"),
   img("/cards/card-impact-government-advisory.jpg", "Advisor presenting occupational health evidence"),
   img("/cards/card-impact-regulatory-reform.jpg", "Department meeting on mining health regulation"),
   img("/cards/card-impact-evidence-to-policy.jpg", "Researcher translating findings into policy"),
@@ -80,7 +80,7 @@ export const leadershipCards = [
 export const programmeCards = [
   img("/cards/card-programme-01-early-warning.jpg", "Disease early warning command center"),
   img("/cards/card-programme-02-ai-surveillance.jpg", "AI-powered worker health surveillance"),
-  img("/cards/card-programme-03-women-mining-health.jpg", "Women mining health and safety team on site"),
+  img("/gallery/women-in-mining-indaba-2026/delegates-gift-bags.jpg", "Women in Mining Indaba delegates with MHSC host gift bags"),
   img("/cards/card-programme-04-mental-health.jpg", "Psychosocial support in mining workplace"),
   img("/cards/card-programme-05-biological-hazards.jpg", "Dust and biological hazard sampling underground"),
   img("/cards/card-programme-06-cancer-prevention.jpg", "Cancer prevention screening in mine health facility"),
@@ -96,14 +96,14 @@ export const themeCardsHome = [
   img("/cards/card-theme-02-ai-analytics-alt.jpg", "Aerial view of haul truck convoy with predictive analytics overlay"),
   img("/cards/card-theme-03-disease-prevention-alt.jpg", "Mobile mine-site health screening unit"),
   img("/cards/card-theme-04-medical-surveillance-alt.jpg", "Underground control point monitoring worker biometric wearables"),
-  img("/cards/card-theme-05-women-in-mining-alt.jpg", "Women reviewing a health and safety heatmap over a mine model"),
+  img("/gallery/women-in-mining-indaba-2026/scholars-industry-leaders.jpg", "UNIVEN scholars with industry leaders at the Women in Mining Indaba"),
   img("/cards/card-theme-08-innovation-commercialisation-alt.jpg", "Innovation workshop bench with wearable sensor prototype"),
 ] as const satisfies readonly CardImage[];
 
 export const programmeCardsHome = [
   img("/cards/card-programme-01-early-warning-alt.jpg", "Night-shift operations room monitoring outbreak trends"),
   img("/cards/card-programme-02-ai-surveillance-alt.jpg", "Haul truck cab interior with AI biometric-tracking overlay"),
-  img("/cards/card-programme-03-women-mining-health-alt.jpg", "Field clinic tent fitting a monitoring wristband on a woman miner"),
+  img("/gallery/women-in-mining-indaba-2026/participants-mhsc-stage.jpg", "Participants at the 2026 National Women in Mining Indaba"),
   img("/cards/card-programme-04-mental-health-alt.jpg", "Wellbeing room conversation near a mine change-house"),
   img("/cards/card-programme-05-biological-hazards-alt.jpg", "Researcher collecting an air-quality sample underground"),
   img("/cards/card-programme-06-cancer-prevention-alt.jpg", "Mobile diagnostic van cancer screening near a mine gate"),

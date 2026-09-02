@@ -98,7 +98,7 @@ const collaborationTypes = [
 export default function StrategicPartnersPage() {
   return (
     <>
-      <PageHero src="/banners/hero-partners.jpg" alt="Futuristic open-pit mining operations">
+      <PageHero src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg" alt="SAMRC, University of Venda and Mintek DHAIOH Unit plaque" imageClassName="object-cover object-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
           <span className="text-[#b8962e]">Partners</span>
         </h1>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CardImageHeader from "@/components/CardImageHeader";
 import { frameworkPillarImages } from "@/lib/card-images";
@@ -68,6 +69,15 @@ export default function AboutPage() {
       {/* Unit Overview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="relative w-full mb-14 overflow-hidden" style={{ aspectRatio: "21/9" }}>
+            <Image
+              src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-leadership.jpg"
+              alt="Leadership presenting the DHAIOH Unit commemorative plaque — SAMRC, University of Venda and Mintek"
+              fill
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+          </div>
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Unit Overview</p>

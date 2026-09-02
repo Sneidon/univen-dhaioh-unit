@@ -3,95 +3,100 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#164076] text-white">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div className="md:col-span-1">
-          <div className="mb-4">
+    <footer className="bg-[#0d1b35] text-white">
+      <div className="sec !pb-10 !pt-14">
+        <div className="sec-in grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div>
             <Image
               src="/logos/landscape-08.png"
               alt="OHS in Mining Research Institute – University of Venda"
               width={1376}
               height={618}
-              className="h-[5.5rem] w-auto object-contain"
+              className="mb-4 h-16 w-auto object-contain brightness-0 invert"
             />
+            <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
+              SAMRC Extramural Unit
+            </p>
+            <p className="text-sm leading-relaxed text-white/70">
+              Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector.
+            </p>
           </div>
-          <p className="text-[#b8962e] text-xs mb-3">SAMRC Extramural Unit</p>
-          <p className="text-white/80 text-sm leading-relaxed mb-3">
-            Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector.
-          </p>
-          <p className="text-white/70 text-xs leading-relaxed italic">
-            &ldquo;Transforming Worker Health Through Digital Intelligence&rdquo;
-          </p>
-          <p className="text-white/70 text-xs mt-3">
-            A strategic partnership of SAMRC, University of Venda, and Mintek.
-          </p>
-        </div>
 
-        <div>
-          <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">Navigation</h4>
-          <ul className="space-y-2 text-sm text-white/80">
-            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-white transition-colors">About Unit</Link></li>
-            <li><Link href="/leadership" className="hover:text-white transition-colors">Leadership & Team</Link></li>
-            <li><Link href="/research-themes" className="hover:text-white transition-colors">Research Themes</Link></li>
-            <li><Link href="/research-impact" className="hover:text-white transition-colors">Research Impact & Policy</Link></li>
-            <li><Link href="/human-capital" className="hover:text-white transition-colors">Human Capital Development</Link></li>
-            <li><Link href="/innovation" className="hover:text-white transition-colors">Innovation</Link></li>
-            <li><Link href="/impact-framework" className="hover:text-white transition-colors">Impact Framework</Link></li>
-            <li><Link href="/strategic-partners" className="hover:text-white transition-colors">Partners</Link></li>
-            <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery & Media</Link></li>
-            <li><Link href="/news" className="hover:text-white transition-colors">News & Highlights</Link></li>
-            <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-          </ul>
-        </div>
+          <div>
+            <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.14em] text-[#b8962e]">
+              Research
+            </h4>
+            <ul className="space-y-2 text-sm text-white/75">
+              <li><Link href="/research-themes" className="hover:text-white">Research Themes</Link></li>
+              <li><Link href="/research-impact" className="hover:text-white">Research Impact</Link></li>
+              <li><Link href="/human-capital" className="hover:text-white">Human Capital</Link></li>
+              <li><Link href="/innovation" className="hover:text-white">Innovation</Link></li>
+              <li><Link href="/impact-framework" className="hover:text-white">Impact Framework</Link></li>
+            </ul>
+          </div>
 
-        <div>
-          <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">Resources</h4>
-          <ul className="space-y-2 text-sm text-white/80">
-            <li><Link href="/impact-framework" className="hover:text-white transition-colors">Impact Framework</Link></li>
-            <li><Link href="/strategic-partners" className="hover:text-white transition-colors">Strategic Partners</Link></li>
-            <li><Link href="/research-themes" className="hover:text-white transition-colors">Research Portal</Link></li>
-            <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery & Media</Link></li>
-            <li><Link href="/news" className="hover:text-white transition-colors">News & Highlights</Link></li>
-            <li>
-              <a
-                href="/docs/news/univen-faculty-women-in-mining-indaba-2026.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                Women in Mining Indaba PDF
-              </a>
-            </li>
-          </ul>
-        </div>
+          <div>
+            <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.14em] text-[#b8962e]">
+              Institute
+            </h4>
+            <ul className="space-y-2 text-sm text-white/75">
+              <li><Link href="/about" className="hover:text-white">About Unit</Link></li>
+              <li><Link href="/leadership" className="hover:text-white">Leadership</Link></li>
+              <li><Link href="/strategic-partners" className="hover:text-white">Partners</Link></li>
+              <li><Link href="/news" className="hover:text-white">News</Link></li>
+              <li><Link href="/gallery" className="hover:text-white">Gallery</Link></li>
+            </ul>
+          </div>
 
-        <div>
-          <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">Legal</h4>
-          <ul className="space-y-2 text-sm text-white/80">
-            <li>
-              <a href="https://www.univen.ac.za/privacy-policy/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="https://www.univen.ac.za/terms-and-conditions/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                Terms &amp; Conditions
-              </a>
-            </li>
-          </ul>
-          <div className="mt-6">
-            <h4 className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Connect</h4>
-            <p className="text-white/80 text-sm">info@dhaioh-univen.ac.za</p>
+          <div>
+            <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.14em] text-[#b8962e]">
+              Contact
+            </h4>
+            <ul className="space-y-2 text-sm text-white/75">
+              <li>University of Venda</li>
+              <li>Thohoyandou, Limpopo</li>
+              <li>
+                <a href="mailto:info@dhaioh-univen.ac.za" className="hover:text-white">
+                  info@dhaioh-univen.ac.za
+                </a>
+              </li>
+              <li><Link href="/contact" className="hover:text-white">Get in Touch</Link></li>
+              <li>
+                <a
+                  href="https://www.univen.ac.za"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  univen.ac.za ↗
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className="border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <p className="text-white/65 text-xs text-center md:text-left">
-            © 2026 DHAIOH Unit. Transforming Worker Health Through Digital Intelligence.
-          </p>
+      <div className="border-t border-white/15">
+        <div className="sec-in flex flex-col gap-3 px-6 py-4 text-[11px] text-white/55 md:flex-row md:items-center md:justify-between md:px-12">
+          <p>© 2026 DHAIOH Unit · University of Venda</p>
+          <div className="flex gap-4">
+            <a
+              href="https://www.univen.ac.za/privacy-policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="https://www.univen.ac.za/terms-and-conditions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
+              Terms &amp; Conditions
+            </a>
+          </div>
         </div>
       </div>
     </footer>

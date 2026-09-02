@@ -68,12 +68,11 @@ const capabilities = [
 export default function InnovationPage() {
   return (
     <>
-      <PageHero
-        src="/banners/hero-innovation.jpg"
-        alt="Digital twin mining haul truck with health analytics"
-        className="py-24 md:py-36"
-      >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+      <PageHero src="/banners/hero-innovation.jpg" alt="Digital twin mining haul truck with health analytics">
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Technology
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
           <span className="text-[#b8962e]">Innovation</span>
         </h1>
       </PageHero>
@@ -102,9 +101,9 @@ export default function InnovationPage() {
                 solutions.
               </p>
             </div>
-            <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-8">
+            <div className="card-soft overflow-hidden bg-[#164076] p-8 text-white !border-[#164076]">
               <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">Creating Value Through Innovation</p>
-              <p className="text-gray-300 text-sm mb-6">Through its innovation and commercialisation activities, the DHAIOH Unit aims to:</p>
+              <p className="text-white/70 text-sm mb-6">Through its innovation and commercialisation activities, the DHAIOH Unit aims to:</p>
               <ul className="space-y-3">
                 {[
                   "Accelerate the development of breakthrough occupational health technologies",
@@ -118,7 +117,7 @@ export default function InnovationPage() {
                 ].map((aim) => (
                   <li key={aim} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 bg-[#b8962e] rounded-full flex-shrink-0 mt-2" />
-                    <span className="text-gray-300 text-sm leading-relaxed">{aim}</span>
+                    <span className="text-white/75 text-sm leading-relaxed">{aim}</span>
                   </li>
                 ))}
               </ul>
@@ -136,45 +135,45 @@ export default function InnovationPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {/* IP Development & Patents — white */}
-            <div className="overflow-hidden flex flex-col bg-gray-50 border border-gray-200" id="ip">
-              <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} overlay="light" className="h-64" />
-              <div className="p-8 flex flex-col flex-1">
-                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-[#164076] text-[#b8962e]">
+            {/* IP Development & Patents */}
+            <div className="card-soft overflow-hidden flex flex-col" id="ip">
+              <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} />
+              <div className="p-6 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-[#0d1b35]">{portfolioCards.ip.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-600">{portfolioCards.ip.desc}</p>
+                <p className="text-sm leading-relaxed text-[#5a7184]">{portfolioCards.ip.desc}</p>
               </div>
             </div>
 
-            {/* Sensor Integration — blue */}
-            <div className="overflow-hidden flex flex-col bg-[#164076] text-white border-t-4 border-[#d22d20]" id="sensor">
-              <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} overlay="blue" className="h-64" />
-              <div className="p-8 flex flex-col flex-1">
-                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-white/20 text-white">
+            {/* Sensor Integration */}
+            <div className="card-soft overflow-hidden flex flex-col" id="sensor">
+              <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} />
+              <div className="p-6 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-lg mb-3 text-white">{portfolioCards.sensor.title}</h3>
-                <p className="text-sm leading-relaxed text-white/70">{portfolioCards.sensor.desc}</p>
+                <h3 className="font-bold text-lg mb-3 text-[#0d1b35]">{portfolioCards.sensor.title}</h3>
+                <p className="text-sm leading-relaxed text-[#5a7184]">{portfolioCards.sensor.desc}</p>
               </div>
             </div>
 
-            {/* Strategic Impact Pathway — blue */}
-            <div className="overflow-hidden flex flex-col bg-[#164076] text-white border-t-4 border-[#d22d20]" id="pathway">
-              <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} overlay="blue" className="h-64" />
-              <div className="p-8 flex flex-col flex-1">
-                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-white/20 text-white">
+            {/* Strategic Impact Pathway */}
+            <div className="card-soft overflow-hidden flex flex-col" id="pathway">
+              <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} />
+              <div className="p-6 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8L11 17l-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="font-bold text-lg mb-3 text-white">{portfolioCards.pathway.title}</h3>
-                <p className="text-sm leading-relaxed text-white/70 mb-5">{portfolioCards.pathway.desc}</p>
+                <h3 className="font-bold text-lg mb-3 text-[#0d1b35]">{portfolioCards.pathway.title}</h3>
+                <p className="text-sm leading-relaxed text-[#5a7184] mb-5">{portfolioCards.pathway.desc}</p>
                 <Link
                   href={portfolioCards.pathway.link!.href}
                   className="text-xs font-bold tracking-widest uppercase text-[#b8962e] border-b border-[#b8962e] pb-0.5 w-fit mt-auto"
@@ -184,22 +183,22 @@ export default function InnovationPage() {
               </div>
             </div>
 
-            {/* AI Solutions — white */}
-            <div className="overflow-hidden flex flex-col bg-gray-50 border border-gray-200" id="ai-hub">
-              <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} overlay="light" className="h-64" />
-              <div className="p-8 flex flex-col flex-1">
-                <div className="w-10 h-10 flex items-center justify-center mb-4 bg-[#164076] text-[#b8962e]">
+            {/* AI Solutions */}
+            <div className="card-soft overflow-hidden flex flex-col" id="ai-hub">
+              <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} />
+              <div className="p-6 flex flex-col flex-1">
+                <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <h3 className="font-bold text-lg mb-3 text-[#0d1b35]">{portfolioCards.ai.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-600 mb-5">{portfolioCards.ai.desc}</p>
+                <p className="text-sm leading-relaxed text-[#5a7184] mb-5">{portfolioCards.ai.desc}</p>
                 <div className="space-y-2 mb-5">
                   {portfolioCards.ai.items!.map((item) => (
                     <div key={item} className="flex items-center gap-3">
                       <div className="w-4 h-4 rounded-full border border-[#164076]" />
-                      <span className="text-sm font-bold tracking-wider uppercase text-gray-600">{item}</span>
+                      <span className="text-sm font-bold tracking-wider uppercase text-[#5a7184]">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -248,9 +247,9 @@ export default function InnovationPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {innovationAreas.map((area) => (
-              <div key={area} className="bg-[#164076] text-white border-t-4 border-[#d22d20] px-5 py-4 flex items-center gap-3">
+              <div key={area} className="card-soft px-5 py-4 flex items-center gap-3">
                 <div className="w-2 h-2 bg-[#b8962e] rounded-full flex-shrink-0" />
-                <span className="text-sm text-white/80">{area}</span>
+                <span className="text-sm text-[#0d1b35]">{area}</span>
               </div>
             ))}
           </div>

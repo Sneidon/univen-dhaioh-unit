@@ -34,14 +34,21 @@ const navLinks: NavItem[] = [
   { href: "/contact", label: "Contact" },
 ];
 
-function DropdownMenu({ items }: { items: { href: string; label: string }[] }) {
+function DropdownMenu({
+  items,
+  onNavigate,
+}: {
+  items: { href: string; label: string }[];
+  onNavigate?: () => void;
+}) {
   return (
-    <div className="absolute top-full left-0 mt-0 min-w-44 bg-white border border-gray-200 shadow-lg z-50 py-1">
+    <div className="absolute top-full left-0 z-50 min-w-52 rounded-b-lg border border-[#d8e3ec] border-t-2 border-t-[#b8962e] bg-white py-1 shadow-[0_4px_20px_rgba(13,27,53,0.1)]">
       {items.map((item) => (
         <Link
           key={item.href}
           href={item.href}
-          className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-[#0d1b35] transition-colors"
+          onClick={onNavigate}
+          className="block px-4 py-2.5 text-sm text-[#2c3e50] transition-colors hover:bg-[rgba(184,150,46,0.08)] hover:text-[#0d1b35]"
         >
           {item.label}
         </Link>
@@ -54,7 +61,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -68,127 +74,155 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const closeMenus = () => {
     setMobileOpen(false);
     setOpenDropdown(null);
-  }, [pathname]);
+  };
 
   const linkClass = (active: boolean) =>
-    `text-sm transition-colors relative pb-1 whitespace-nowrap ${
+    `block whitespace-nowrap border-b-2 px-[14px] py-[18px] text-[15px] font-semibold tracking-wide transition-colors ${
       active
-        ? "text-[#0d1b35] font-semibold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#b8962e]"
-        : "text-gray-600 hover:text-[#0d1b35]"
+        ? "border-[#b8962e] text-[#164076]"
+        : "border-transparent text-[#2c3e50] hover:border-[#b8962e] hover:text-[#164076]"
     }`;
 
   return (
-    <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-24">
-        <Link href="/" className="flex items-center py-1 flex-shrink-0">
+    <nav
+      ref={navRef}
+      className="border-b border-[#d8e3ec] bg-white shadow-[0_2px_8px_rgba(13,27,53,0.06)]"
+    >
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 md:px-12">
+        <Link href="/" className="flex shrink-0 items-center gap-3 py-3">
           <Image
             src="/logos/ohs-logo.png"
             alt="OHS in Mining Research Institute – University of Venda"
             width={1376}
             height={618}
-            className="h-[88px] w-auto object-contain"
+            className="h-16 w-auto object-contain md:h-[72px]"
             priority
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-6">
-          {navLinks.map((link) => {
-            if (link.children) {
-              const isActive = link.children.some((c) => pathname === c.href);
-              return (
-                <div key={link.label} className="relative">
-                  <button
-                    onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
-                    className={`flex items-center gap-1 ${linkClass(isActive)}`}
-                  >
-                    {link.label}
-                    <svg
-                      className={`w-3 h-3 transition-transform ${openDropdown === link.label ? "rotate-180" : ""}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+        <div className="hidden items-center lg:flex">
+          <ul className="flex items-center">
+            {navLinks.map((link) => {
+              if (link.children) {
+                const isActive = link.children.some((c) => pathname === c.href || pathname.startsWith(c.href + "/"));
+                return (
+                  <li key={link.label} className="relative">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenDropdown(openDropdown === link.label ? null : link.label)
+                      }
+                      className={`flex items-center gap-1 ${linkClass(isActive)}`}
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {openDropdown === link.label && <DropdownMenu items={link.children} />}
-                </div>
-              );
-            }
+                      {link.label}
+                      <svg
+                        className={`h-3 w-3 transition-transform ${openDropdown === link.label ? "rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {openDropdown === link.label && (
+                      <DropdownMenu items={link.children} onNavigate={closeMenus} />
+                    )}
+                  </li>
+                );
+              }
 
-            return (
-              <Link key={link.href} href={link.href!} className={linkClass(pathname === link.href)}>
-                {link.label}
-              </Link>
-            );
-          })}
+              const active =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href!));
+              return (
+                <li key={link.href}>
+                  <Link href={link.href!} className={linkClass(active)} onClick={closeMenus}>
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
 
         <button
-          className="lg:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
+          type="button"
+          className="flex h-10 w-10 items-center justify-center lg:hidden"
+          onClick={() => setMobileOpen(true)}
+          aria-label="Open menu"
         >
-          <span className={`block w-6 h-0.5 bg-[#0d1b35] transition-all ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-[#0d1b35] transition-all ${mobileOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-[#0d1b35] transition-all ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <svg className="h-6 w-6 text-[#0d1b35]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-1 max-h-[80vh] overflow-y-auto">
-          {navLinks.map((link) => {
-            if (link.children) {
-              const isExpanded = mobileExpanded === link.label;
-              return (
-                <div key={link.label}>
-                  <button
-                    onClick={() => setMobileExpanded(isExpanded ? null : link.label)}
-                    className="w-full flex items-center justify-between py-2 text-sm font-medium text-gray-700"
-                  >
-                    {link.label}
-                    <svg
-                      className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-180" : ""}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {isExpanded && (
-                    <div className="pl-4 pb-2 flex flex-col gap-1">
-                      {link.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          onClick={() => setMobileOpen(false)}
-                          className={`text-sm py-1.5 ${pathname === child.href ? "text-[#0d1b35] font-semibold" : "text-gray-600"}`}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            }
-
+      {/* Mobile drawer */}
+      <div
+        className={`fixed inset-0 z-[60] bg-black/40 transition-opacity lg:hidden ${
+          mobileOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={() => setMobileOpen(false)}
+        aria-hidden={!mobileOpen}
+      />
+      <div
+        className={`fixed top-0 right-0 z-[70] flex h-full w-[min(340px,86vw)] flex-col overflow-y-auto bg-white p-7 pt-20 shadow-[-8px_0_32px_rgba(13,27,53,0.18)] transition-transform duration-300 lg:hidden ${
+          mobileOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          type="button"
+          className="absolute top-5 right-5 text-2xl leading-none text-[#2c3e50]"
+          onClick={() => setMobileOpen(false)}
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+        {navLinks.map((link) => {
+          if (link.children) {
             return (
-              <Link
-                key={link.href}
-                href={link.href!}
-                onClick={() => setMobileOpen(false)}
-                className={`text-sm py-2 ${pathname === link.href ? "text-[#0d1b35] font-semibold" : "text-gray-600"}`}
-              >
-                {link.label}
-              </Link>
+              <div key={link.label} className="border-b border-[#d8e3ec] py-2">
+                <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
+                  {link.label}
+                </p>
+                {link.children.map((child) => (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block py-2.5 pl-3 text-sm font-medium ${
+                      pathname === child.href ? "text-[#0d1b35]" : "text-[#2c3e50]"
+                    }`}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
             );
-          })}
-        </div>
-      )}
+          }
+          return (
+            <Link
+              key={link.href}
+              href={link.href!}
+              onClick={closeMenus}
+              className={`block border-b border-[#d8e3ec] py-3 text-base font-semibold ${
+                pathname === link.href ? "text-[#0d1b35]" : "text-[#0d1b2a]"
+              }`}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
+      </div>
     </nav>
   );
 }

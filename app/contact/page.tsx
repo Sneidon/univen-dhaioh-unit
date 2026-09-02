@@ -4,36 +4,36 @@ import PageHero from "@/components/PageHero";
 export default function ContactPage() {
   return (
     <>
-      <PageHero src="/banners/hero-contact.jpg" alt="Connected mining site at sunset" imageClassName="object-cover object-top">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
-          Contact Us
+      <PageHero>
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Get in Touch
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
+          Contact <span className="text-[#b8962e]">Us</span>
         </h1>
       </PageHero>
 
       {/* Main content */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+      <section className="sec bg-[#f5f8fa]">
+        <div className="sec-in grid gap-6 md:grid-cols-2">
           {/* Left: Director + Form */}
           <div className="space-y-6">
             {/* Director card */}
-            <div className="bg-white border border-gray-200 p-6">
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">Unit Director</p>
+            <div className="info-card hover:border-[#d8e3ec] hover:translate-y-0">
+              <p className="info-card-tag">Unit Director</p>
               <div className="flex gap-5 items-start">
-                <div className="w-28 h-36 rounded-sm flex-shrink-0 overflow-hidden">
+                <div className="w-28 h-36 rounded-[10px] flex-shrink-0 overflow-hidden">
                   <Image src="/prof-zungu.jpg" alt="Prof Lindiwe Zungu" width={112} height={144} className="object-cover object-top w-full h-full" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-[#0d1b35]">Prof Lindiwe Zungu</h2>
-                  <p className="text-gray-600 text-sm mt-1 leading-relaxed">
+                  <h2 className="info-card-title !text-2xl">Prof Lindiwe Zungu</h2>
+                  <p className="info-card-desc mt-1">
                     Leading transformative research in Digital Health and Artificial Intelligence for occupational health.
                   </p>
                   <a
                     href="mailto:lindiwe.zungu@univen.ac.za"
-                    className="flex items-center gap-2 mt-3 text-sm text-[#0d1b35] hover:text-[#b8962e] transition-colors"
+                    className="info-card-link inline-flex items-center gap-2"
                   >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
                     lindiwe.zungu@univen.ac.za
                   </a>
                 </div>
@@ -41,26 +41,23 @@ export default function ContactPage() {
             </div>
 
             {/* General inquiries card */}
-            <div className="bg-white border border-gray-200 p-6">
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-4">General Inquiries</p>
+            <div className="info-card hover:border-[#d8e3ec] hover:translate-y-0">
+              <p className="info-card-tag">General Inquiries</p>
               <div className="flex gap-5 items-start">
-                <div className="w-28 h-36 rounded-sm flex-shrink-0 bg-[#164076] flex items-center justify-center">
+                <div className="w-28 h-36 rounded-[10px] flex-shrink-0 bg-[#164076] flex items-center justify-center">
                   <svg className="w-12 h-12 text-[#b8962e]" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-[#0d1b35]">DHAIOH Unit</h2>
-                  <p className="text-gray-600 text-sm mt-1 leading-relaxed">
+                  <h2 className="info-card-title !text-2xl">DHAIOH Unit</h2>
+                  <p className="info-card-desc mt-1">
                     For research collaboration, partnerships, postgraduate opportunities, media requests, and all other general enquiries.
                   </p>
                   <a
                     href="mailto:info@dhaioh-univen.ac.za"
-                    className="flex items-center gap-2 mt-3 text-sm text-[#0d1b35] hover:text-[#b8962e] transition-colors"
+                    className="info-card-link inline-flex items-center gap-2"
                   >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
                     info@dhaioh-univen.ac.za
                   </a>
                 </div>
@@ -71,13 +68,8 @@ export default function ContactPage() {
           {/* Right: Offices + map */}
           <div className="space-y-6">
             {/* Offices */}
-            <div className="bg-white border border-gray-200 p-6">
-              <div className="flex items-center gap-2 mb-6">
-                <svg className="w-5 h-5 text-[#0d1b35]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-                <h3 className="font-bold text-[#0d1b35] text-lg">Our Strategic Offices</h3>
-              </div>
+            <div className="info-card hover:border-[#d8e3ec] hover:translate-y-0">
+              <p className="info-card-tag">Our Strategic Offices</p>
 
               <div className="space-y-6">
                 <div>

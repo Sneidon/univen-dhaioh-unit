@@ -28,36 +28,34 @@ const thematicAreas = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero src="/banners/hero-about.jpg" alt="DHAIOH research team at Mintek" imageClassName="object-cover object-top">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+      <PageHero>
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Institute
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
           About the <span className="text-[#b8962e]">Unit</span>
         </h1>
       </PageHero>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-6">
-          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
-            <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-            </div>
-            <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
-            <p className="text-gray-300 leading-relaxed">
+      <section className="sec bg-[#f5f8fa]">
+        <div className="sec-in grid gap-6 md:grid-cols-2">
+          <div className="card-soft bg-[#164076] !border-[#164076] p-8 text-white">
+            <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
+              Vision
+            </p>
+            <h2 className="mb-4 text-2xl font-bold text-white">Our Vision</h2>
+            <p className="leading-relaxed text-white/75">
               To become a globally recognised centre of excellence leading the transformation of occupational
               health through digital innovation, artificial intelligence, and predictive health systems.
             </p>
           </div>
-          <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-10">
-            <div className="w-12 h-12 bg-[#b8962e] flex items-center justify-center mb-6">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
-              </svg>
-            </div>
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-            <p className="text-gray-300 leading-relaxed">
+          <div className="card-soft bg-[#0d1b35] !border-[#0d1b35] p-8 text-white">
+            <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
+              Mission
+            </p>
+            <h2 className="mb-4 text-2xl font-bold text-white">Our Mission</h2>
+            <p className="leading-relaxed text-white/75">
               To generate world-class research, develop innovative technologies, build future research leaders,
               influence policy, and create scalable digital health solutions that improve occupational health
               outcomes in mining and other high-risk sectors.
@@ -67,21 +65,21 @@ export default function AboutPage() {
       </section>
 
       {/* Unit Overview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="relative w-full mb-14 overflow-hidden" style={{ aspectRatio: "21/9" }}>
+      <section className="sec bg-white">
+        <div className="sec-in">
+          <div className="relative mb-12 w-full min-h-[320px] overflow-hidden rounded-[10px] md:min-h-[420px]" style={{ aspectRatio: "16/9" }}>
             <Image
-              src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-leadership.jpg"
-              alt="Leadership presenting the DHAIOH Unit commemorative plaque — SAMRC, University of Venda and Mintek"
+              src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-delegation.jpg"
+              alt="DHAIOH Unit commemorative plaque with SAMRC, University of Venda and Mintek partners"
               fill
               className="object-cover object-center"
               sizes="100vw"
             />
           </div>
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="grid items-start gap-12 md:grid-cols-2">
             <div>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Unit Overview</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-6">
+              <p className="slbl">Unit Overview</p>
+              <h2 className="stit">
                 A Flagship Interdisciplinary Research Unit
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
@@ -117,16 +115,19 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-5">
+              <p className="slbl">Focus Areas</p>
+              <h3 className="mb-5 text-xl font-bold text-[#0d1b35]">
                 Five Interconnected Thematic Areas
-              </p>
-              <div className="space-y-4">
+              </h3>
+              <div className="space-y-3">
                 {thematicAreas.map((area) => (
-                  <div key={area.n} className="flex gap-4 items-start border-l-4 border-[#b8962e] pl-5 py-2">
-                    <span className="text-[#b8962e] font-bold text-lg flex-shrink-0">{area.n}</span>
-                    <div>
-                      <p className="font-bold text-[#0d1b35] text-sm mb-1">{area.title}</p>
-                      <p className="text-gray-600 text-sm leading-relaxed">{area.desc}</p>
+                  <div key={area.n} className="card-soft p-4 transition-colors hover:border-[#b8962e]">
+                    <div className="flex gap-4 items-start">
+                      <span className="text-[#b8962e] font-bold text-lg flex-shrink-0">{area.n}</span>
+                      <div>
+                        <p className="mb-1 text-sm font-bold leading-snug text-[#0d1b35]">{area.title}</p>
+                        <p className="text-sm leading-relaxed text-[#5a7184]">{area.desc}</p>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -172,23 +173,21 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {pillars.map((p, i) => (
-              <div key={p.n} className="bg-[#164076] text-white overflow-hidden flex flex-col">
+              <div key={p.n} className="card-soft overflow-hidden flex flex-col">
                 <CardImageHeader
                   src={frameworkPillarImages[i].src}
                   alt={frameworkPillarImages[i].alt}
-                  overlay="blue"
-                  className="h-44"
                 />
-                <div className="p-8 flex flex-col flex-1">
-                <div className="flex justify-between items-start mb-4">
-                  <span className="text-2xl font-bold text-[#b8962e]">{p.n}</span>
-                  <div className="w-8 h-8 border border-[#b8962e]/40 rounded flex items-center justify-center">
-                    <svg className="w-4 h-4 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex justify-between items-start mb-3">
+                    <span className="text-2xl font-bold text-[#b8962e]">{p.n}</span>
+                    <div className="w-8 h-8 border border-[#b8962e]/40 rounded flex items-center justify-center">
+                      <svg className="w-4 h-4 text-[#b8962e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-                <h3 className="font-bold text-base text-white">{p.title}</h3>
+                  <h3 className="font-bold text-base text-[#0d1b35]">{p.title}</h3>
                 </div>
               </div>
             ))}

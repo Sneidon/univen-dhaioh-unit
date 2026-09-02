@@ -6,28 +6,31 @@ import { newsArticles } from "@/lib/news-data";
 export default function NewsPage() {
   return (
     <>
-      <PageHero src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg" alt="DHAIOH Unit plaque at Women in Mining Indaba" imageClassName="object-cover object-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-4">
-          News &{" "}
-          <span className="text-[#b8962e]">Highlights</span>
+      <PageHero
+        src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg"
+        alt="DHAIOH Unit plaque at Women in Mining Indaba"
+      >
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Updates
+        </p>
+        <h1 className="mb-3 max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
+          News &amp; <span className="text-[#b8962e]">Highlights</span>
         </h1>
-        <p className="text-gray-300 text-sm md:text-base max-w-2xl leading-relaxed">
+        <p className="max-w-2xl text-sm leading-relaxed text-white/75 md:text-base">
           Updates from the DHAIOH Unit, UNIVEN scholars, and partners advancing occupational health in mining.
         </p>
       </PageHero>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-1 h-6 bg-[#b8962e]" />
-            <h2 className="text-2xl font-bold text-[#0d1b35]">Latest Stories</h2>
-          </div>
+      <section className="sec bg-white">
+        <div className="sec-in">
+          <p className="slbl">Latest Stories</p>
+          <h2 className="stit">From the Unit</h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-6 md:grid-cols-2">
             {newsArticles.map((article) => (
-              <article key={article.slug} className="border border-gray-200 overflow-hidden group hover:border-[#b8962e] transition-colors">
+              <article key={article.slug} className="card-soft group overflow-hidden transition-colors hover:border-[#b8962e]">
                 <Link href={`/news/${article.slug}`} className="block">
-                  <div className="relative overflow-hidden" style={{ aspectRatio: "16/10" }}>
+                  <div className="relative aspect-[5/4] min-h-[260px] overflow-hidden">
                     <Image
                       src={article.cover}
                       alt={article.coverAlt}
@@ -35,23 +38,18 @@ export default function NewsPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <span className="absolute top-4 left-4 bg-[#d22d20] text-white text-xs px-2 py-1 font-bold tracking-wider">
-                      NEWS
-                    </span>
                   </div>
                   <div className="p-6">
-                    <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
                       {article.dateLabel}
                     </p>
-                    <h3 className="font-bold text-[#0d1b35] text-lg leading-snug mb-3 group-hover:text-[#b8962e] transition-colors">
+                    <h3 className="mb-3 text-lg font-bold leading-snug text-[#0d1b35] group-hover:text-[#164076]">
                       {article.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
+                    <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-[#5a7184]">
                       {article.summary}
                     </p>
-                    <span className="text-sm font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#b8962e] pb-0.5">
-                      Read Story →
-                    </span>
+                    <span className="text-sm font-bold text-[#b8962e]">Read Story →</span>
                   </div>
                 </Link>
               </article>

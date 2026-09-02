@@ -43,12 +43,11 @@ const pathway = [
 export default function ImpactFrameworkPage() {
   return (
     <>
-      <PageHero
-        src="/banners/hero-impact-framework.jpg"
-        alt="Connected mining and processing facility at sunset"
-        imageClassName="object-cover object-top"
-      >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
+      <PageHero src="/banners/hero-impact-framework.jpg" alt="Connected mining and processing facility at sunset">
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Outcomes
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
           Impact <span className="text-[#b8962e]">Framework</span>
         </h1>
       </PageHero>
@@ -66,17 +65,15 @@ export default function ImpactFrameworkPage() {
           </div>
 
           <div className="space-y-4">
-            {pathway.map((item, i) => {
-              const isBlue = i % 2 !== 0;
-              return (
+            {pathway.map((item) => (
               <div
                 key={item.step}
-                className={`grid md:grid-cols-12 gap-0 ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
+                className="card-soft grid md:grid-cols-12 gap-0 overflow-hidden"
               >
                 {/* Step number */}
-                <div className={`md:col-span-2 p-8 flex items-center justify-center border-r ${isBlue ? "border-white/10" : "border-gray-200"}`}>
+                <div className="md:col-span-2 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-[#d8e3ec]">
                   <div className="text-center">
-                    <p className={`text-4xl font-bold ${isBlue ? "text-white/30" : "text-gray-200"}`}>{item.step}</p>
+                    <p className="text-4xl font-bold text-[#d8e3ec]">{item.step}</p>
                     <p className="text-xs font-bold tracking-widest uppercase mt-2 text-[#b8962e]">
                       {item.phase}
                     </p>
@@ -84,32 +81,31 @@ export default function ImpactFrameworkPage() {
                 </div>
 
                 {/* Content */}
-                <div className="md:col-span-6 p-8">
-                  <h3 className={`font-bold text-xl mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
+                <div className="md:col-span-6 p-6">
+                  <h3 className="font-bold text-xl mb-3 text-[#0d1b35]">
                     {item.title}
                   </h3>
-                  <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
+                  <p className="text-sm leading-relaxed text-[#5a7184]">
                     {item.desc}
                   </p>
                 </div>
 
                 {/* Outputs */}
-                <div className={`md:col-span-4 p-8 border-l ${isBlue ? "border-white/10" : "border-gray-200"}`}>
-                  <p className="text-xs font-bold tracking-widest uppercase mb-3 text-gray-400">
+                <div className="md:col-span-4 p-6 border-t md:border-t-0 md:border-l border-[#d8e3ec] bg-[#f5f8fa]">
+                  <p className="text-xs font-bold tracking-widest uppercase mb-3 text-[#5a7184]">
                     Key Outputs
                   </p>
                   <ul className="space-y-2">
                     {item.outputs.map((o) => (
                       <li key={o} className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 bg-[#b8962e]" />
-                        <span className={`text-sm ${isBlue ? "text-gray-300" : "text-gray-600"}`}>{o}</span>
+                        <span className="text-sm text-[#5a7184]">{o}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>

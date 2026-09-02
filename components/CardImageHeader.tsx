@@ -8,13 +8,14 @@ type CardImageHeaderProps = {
   className?: string;
 };
 
+/** Default image band for info cards — tall enough for readable crop on desktop grids. */
 export default function CardImageHeader({
   src,
   alt,
-  className = "h-72",
+  className = "aspect-[5/4] min-h-[260px]",
 }: CardImageHeaderProps) {
   return (
-    <div className={`relative w-full flex-shrink-0 ${className}`}>
+    <div className={`relative w-full flex-shrink-0 overflow-hidden ${className}`}>
       <Image
         src={assetUrl(src)}
         alt={alt}
@@ -22,7 +23,7 @@ export default function CardImageHeader({
         loading="lazy"
         quality={70}
         className="object-cover"
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
       />
     </div>
   );

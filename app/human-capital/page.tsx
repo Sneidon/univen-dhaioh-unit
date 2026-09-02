@@ -99,7 +99,10 @@ export default function HumanCapitalPage() {
   return (
     <>
       <PageHero src="/banners/hero-human-capital.jpg" alt="Mine health doctor with holographic dashboard">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:whitespace-nowrap">
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Capacity
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
           Human Capital <span className="text-[#b8962e]">Development</span>
         </h1>
       </PageHero>
@@ -132,47 +135,37 @@ export default function HumanCapitalPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
-            {opportunities.map((opp, i) => {
-              const row = Math.floor(i / 2);
-              const col = i % 2;
-              const isBlue = (row + col) % 2 === 1;
-              return (
-              <div
-                key={opp.category}
-                className={`overflow-hidden flex flex-col ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-gray-50 border border-gray-200"}`}
-              >
+            {opportunities.map((opp) => (
+              <div key={opp.category} className="card-soft overflow-hidden flex flex-col">
                 <CardImageHeader
                   src={opp.image.src}
                   alt={opp.image.alt}
-                  overlay={isBlue ? "blue" : "light"}
-                  className="h-72"
                 />
-                <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className={`text-xs font-bold tracking-widest uppercase px-3 py-1 ${isBlue ? "bg-[#b8962e] text-white" : "bg-[#d22d20] text-white"}`}>
-                    {opp.tag}
-                  </span>
-                </div>
-                <h3 className={`font-bold text-xl mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
-                  {opp.category}
-                </h3>
-                <p className={`text-sm leading-relaxed mb-5 ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
-                  {opp.desc}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {opp.areas.map((area) => (
-                    <span
-                      key={area}
-                      className={`text-xs px-3 py-1 border ${isBlue ? "border-white/20 text-white/70" : "border-gray-300 text-gray-600"}`}
-                    >
-                      {area}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded bg-[#164076] text-white">
+                      {opp.tag}
                     </span>
-                  ))}
-                </div>
+                  </div>
+                  <h3 className="font-bold text-xl mb-3 text-[#0d1b35]">
+                    {opp.category}
+                  </h3>
+                  <p className="text-sm leading-relaxed mb-5 text-[#5a7184]">
+                    {opp.desc}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {opp.areas.map((area) => (
+                      <span
+                        key={area}
+                        className="text-xs px-3 py-1 rounded-full border border-[#d8e3ec] text-[#5a7184]"
+                      >
+                        {area}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>
@@ -185,25 +178,19 @@ export default function HumanCapitalPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35]">Development Programmes</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {programmes.map((prog, i) => {
-              const isBlue = i % 2 === 1;
-              return (
-                <div
-                  key={prog.title}
-                  className={`p-8 ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
-                >
-                  <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${isBlue ? "bg-white/20 text-white" : "bg-[#164076] text-[#b8962e]"}`}>
-                    {prog.icon}
-                  </div>
-                  <h3 className={`font-bold text-base mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
-                    {prog.title}
-                  </h3>
-                  <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
-                    {prog.desc}
-                  </p>
+            {programmes.map((prog) => (
+              <div key={prog.title} className="card-soft p-6">
+                <div className="w-10 h-10 flex items-center justify-center font-bold text-sm mb-4 rounded-md bg-[#164076] text-[#b8962e]">
+                  {prog.icon}
                 </div>
-              );
-            })}
+                <h3 className="font-bold text-base mb-2 text-[#0d1b35]">
+                  {prog.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[#5a7184]">
+                  {prog.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -22,10 +22,9 @@ export default function GalleryPage() {
 
   return (
     <>
-      <PageHero src="/banners/hero-gallery.jpg" alt="Mining health research laboratory" imageClassName="object-cover object-top">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
-          Gallery &{" "}
-          <span className="text-[#b8962e]">Media</span>
+      <PageHero src="/banners/hero-gallery.jpg" alt="Mining health research laboratory">
+        <h1 className="mb-6 max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
+          Gallery &amp; <span className="text-[#b8962e]">Media</span>
         </h1>
 
         <div className="flex gap-0 border-b border-white/20">
@@ -58,9 +57,9 @@ export default function GalleryPage() {
                 <Link
                   key={event.slug}
                   href={`/gallery/${event.slug}`}
-                  className="group bg-white border border-gray-200 overflow-hidden hover:border-[#b8962e] transition-colors"
+                  className="card-soft group overflow-hidden transition-colors hover:border-[#b8962e]"
                 >
-                  <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+                  <div className="relative aspect-[5/4] min-h-[240px] overflow-hidden">
                     <Image
                       src={event.photos[0].src}
                       alt={event.title}
@@ -97,7 +96,7 @@ export default function GalleryPage() {
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               {galleryVideos.map((video) => (
-                <article key={video.id} className="bg-white border border-gray-200 overflow-hidden">
+                <article key={video.id} className="card-soft overflow-hidden">
                   <a
                     href={`https://www.youtube.com/watch?v=${video.id}`}
                     target="_blank"

@@ -64,8 +64,11 @@ const metrics = [
 export default function ResearchImpactPage() {
   return (
     <>
-      <PageHero src="/banners/hero-research-impact.jpg" alt="Occupational health command center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+      <PageHero>
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Policy
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
           Research <span className="text-[#b8962e]">Impact</span>
         </h1>
       </PageHero>
@@ -106,29 +109,21 @@ export default function ResearchImpactPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35]">How We Drive Change</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {impactAreas.map((area, i) => {
-              const isBlue = i % 2 === 1;
-              return (
-              <div
-                key={area.title}
-                className={`overflow-hidden flex flex-col ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
-              >
+            {impactAreas.map((area) => (
+              <div key={area.title} className="card-soft overflow-hidden flex flex-col">
                 <CardImageHeader
                   src={area.image.src}
                   alt={area.image.alt}
-                  overlay={isBlue ? "blue" : "light"}
-                  className="h-72"
                 />
-                <div className="p-8 flex flex-col flex-1">
-                <div className={`w-12 h-12 flex items-center justify-center font-bold text-lg mb-5 ${isBlue ? "bg-[#b8962e] text-white" : "bg-[#164076] text-[#b8962e]"}`}>
-                  {area.icon}
-                </div>
-                <h3 className={`font-bold text-lg mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>{area.title}</h3>
-                <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>{area.desc}</p>
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="w-10 h-10 flex items-center justify-center font-bold text-sm mb-4 rounded-md bg-[#164076] text-[#b8962e]">
+                    {area.icon}
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-[#0d1b35]">{area.title}</h3>
+                  <p className="text-sm leading-relaxed text-[#5a7184]">{area.desc}</p>
                 </div>
               </div>
-              );
-            })}
+            ))}
           </div>
         </div>
       </section>

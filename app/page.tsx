@@ -43,9 +43,30 @@ const stats = [
 ];
 
 const partners = [
-  { src: "/logos/samrc.svg", alt: "SAMRC", w: 120, h: 48 },
-  { src: "/logos/univen.png", alt: "University of Venda", w: 72, h: 72 },
-  { src: "/logos/mintek.png", alt: "Mintek", w: 130, h: 48 },
+  {
+    src: "/logos/samrc.svg",
+    alt: "SAMRC",
+    name: "South African Medical Research Council",
+    role: "Strategic Funder",
+    w: 140,
+    h: 56,
+  },
+  {
+    src: "/logos/univen.png",
+    alt: "University of Venda",
+    name: "University of Venda",
+    role: "Host Institution",
+    w: 88,
+    h: 88,
+  },
+  {
+    src: "/logos/mintek.png",
+    alt: "Mintek",
+    name: "Mintek",
+    role: "Strategic Research Partner",
+    w: 150,
+    h: 56,
+  },
 ];
 
 export default function HomePage() {
@@ -165,8 +186,95 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Research themes — teasers (original home theme copy) */}
+      {/* Latest highlight — Women in Mining Indaba */}
+      <section className="sec bg-[#f5f8fa]">
+        <div className="sec-in">
+          <div className="card-soft grid overflow-hidden md:grid-cols-2">
+            <div className="relative min-h-[360px] w-full aspect-[4/3] md:min-h-[420px] md:aspect-auto">
+              <Image
+                src={latestNews.cover}
+                alt={latestNews.coverAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
+            <div className="flex flex-col justify-center p-6 md:p-8">
+              <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
+                Latest Highlight · {latestNews.dateLabel}
+              </p>
+              <h2 className="mb-4 text-2xl font-bold leading-snug text-[#0d1b35] md:text-3xl">
+                2026 National Women in Mining Indaba
+              </h2>
+              <p className="mb-6 text-sm leading-relaxed text-[#5a7184] md:text-base">
+                {latestNews.summary}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link href={`/gallery/${latestNews.gallerySlug}`} className="bt">
+                  View Gallery
+                </Link>
+                <Link href={`/news/${latestNews.slug}`} className="bot">
+                  Read Story
+                </Link>
+                <a
+                  href={latestNews.pdfHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bot"
+                >
+                  Download PDF
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners — teaser with original alliance copy */}
       <section className="sec bg-white">
+        <div className="sec-in">
+          <p className="slbl">The SAMRC–UNIVEN–MINTEK Strategic Alliance</p>
+          <h2 className="stit">A Jointly Driven Strategic Initiative</h2>
+          <p className="ssub">
+            The DHAIOH Unit was established as a flagship three-way partnership combining strategic
+            investment, academic leadership, and mining innovation to transform worker health through
+            digital intelligence. This alliance is central to the Unit&apos;s identity, credibility, and
+            long-term impact.
+          </p>
+          <div className="mb-8 grid gap-4 sm:grid-cols-3">
+            {partners.map((p) => (
+              <div
+                key={p.alt}
+                className="card-soft flex flex-col items-center px-6 py-8 text-center"
+              >
+                <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
+                  {p.role}
+                </p>
+                <div className="mb-5 flex h-20 w-full items-center justify-center">
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    width={p.w}
+                    height={p.h}
+                    className="max-h-20 w-auto object-contain"
+                  />
+                </div>
+                <p className="text-sm font-bold leading-snug text-[#0d1b35]">{p.name}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mb-6 text-sm font-semibold tracking-wide text-[#0d1b35]">
+            United for a Safer, Healthier Mining Sector
+          </p>
+          <Link href="/strategic-partners" className="bot">
+            View All Partners →
+          </Link>
+        </div>
+      </section>
+
+      {/* Research themes — teasers (original home theme copy) */}
+      <section className="sec bg-[#f5f8fa]">
         <div className="sec-in">
           <p className="slbl">Scientific Identity</p>
           <h2 className="stit">Strategic Research Themes</h2>
@@ -205,7 +313,7 @@ export default function HomePage() {
       </section>
 
       {/* Flagship — 4 landmarks (avoids duplicating full programme grid) */}
-      <section className="sec bg-[#f5f8fa]">
+      <section className="sec bg-white">
         <div className="sec-in">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -244,76 +352,6 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Latest News — single feature */}
-      <section className="sec bg-white">
-        <div className="sec-in">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="slbl">Latest Highlight</p>
-              <h2 className="stit !mb-0">News &amp; Events</h2>
-            </div>
-            <Link href="/news" className="text-sm font-semibold text-[#164076] hover:text-[#b8962e]">
-              All News →
-            </Link>
-          </div>
-          <Link
-            href={`/news/${latestNews.slug}`}
-            className="card-soft group grid overflow-hidden md:grid-cols-2"
-          >
-            <div className="relative min-h-[360px] w-full aspect-[4/3] md:min-h-[420px] md:aspect-auto">
-              <Image
-                src={latestNews.cover}
-                alt={latestNews.coverAlt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-            <div className="flex flex-col justify-center p-6 md:p-8">
-              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#5a7184]">
-                {latestNews.dateLabel}
-              </p>
-              <h3 className="mb-3 text-xl font-bold leading-snug text-[#0d1b35] group-hover:text-[#164076]">
-                2026 National Women in Mining Indaba
-              </h3>
-              <p className="mb-4 text-sm leading-relaxed text-[#5a7184] line-clamp-3">
-                {latestNews.summary}
-              </p>
-              <span className="text-sm font-bold text-[#b8962e]">Read Story →</span>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* Partners — teaser with original alliance copy */}
-      <section className="sec bg-[#eef3f7]">
-        <div className="sec-in">
-          <p className="slbl">The SAMRC–UNIVEN–MINTEK Strategic Alliance</p>
-          <h2 className="stit">A Jointly Driven Strategic Initiative</h2>
-          <p className="ssub">
-            The DHAIOH Unit was established as a flagship three-way partnership combining strategic
-            investment, academic leadership, and mining innovation to transform worker health through
-            digital intelligence. This alliance is central to the Unit&apos;s identity, credibility, and
-            long-term impact.
-          </p>
-          <div className="mb-8 flex flex-wrap items-center justify-center gap-10 md:gap-16">
-            {partners.map((p) => (
-              <Image
-                key={p.alt}
-                src={p.src}
-                alt={p.alt}
-                width={p.w}
-                height={p.h}
-                className="object-contain opacity-90"
-              />
-            ))}
-          </div>
-          <Link href="/strategic-partners" className="bot">
-            View All Partners →
-          </Link>
         </div>
       </section>
 

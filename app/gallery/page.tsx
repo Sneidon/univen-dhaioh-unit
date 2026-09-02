@@ -22,7 +22,11 @@ export default function GalleryPage() {
 
   return (
     <>
-      <PageHero src="/banners/hero-gallery.jpg" alt="Mining health research laboratory">
+      <PageHero
+        src="/banners/hero-gallery.jpg"
+        alt="Mining health research laboratory"
+        imageClassName="object-cover object-top"
+      >
         <h1 className="mb-6 max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
           Gallery &amp; <span className="text-[#b8962e]">Media</span>
         </h1>

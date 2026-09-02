@@ -22,7 +22,7 @@ export default async function NewsArticlePage({
 
   return (
     <>
-      <PageHero src={article.cover} alt={article.coverAlt} size="large">
+      <PageHero src={article.cover} alt={article.coverAlt} className="py-28 md:py-40">
         <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           UNIVEN News · {article.dateLabel}
         </p>

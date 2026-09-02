@@ -64,7 +64,10 @@ const metrics = [
 export default function ResearchImpactPage() {
   return (
     <>
-      <PageHero>
+      <PageHero
+        src="/banners/hero-research-impact.jpg"
+        alt="Occupational health command center"
+      >
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           Policy
         </p>

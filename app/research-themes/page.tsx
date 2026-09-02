@@ -7,7 +7,10 @@ import { themeCards } from "@/lib/card-images";
 export default function ResearchThemesPage() {
   return (
     <>
-      <PageHero>
+      <PageHero
+        src="/banners/hero-research-themes.jpg"
+        alt="Open-pit mining operations with AI monitoring"
+      >
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           Research Portfolio
         </p>

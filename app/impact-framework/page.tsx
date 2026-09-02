@@ -43,7 +43,11 @@ const pathway = [
 export default function ImpactFrameworkPage() {
   return (
     <>
-      <PageHero src="/banners/hero-impact-framework.jpg" alt="Connected mining and processing facility at sunset">
+      <PageHero
+        src="/banners/hero-impact-framework.jpg"
+        alt="Connected mining and processing facility at sunset"
+        imageClassName="object-cover object-top"
+      >
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           Outcomes
         </p>

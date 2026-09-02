@@ -16,7 +16,11 @@ const codirectorshipStrengths = [
 export default function LeadershipPage() {
   return (
     <>
-      <PageHero src="/banners/hero-leadership.jpg" alt="Mining health excellence team">
+      <PageHero
+        src="/banners/hero-leadership.jpg"
+        alt="Mining health excellence team"
+        imageClassName="object-cover object-top"
+      >
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           People
         </p>

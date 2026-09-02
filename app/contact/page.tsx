@@ -4,7 +4,11 @@ import PageHero from "@/components/PageHero";
 export default function ContactPage() {
   return (
     <>
-      <PageHero>
+      <PageHero
+        src="/banners/hero-contact.jpg"
+        alt="Connected mining site at sunset"
+        imageClassName="object-cover object-top"
+      >
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           Get in Touch
         </p>

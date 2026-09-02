@@ -101,6 +101,7 @@ export default function StrategicPartnersPage() {
       <PageHero
         src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg"
         alt="SAMRC, University of Venda and Mintek DHAIOH Unit plaque"
+        imageClassName="object-cover object-top"
       >
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           Collaboration

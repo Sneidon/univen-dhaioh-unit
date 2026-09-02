@@ -28,7 +28,7 @@ const thematicAreas = [
 export default function AboutPage() {
   return (
     <>
-      <PageHero>
+      <PageHero src="/banners/hero-about.jpg" alt="DHAIOH research team at Mintek" imageClassName="object-cover object-top">
         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
           Institute
         </p>

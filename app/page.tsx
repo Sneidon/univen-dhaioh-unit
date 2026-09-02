@@ -88,7 +88,7 @@ export default function HomePage() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(105deg, rgba(13,27,53,0.94) 0%, rgba(13,27,53,0.82) 42%, rgba(22,64,118,0.72) 68%, rgba(13,27,53,0.78) 100%)",
+                "linear-gradient(105deg, rgba(13,27,53,0.97) 0%, rgba(13,27,53,0.88) 42%, rgba(22,64,118,0.82) 68%, rgba(13,27,53,0.86) 100%)",
             }}
           />
         </div>

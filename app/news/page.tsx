@@ -7,7 +7,7 @@ export default function NewsPage() {
   return (
     <>
       <PageHero
-        src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg"
+        src="/gallery/dhaioh-unit-launch/dhaioh-plaque-group.jpg"
         alt="DHAIOH Unit plaque at Women in Mining Indaba"
         imageClassName="object-cover object-top"
       >

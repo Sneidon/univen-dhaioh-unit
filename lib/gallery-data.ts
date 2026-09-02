@@ -77,12 +77,33 @@ const womenIndabaPhotos: GalleryPhoto[] = [
   { src: "/gallery/women-in-mining-indaba-2026/participants-mhsc-stage.jpg", caption: "Women in Mining Indaba participants before the MHSC branded stage" },
   { src: "/gallery/women-in-mining-indaba-2026/speakers-womens-month.jpg", caption: "Speakers and delegates celebrating Women's Month at Emperors Palace" },
   { src: "/gallery/women-in-mining-indaba-2026/delegates-gift-bags.jpg", caption: "MHSC Women in Mining Indaba delegates with host gift bags" },
-  { src: "/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg", caption: "DHAIOH Unit plaque unveiling — SAMRC, University of Venda and Mintek" },
-  { src: "/gallery/women-in-mining-indaba-2026/dhaioh-plaque-leadership.jpg", caption: "Leadership presenting the Digital Health and AI occupational health research unit plaque" },
-  { src: "/gallery/women-in-mining-indaba-2026/dhaioh-plaque-women-leaders.jpg", caption: "Women leaders holding the DHAIOH Unit commemorative plaque" },
+];
+
+const dhaiohUnitLaunchPhotos: GalleryPhoto[] = [
+  {
+    src: "/gallery/dhaioh-unit-launch/dhaioh-plaque-group.jpg",
+    caption: "DHAIOH Unit plaque unveiling — SAMRC, University of Venda and Mintek",
+  },
+  {
+    src: "/gallery/dhaioh-unit-launch/dhaioh-plaque-leadership.jpg",
+    caption:
+      "Professor Fulufhelo Netswera, Acting Vice-Chancellor and Principal of UNIVEN, and Professor T.M. Mulaudzi, Acting Executive Dean: Faculty of Health Sciences, with partners presenting the DHAIOH Unit commemorative plaque",
+  },
+  {
+    src: "/gallery/dhaioh-unit-launch/dhaioh-plaque-women-leaders.jpg",
+    caption: "Women leaders holding the DHAIOH Unit commemorative plaque",
+  },
 ];
 
 export const galleryEvents: GalleryEvent[] = [
+  {
+    slug: "dhaioh-unit-launch",
+    title: "DHAIOH Unit Launch — Commemorative Plaque",
+    description:
+      "Partners and leaders present the commemorative plaque marking the launch of the Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector (DHAIOH) Unit — a SAMRC–UNIVEN–MINTEK strategic alliance. Among those present are Professor Fulufhelo Netswera, Acting Vice-Chancellor and Principal of the University of Venda (UNIVEN), and Professor T.M. Mulaudzi, Acting Executive Dean: Faculty of Health Sciences.",
+    cover: "/gallery/dhaioh-unit-launch/dhaioh-plaque-group.jpg",
+    photos: dhaiohUnitLaunchPhotos,
+  },
   {
     slug: "women-in-mining-indaba-2026",
     title: "2026 National Women in Mining Indaba",

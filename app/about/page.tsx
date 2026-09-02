@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="sec-in">
           <div className="relative mb-12 w-full min-h-[320px] overflow-hidden rounded-[10px] md:min-h-[420px]" style={{ aspectRatio: "16/9" }}>
             <Image
-              src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-delegation.jpg"
+              src="/gallery/dhaioh-unit-launch/dhaioh-plaque-group.jpg"
               alt="DHAIOH Unit commemorative plaque with SAMRC, University of Venda and Mintek partners"
               fill
               className="object-cover object-center"

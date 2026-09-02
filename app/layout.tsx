@@ -4,6 +4,7 @@ import "./globals.css";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageWatermark from "@/components/PageWatermark";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -25,12 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`h-full ${dmSans.variable}`}>
-      <body className={`${dmSans.className} min-h-full flex flex-col antialiased`}>
-        <div className="fixed top-0 left-0 right-0 z-50">
+      <body className={`${dmSans.className} relative min-h-full flex flex-col antialiased`}>
+        <PageWatermark />
+        <div className="sticky top-0 z-50">
           <TopBar />
           <Navbar />
         </div>
-        <main className="flex-1 pt-[7.5rem]">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

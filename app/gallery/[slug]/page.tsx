@@ -66,21 +66,18 @@ export default function GalleryEventPage() {
               <button
                 key={photo.src}
                 onClick={() => setLightbox(i)}
-                className="relative overflow-hidden group cursor-zoom-in"
-                style={{ aspectRatio: "3/4" }}
+                className="group cursor-zoom-in text-left"
               >
-                <Image
-                  src={photo.src}
-                  alt={photo.caption}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-[#164076]/0 group-hover:bg-[#164076]/50 transition-all duration-300 flex items-end">
-                  <p className="text-white text-xs font-medium px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {photo.caption}
-                  </p>
+                <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src={photo.src}
+                    alt={photo.caption}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
                 </div>
+                <p className="mt-2 px-0.5 text-xs leading-snug text-gray-600">{photo.caption}</p>
               </button>
             ))}
           </div>

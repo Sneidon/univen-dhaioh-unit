@@ -8,11 +8,11 @@ export default function Footer() {
         <div className="sec-in grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Image
-              src="/logos/landscape-08.png"
-              alt="OHS in Mining Research Institute – University of Venda"
-              width={1376}
-              height={618}
-              className="mb-4 h-16 w-auto object-contain brightness-0 invert"
+              src="/logos/dhaioh-logo-footer.png"
+              alt="DHAIOH Unit – Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector"
+              width={2824}
+              height={1009}
+              className="mb-4 h-14 w-auto max-w-full object-contain md:h-16"
             />
             <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
               SAMRC Extramural Unit

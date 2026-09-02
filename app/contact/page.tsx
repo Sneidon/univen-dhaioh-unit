@@ -118,22 +118,61 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="border-t border-gray-100 bg-white py-14">
-        <div className="mx-auto max-w-7xl px-6 text-center">
+      <section className="border-t border-gray-100 bg-[#eef3f7] py-14">
+        <div className="sec-in mx-auto max-w-[1200px] px-6 text-center md:px-12">
           <p className="mb-8 text-xs font-bold tracking-widest uppercase text-gray-400">
             Strategic Alliance for Impact
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-16">
-            <Image src="/logos/samrc.svg" alt="SAMRC" width={140} height={60} className="mx-auto object-contain" />
-            <Image
-              src="/logos/univen.png"
-              alt="University of Venda"
-              width={100}
-              height={100}
-              className="mx-auto object-contain"
-            />
-            <Image src="/logos/mintek.png" alt="Mintek" width={100} height={100} className="mx-auto object-contain" />
+          <div className="mb-6 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                src: "/logos/samrc.svg",
+                alt: "SAMRC",
+                name: "South African Medical Research Council",
+                role: "Strategic Funder",
+                w: 140,
+                h: 56,
+              },
+              {
+                src: "/logos/univen.png",
+                alt: "University of Venda",
+                name: "University of Venda",
+                role: "Host Institution",
+                w: 88,
+                h: 88,
+              },
+              {
+                src: "/logos/mintek.png",
+                alt: "Mintek",
+                name: "Mintek",
+                role: "Strategic Research Partner",
+                w: 150,
+                h: 56,
+              },
+            ].map((p) => (
+              <div
+                key={p.alt}
+                className="card-soft flex flex-col items-center px-6 py-8 text-center"
+              >
+                <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
+                  {p.role}
+                </p>
+                <div className="mb-5 flex h-20 w-full items-center justify-center">
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    width={p.w}
+                    height={p.h}
+                    className="max-h-20 w-auto object-contain"
+                  />
+                </div>
+                <p className="text-sm font-bold leading-snug text-[#0d1b35]">{p.name}</p>
+              </div>
+            ))}
           </div>
+          <p className="text-sm font-semibold tracking-wide text-[#0d1b35]">
+            United for a Safer, Healthier Mining Sector
+          </p>
         </div>
       </section>
     </>

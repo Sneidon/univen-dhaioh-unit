@@ -4,20 +4,20 @@ import PageHero from "@/components/PageHero";
 
 const corePartners = [
   {
-    category: "Primary Funder",
-    name: "South African Medical Research Council (SAMRC)",
-    role: "Strategic Funder",
-    desc: "Providing strategic and catalytic investment to support scientific excellence, digital innovation, research capacity development, and the generation of high-impact evidence that advances worker health, strengthens occupational health systems, and drives sustainable societal transformation.",
-    dark: true,
-    logo: "/logos/samrc.svg",
-  },
-  {
     category: "Host Institution",
     name: "University of Venda (UNIVEN)",
     role: "Academic Home",
     desc: "Serving as the academic home of the DHAIOH Unit by providing visionary leadership, robust governance, advanced research infrastructure, postgraduate and postdoctoral development opportunities, and an enabling ecosystem that supports scientific excellence, innovation, collaboration, and societal impact.",
     dark: false,
     logo: "/logos/univen.png",
+  },
+  {
+    category: "Primary Funder",
+    name: "South African Medical Research Council (SAMRC)",
+    role: "Strategic Funder",
+    desc: "Providing strategic and catalytic investment to support scientific excellence, digital innovation, research capacity development, and the generation of high-impact evidence that advances worker health, strengthens occupational health systems, and drives sustainable societal transformation.",
+    dark: true,
+    logo: "/logos/samrc.svg",
   },
   {
     category: "Strategic Research Partner",
@@ -99,7 +99,7 @@ export default function StrategicPartnersPage() {
   return (
     <>
       <PageHero
-        src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg"
+        src="/gallery/dhaioh-unit-launch/dhaioh-plaque-group.jpg"
         alt="SAMRC, University of Venda and Mintek DHAIOH Unit plaque"
         imageClassName="object-cover object-top"
       >

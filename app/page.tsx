@@ -44,20 +44,20 @@ const stats = [
 
 const partners = [
   {
-    src: "/logos/samrc.svg",
-    alt: "SAMRC",
-    name: "South African Medical Research Council",
-    role: "Strategic Funder",
-    w: 140,
-    h: 56,
-  },
-  {
     src: "/logos/univen.png",
     alt: "University of Venda",
     name: "University of Venda",
     role: "Host Institution",
     w: 88,
     h: 88,
+  },
+  {
+    src: "/logos/samrc.svg",
+    alt: "SAMRC",
+    name: "South African Medical Research Council",
+    role: "Strategic Funder",
+    w: 140,
+    h: 56,
   },
   {
     src: "/logos/mintek.png",
@@ -72,7 +72,7 @@ const partners = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero — Strategic Alliance */}
       <section
         className="relative overflow-hidden text-white"
         style={{
@@ -80,91 +80,71 @@ export default function HomePage() {
         }}
       >
         <div className="sec !py-16 md:!py-24">
-          <div className="sec-in grid items-center gap-10 lg:grid-cols-[1.35fr_0.85fr]">
+          <div className="sec-in grid items-start gap-10 lg:grid-cols-[1.35fr_0.85fr]">
             <div>
-              <p className="mb-3 text-sm font-light leading-relaxed text-white/70 md:text-base">
-                Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+                The SAMRC–UNIVEN–MINTEK Strategic Alliance
               </p>
-              <h1 className="mb-4 text-[clamp(2rem,5vw,3.75rem)] font-bold leading-tight">
-                <span className="text-[#b8962e]">DHAIOH</span> Unit
+              <h1 className="mb-4 max-w-3xl text-[clamp(1.5rem,3.2vw,2.5rem)] font-bold leading-tight">
+                Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector
+                (DHAIOH)
               </h1>
-              <p className="mb-6 max-w-2xl text-2xl font-semibold leading-snug text-white/90 md:text-3xl">
-                Transforming Worker <span className="text-[#b8962e]">Health Through</span>
-                <br />
-                <span className="whitespace-nowrap">Digital Intelligence</span>
+              <p className="mb-5 text-xl font-semibold leading-snug text-[#b8962e] md:text-2xl">
+                A Jointly Driven Strategic Initiative
               </p>
               <p className="mb-8 max-w-3xl text-sm leading-relaxed text-white/75 md:text-base">
-                A pioneering research and innovation platform dedicated to transforming occupational health
-                through cutting-edge digital technologies, artificial intelligence, advanced analytics, and
-                predictive health systems — positioned to become a continental and global leader in
-                next-generation occupational health solutions for mining and other high-risk work environments.
+                The DHAIOH Unit was established as a flagship three-way partnership combining strategic
+                investment, academic leadership, and mining innovation to transform worker health through
+                digital intelligence. This alliance is central to the Unit&apos;s identity, credibility, and
+                long-term impact.
               </p>
-              <div className="flex flex-wrap gap-3">
-                <Link href="/research-themes" className="bt">
-                  Explore Research
+              <div className="mb-8 flex flex-wrap gap-3">
+                <Link href="/strategic-partners" className="bt">
+                  View All Partners
                 </Link>
-                <Link href="/impact-framework" className="bot !border-white/40 !text-white hover:!bg-white/10">
-                  Impact Framework
-                </Link>
-                <Link href="/about" className="bot !border-[#b8962e]/60 !text-[#b8962e] hover:!bg-[#b8962e]/10">
+                <Link href="/about" className="bot !border-white/40 !text-white hover:!bg-white/10">
                   About Unit
                 </Link>
+                <Link href="/research-themes" className="bot !border-[#b8962e]/60 !text-[#b8962e] hover:!bg-[#b8962e]/10">
+                  Explore Research
+                </Link>
               </div>
+              <p className="text-sm font-semibold tracking-wide text-white/90">
+                United for a Safer, Healthier Mining Sector
+              </p>
             </div>
 
-            {/* Co-Directors — IPGH-style cards */}
+            {/* Core partners — director-style cards */}
             <div className="space-y-4">
-              <div className="rounded-[12px] border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
-                <div className="flex gap-4 items-start">
-                  <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#b8962e]">
-                    <Image
-                      src="/prof-zungu.jpg"
-                      alt="Prof Lindiwe Zungu"
-                      fill
-                      className="object-cover object-top"
-                      sizes="72px"
-                    />
-                  </div>
-                  <div>
-                    <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
-                      Unit Director
-                    </p>
-                    <p className="mb-1 text-lg font-bold text-white">Prof Lindiwe Zungu</p>
-                    <p className="text-xs leading-relaxed text-white/60">
-                      Director: OHS in Mining Research Institute | UNIVEN
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-[12px] border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
-                <div className="flex gap-4 items-start">
-                  <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden rounded-full border-2 border-[#d22d20]">
-                    <Image
-                      src="/james-headshot.jpg"
-                      alt="Dr James Aluha"
-                      fill
-                      className="object-cover object-top"
-                      sizes="72px"
-                    />
-                  </div>
-                  <div>
-                    <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
-                      Co-Unit Director
-                    </p>
-                    <p className="mb-1 text-lg font-bold text-white">Dr James Aluha</p>
-                    <p className="text-xs leading-relaxed text-white/60">
-                      Chief Research Scientist | Mintek
-                    </p>
+              {partners.map((p) => (
+                <div
+                  key={p.alt}
+                  className="rounded-[12px] border border-white/15 bg-white/10 p-5 backdrop-blur-sm"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-[72px] w-[72px] shrink-0 items-center justify-center overflow-hidden rounded-full border-2 border-[#b8962e] bg-white p-2">
+                      <Image
+                        src={p.src}
+                        alt={p.alt}
+                        width={p.w}
+                        height={p.h}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#b8962e]">
+                        {p.role}
+                      </p>
+                      <p className="text-lg font-bold leading-snug text-white">{p.name}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
+              ))}
               <Link
-                href="/leadership"
+                href="/strategic-partners"
                 className="inline-flex text-sm font-semibold text-[#b8962e] hover:underline"
               >
-                Meet the Leadership Team →
+                View All Partners →
               </Link>
             </div>
           </div>
@@ -231,50 +211,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Partners — teaser with original alliance copy */}
-      <section className="sec bg-white">
-        <div className="sec-in">
-          <p className="slbl">The SAMRC–UNIVEN–MINTEK Strategic Alliance</p>
-          <h2 className="stit">A Jointly Driven Strategic Initiative</h2>
-          <p className="ssub">
-            The DHAIOH Unit was established as a flagship three-way partnership combining strategic
-            investment, academic leadership, and mining innovation to transform worker health through
-            digital intelligence. This alliance is central to the Unit&apos;s identity, credibility, and
-            long-term impact.
-          </p>
-          <div className="mb-8 grid gap-4 sm:grid-cols-3">
-            {partners.map((p) => (
-              <div
-                key={p.alt}
-                className="card-soft flex flex-col items-center px-6 py-8 text-center"
-              >
-                <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e]">
-                  {p.role}
-                </p>
-                <div className="mb-5 flex h-20 w-full items-center justify-center">
-                  <Image
-                    src={p.src}
-                    alt={p.alt}
-                    width={p.w}
-                    height={p.h}
-                    className="max-h-20 w-auto object-contain"
-                  />
-                </div>
-                <p className="text-sm font-bold leading-snug text-[#0d1b35]">{p.name}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mb-6 text-sm font-semibold tracking-wide text-[#0d1b35]">
-            United for a Safer, Healthier Mining Sector
-          </p>
-          <Link href="/strategic-partners" className="bot">
-            View All Partners →
-          </Link>
-        </div>
-      </section>
-
       {/* Research themes — teasers (original home theme copy) */}
-      <section className="sec bg-[#f5f8fa]">
+      <section className="sec bg-white">
         <div className="sec-in">
           <p className="slbl">Scientific Identity</p>
           <h2 className="stit">Strategic Research Themes</h2>
@@ -313,7 +251,7 @@ export default function HomePage() {
       </section>
 
       {/* Flagship — 4 landmarks (avoids duplicating full programme grid) */}
-      <section className="sec bg-white">
+      <section className="sec bg-[#f5f8fa]">
         <div className="sec-in">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>

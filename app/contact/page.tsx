@@ -130,20 +130,20 @@ export default function ContactPage() {
           <div className="mb-6 grid gap-4 sm:grid-cols-3">
             {[
               {
-                src: "/logos/samrc.svg",
-                alt: "SAMRC",
-                name: "South African Medical Research Council",
-                role: "Strategic Funder",
-                w: 140,
-                h: 56,
-              },
-              {
                 src: "/logos/univen.png",
                 alt: "University of Venda",
                 name: "University of Venda",
                 role: "Host Institution",
                 w: 88,
                 h: 88,
+              },
+              {
+                src: "/logos/samrc.svg",
+                alt: "SAMRC",
+                name: "South African Medical Research Council",
+                role: "Strategic Funder",
+                w: 140,
+                h: 56,
               },
               {
                 src: "/logos/mintek.png",

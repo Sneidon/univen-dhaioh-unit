@@ -40,6 +40,7 @@ export default function Footer() {
             <li><Link href="/impact-framework" className="hover:text-white transition-colors">Impact Framework</Link></li>
             <li><Link href="/strategic-partners" className="hover:text-white transition-colors">Partners</Link></li>
             <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery & Media</Link></li>
+            <li><Link href="/news" className="hover:text-white transition-colors">News & Highlights</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
           </ul>
         </div>
@@ -51,6 +52,17 @@ export default function Footer() {
             <li><Link href="/strategic-partners" className="hover:text-white transition-colors">Strategic Partners</Link></li>
             <li><Link href="/research-themes" className="hover:text-white transition-colors">Research Portal</Link></li>
             <li><Link href="/gallery" className="hover:text-white transition-colors">Gallery & Media</Link></li>
+            <li><Link href="/news" className="hover:text-white transition-colors">News & Highlights</Link></li>
+            <li>
+              <a
+                href="/docs/news/univen-faculty-women-in-mining-indaba-2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Women in Mining Indaba PDF
+              </a>
+            </li>
           </ul>
         </div>
 

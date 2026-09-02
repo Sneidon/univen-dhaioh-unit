@@ -3,6 +3,9 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { flagshipProgrammesHome } from "@/lib/flagship-programmes";
 import { themeCardsHome } from "@/lib/card-images";
+import { newsArticles } from "@/lib/news-data";
+
+const latestNews = newsArticles[0];
 
 const researchThemes = [
   {
@@ -153,6 +156,53 @@ export default function HomePage() {
             </Link>
           </div>
       </PageHero>
+
+      {/* Latest highlight */}
+      <section className="py-16 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src={latestNews.cover}
+                alt={latestNews.coverAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div>
+              <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">
+                Latest Highlight · {latestNews.dateLabel}
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#0d1b35] mb-4 leading-snug">
+                2026 National Women in Mining Indaba
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {latestNews.summary}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href={`/news/${latestNews.slug}`} className="btn-cta-sm">
+                  Read Story
+                </Link>
+                <a
+                  href={latestNews.pdfHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-[#0d1b35]/30 text-[#0d1b35] text-sm font-bold px-6 py-3 tracking-widest uppercase hover:border-[#b8962e] hover:text-[#b8962e] transition-colors"
+                >
+                  Download PDF
+                </a>
+                <Link
+                  href={`/gallery/${latestNews.gallerySlug}`}
+                  className="text-sm font-bold tracking-widest uppercase text-[#0d1b35] border-b-2 border-[#b8962e] pb-0.5 self-center hover:text-[#b8962e] transition-colors"
+                >
+                  Gallery →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Strategic Alliance */}
       <section className="py-20 bg-white">

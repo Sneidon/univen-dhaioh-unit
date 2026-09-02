@@ -17,6 +17,7 @@ const navLinks: NavItem[] = [
       { href: "/about", label: "About Unit" },
       { href: "/leadership", label: "Leadership" },
       { href: "/strategic-partners", label: "Partners" },
+      { href: "/news", label: "News" },
     ],
   },
   {

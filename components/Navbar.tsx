@@ -100,11 +100,11 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-6 md:px-12">
         <Link href="/" className="flex shrink-0 items-center gap-3 py-3">
           <Image
-            src="/logos/ohs-logo.png"
-            alt="OHS in Mining Research Institute – University of Venda"
-            width={1376}
-            height={618}
-            className="h-16 w-auto object-contain md:h-[72px]"
+            src="/logos/dhaioh-logo-nav.png"
+            alt="DHAIOH Unit – Digital Health and Artificial Intelligence for Occupational Health in the Mining Sector"
+            width={2824}
+            height={814}
+            className="h-12 w-auto object-contain md:h-14"
             priority
           />
         </Link>

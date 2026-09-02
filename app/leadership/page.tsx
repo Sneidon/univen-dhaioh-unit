@@ -16,8 +16,15 @@ const codirectorshipStrengths = [
 export default function LeadershipPage() {
   return (
     <>
-      <PageHero src="/banners/hero-leadership.jpg" alt="Mining health excellence team" imageClassName="object-cover object-top">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl">
+      <PageHero
+        src="/banners/hero-leadership.jpg"
+        alt="Mining health excellence team"
+        imageClassName="object-cover object-top"
+      >
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          People
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
           Unit <span className="text-[#b8962e]">Leadership</span>
         </h1>
       </PageHero>
@@ -44,7 +51,7 @@ export default function LeadershipPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Prof Lindiwe Zungu */}
-            <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-8 md:p-10">
+            <div className="card-soft p-8 md:p-10">
               <div className="flex flex-col sm:flex-row gap-6 items-start mb-8">
                 <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-[#b8962e] flex-shrink-0">
                   <Image
@@ -56,17 +63,17 @@ export default function LeadershipPage() {
                   />
                 </div>
                 <div>
-                  <span className="bg-[#b8962e] text-white text-xs font-bold tracking-widest uppercase px-3 py-1 inline-block mb-3">
+                  <span className="bg-[#b8962e] text-white text-xs font-bold tracking-widest uppercase px-3 py-1 inline-block mb-3 rounded">
                     Unit Director
                   </span>
-                  <h3 className="font-bold text-2xl mb-1">Prof Lindiwe Zungu</h3>
+                  <h3 className="font-bold text-2xl mb-1 text-[#0d1b35]">Prof Lindiwe Zungu</h3>
                   <p className="text-[#b8962e] text-sm font-semibold leading-snug">
                     Director: OHS in Mining Research Institute | UNIVEN
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-4 text-sm leading-relaxed text-gray-300">
+              <div className="space-y-4 text-sm leading-relaxed text-[#5a7184]">
                 <p>
                   Professor Lindiwe Zungu is a multiple award-winning scholar, occupational health specialist, and
                   research leader, currently serving as Director of the Occupational Health and Safety (OHS)
@@ -99,7 +106,7 @@ export default function LeadershipPage() {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-white/10">
+              <div className="mt-8 pt-6 border-t border-[#d8e3ec]">
                 <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Key Awards</p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -109,7 +116,7 @@ export default function LeadershipPage() {
                     "Feroza Adam Award",
                     "SAMRC Merit Award 2024/25",
                   ].map((award) => (
-                    <span key={award} className="bg-white/10 text-white/80 text-xs px-3 py-1 border border-white/10">
+                    <span key={award} className="bg-[#f5f8fa] text-[#0d1b35] text-xs px-3 py-1 border border-[#d8e3ec] rounded">
                       {award}
                     </span>
                   ))}
@@ -118,7 +125,7 @@ export default function LeadershipPage() {
             </div>
 
             {/* Dr James Aluha */}
-            <div className="bg-gray-50 border border-gray-200 p-8 md:p-10">
+            <div className="card-soft p-8 md:p-10">
               <div className="flex flex-col sm:flex-row gap-6 items-start mb-8">
                 <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-[#d22d20] flex-shrink-0">
                   <Image
@@ -130,7 +137,7 @@ export default function LeadershipPage() {
                   />
                 </div>
                 <div>
-                  <span className="bg-[#d22d20] text-white text-xs font-bold tracking-widest uppercase px-3 py-1 inline-block mb-3">
+                  <span className="bg-[#d22d20] text-white text-xs font-bold tracking-widest uppercase px-3 py-1 inline-block mb-3 rounded">
                     Co-Unit Director
                   </span>
                   <h3 className="font-bold text-2xl text-[#0d1b35] mb-1">Dr James Aluha</h3>
@@ -140,7 +147,7 @@ export default function LeadershipPage() {
                 </div>
               </div>
 
-              <div className="space-y-4 text-sm leading-relaxed text-gray-600">
+              <div className="space-y-4 text-sm leading-relaxed text-[#5a7184]">
                 <p>
                   Dr James Aluha is a Chief Research Scientist at Mintek with expertise in chemical engineering,
                   materials science, and mining innovation. He holds a PhD in Chemical Engineering from
@@ -160,7 +167,7 @@ export default function LeadershipPage() {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-gray-200">
+              <div className="mt-8 pt-6 border-t border-[#d8e3ec]">
                 <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-3">Areas of Expertise</p>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -171,7 +178,7 @@ export default function LeadershipPage() {
                     "Real-Time Monitoring",
                     "Technology Transfer",
                   ].map((exp) => (
-                    <span key={exp} className="bg-[#164076]/5 text-[#0d1b35] text-xs px-3 py-1 border border-[#0d1b35]/10">
+                    <span key={exp} className="bg-[#f5f8fa] text-[#0d1b35] text-xs px-3 py-1 border border-[#d8e3ec] rounded">
                       {exp}
                     </span>
                   ))}
@@ -195,14 +202,14 @@ export default function LeadershipPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {codirectorshipStrengths.map((s, i) => (
-              <div key={i} className="border border-white/10 bg-white/5 overflow-hidden flex flex-col">
-                <CardImageHeader src={s.image.src} alt={s.image.alt} overlay="blue" className="h-64" />
+              <div key={i} className="card-soft overflow-hidden flex flex-col bg-white">
+                <CardImageHeader src={s.image.src} alt={s.image.alt} />
                 <div className="p-6 flex flex-col flex-1">
-                <div className="w-8 h-8 bg-[#b8962e] flex items-center justify-center mb-4 font-bold text-xs text-white">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <h3 className="font-bold text-white text-sm mb-2">{s.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+                  <div className="w-8 h-8 bg-[#b8962e] flex items-center justify-center mb-4 font-bold text-xs text-white rounded">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="font-bold text-[#0d1b35] text-sm mb-2">{s.title}</h3>
+                  <p className="text-[#5a7184] text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}

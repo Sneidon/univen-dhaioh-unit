@@ -71,7 +71,26 @@ const openPitOpsPhotos: GalleryPhoto[] = [
   { src: "/gallery/ops-12.png", caption: "Wheel loader at the quarry rock face — surface operations" },
 ];
 
+const womenIndabaPhotos: GalleryPhoto[] = [
+  { src: "/gallery/women-in-mining-indaba-2026/delegates-speakers-stage.jpg", caption: "Delegates and speakers at the MHSC Women in Mining Indaba stage" },
+  { src: "/gallery/women-in-mining-indaba-2026/scholars-industry-leaders.jpg", caption: "UNIVEN scholars with industry leaders at the Indaba photo backdrop" },
+  { src: "/gallery/women-in-mining-indaba-2026/participants-mhsc-stage.jpg", caption: "Women in Mining Indaba participants before the MHSC branded stage" },
+  { src: "/gallery/women-in-mining-indaba-2026/speakers-womens-month.jpg", caption: "Speakers and delegates celebrating Women's Month at Emperors Palace" },
+  { src: "/gallery/women-in-mining-indaba-2026/delegates-gift-bags.jpg", caption: "MHSC Women in Mining Indaba delegates with host gift bags" },
+  { src: "/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg", caption: "DHAIOH Unit plaque unveiling — SAMRC, University of Venda and Mintek" },
+  { src: "/gallery/women-in-mining-indaba-2026/dhaioh-plaque-leadership.jpg", caption: "Leadership presenting the Digital Health and AI occupational health research unit plaque" },
+  { src: "/gallery/women-in-mining-indaba-2026/dhaioh-plaque-women-leaders.jpg", caption: "Women leaders holding the DHAIOH Unit commemorative plaque" },
+];
+
 export const galleryEvents: GalleryEvent[] = [
+  {
+    slug: "women-in-mining-indaba-2026",
+    title: "2026 National Women in Mining Indaba",
+    description:
+      "UNIVEN and DHAIOH scholars at the MHSC National Women in Mining Indaba (20–21 August 2026, Emperors Palace), advancing gender-responsive health, safety, and dignity for women in the South African mining industry.",
+    cover: "/gallery/women-in-mining-indaba-2026/delegates-speakers-stage.jpg",
+    photos: womenIndabaPhotos,
+  },
   {
     slug: "dolomite-mine-field-visit",
     title: "Dolomite Mine Field Visit",
@@ -99,9 +118,14 @@ export const galleryEvents: GalleryEvent[] = [
 
 export const galleryVideos: GalleryVideo[] = [
   {
+    id: "UB_Fn2aw_T8",
+    title: "2026 National Women in Mining Indaba — MHSC",
+    desc: "Highlights from the MHSC National Women in Mining Indaba featuring UNIVEN Faculty of Health Sciences scholars.",
+  },
+  {
     id: "4jLevr_hxpo",
     title: "Professor Lindiwe Zungu's Visit to South Deep Gold Mine",
-    desc: galleryEvents[0].description,
+    desc: galleryEvents[1].description,
   },
   {
     id: "9agcYsFIDi8",

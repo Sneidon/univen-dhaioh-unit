@@ -98,31 +98,42 @@ const collaborationTypes = [
 export default function StrategicPartnersPage() {
   return (
     <>
-      <PageHero src="/banners/hero-partners.jpg" alt="Futuristic open-pit mining operations">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
-          <span className="text-[#b8962e]">Partners</span>
+      <PageHero
+        src="/gallery/women-in-mining-indaba-2026/dhaioh-plaque-group.jpg"
+        alt="SAMRC, University of Venda and Mintek DHAIOH Unit plaque"
+        imageClassName="object-cover object-top"
+      >
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e]">
+          Collaboration
+        </p>
+        <h1 className="max-w-3xl text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight">
+          Strategic <span className="text-[#b8962e]">Partners</span>
         </h1>
       </PageHero>
 
       {/* Core Partners */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b35] mb-3">Core Institutional Partners</h2>
-            <p className="text-gray-500 max-w-2xl">
-              Together, these three institutions form the strategic foundation of the DHAIOH Unit — combining scientific excellence, technological innovation, and academic leadership.
-            </p>
-          </div>
+      <section className="sec bg-white">
+        <div className="sec-in">
+          <p className="slbl">Foundation</p>
+          <h2 className="stit">Core Institutional Partners</h2>
+          <p className="ssub">
+            Together, these three institutions form the strategic foundation of the DHAIOH Unit — combining
+            scientific excellence, technological innovation, and academic leadership.
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid gap-4 md:grid-cols-3">
             {corePartners.map((partner) => (
               <div
                 key={partner.name}
-                className={`p-8 flex flex-col ${
-                  partner.dark ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : partner.gold ? "bg-[#b8962e] text-white" : "border border-gray-200"
+                className={`info-card hover:translate-y-0 ${
+                  partner.dark
+                    ? "!border-transparent !bg-[#164076] text-white hover:!border-transparent"
+                    : partner.gold
+                      ? "!border-transparent !bg-[#b8962e] text-white hover:!border-transparent"
+                      : ""
                 }`}
               >
-                <p className={`text-xs font-bold tracking-widest uppercase mb-3 ${partner.dark || partner.gold ? "text-white/60" : "text-[#b8962e]"}`}>
+                <p className={`info-card-tag ${partner.dark || partner.gold ? "!text-white/70" : ""}`}>
                   {partner.category}
                 </p>
                 {partner.logo && (
@@ -130,15 +141,15 @@ export default function StrategicPartnersPage() {
                     <Image src={partner.logo} alt={partner.name} width={120} height={50} className={`object-contain ${partner.dark ? "brightness-0 invert" : ""}`} />
                   </div>
                 )}
-                <h3 className={`font-bold text-lg mb-1 ${partner.dark || partner.gold ? "text-white" : "text-[#0d1b35]"}`}>
+                <h3 className={`info-card-title ${partner.dark || partner.gold ? "!text-white" : ""}`}>
                   {partner.name}
                 </h3>
-                <span className={`inline-block text-xs font-bold tracking-wider px-2 py-0.5 mb-5 self-start ${
+                <span className={`mb-4 inline-block self-start rounded px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
                   partner.dark ? "bg-[#b8962e] text-white" : partner.gold ? "bg-white/20 text-white" : "bg-[#d22d20] text-white"
                 }`}>
                   {partner.role}
                 </span>
-                <p className={`text-sm leading-relaxed flex-1 ${partner.dark ? "text-gray-300" : partner.gold ? "text-white/80" : "text-gray-600"}`}>
+                <p className={`info-card-desc ${partner.dark ? "!text-white/75" : partner.gold ? "!text-white/85" : ""}`}>
                   {partner.desc}
                 </p>
               </div>
@@ -156,18 +167,18 @@ export default function StrategicPartnersPage() {
               <p className="text-gray-600 leading-relaxed mb-6">
                 As an interdisciplinary and innovation-driven initiative hosted by the University of Venda, the DHAIOH Unit collaborates closely with a range of institutional structures that support research excellence, digital transformation, innovation, and societal impact.
               </p>
-              <div className="bg-[#164076] text-white border-t-4 border-[#d22d20] p-6">
+              <div className="card-soft p-6">
                 <p className="text-[#b8962e] text-xs font-bold tracking-widest uppercase mb-2">Partnership Vision</p>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-[#5a7184] text-sm leading-relaxed">
                   These institutional partnerships provide the academic, technological, innovation, governance, and commercialisation support required to advance the DHAIOH Unit&apos;s research, innovation, and human capital development agenda.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-2">
               {univenInternal.map((name) => (
-                <div key={name} className="flex items-center gap-3 bg-white border border-gray-200 px-4 py-3">
+                <div key={name} className="card-soft flex items-center gap-3 px-4 py-3">
                   <div className="w-2 h-2 bg-[#b8962e] rounded-full flex-shrink-0" />
-                  <span className="text-sm text-gray-700">{name}</span>
+                  <span className="text-sm text-[#0d1b35]">{name}</span>
                 </div>
               ))}
             </div>
@@ -184,7 +195,7 @@ export default function StrategicPartnersPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {nationalPartners.map((name) => (
-              <div key={name} className="border border-gray-200 bg-gray-50 px-5 py-4 flex items-center gap-3">
+              <div key={name} className="card-soft px-5 py-4 flex items-center gap-3">
                 <div className="w-2 h-2 bg-[#b8962e] rounded-full flex-shrink-0" />
                 <span className="text-sm text-[#0d1b35]">{name}</span>
               </div>
@@ -238,22 +249,16 @@ export default function StrategicPartnersPage() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {collaborationTypes.map((item, i) => {
-              const isBlue = i % 2 === 1;
-              return (
-                <div
-                  key={item.title}
-                  className={`p-8 ${isBlue ? "bg-[#164076] text-white border-t-4 border-[#d22d20]" : "bg-white border border-gray-200"}`}
-                >
-                  <h3 className={`font-bold text-base mb-3 ${isBlue ? "text-white" : "text-[#0d1b35]"}`}>
-                    {item.title}
-                  </h3>
-                  <p className={`text-sm leading-relaxed ${isBlue ? "text-gray-300" : "text-gray-600"}`}>
-                    {item.desc}
-                  </p>
-                </div>
-              );
-            })}
+            {collaborationTypes.map((item) => (
+              <div key={item.title} className="card-soft p-6">
+                <h3 className="font-bold text-base mb-2 text-[#0d1b35]">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[#5a7184]">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
 
           <div className="text-center mt-12">

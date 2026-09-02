@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "DHAIOH Unit | Transforming Worker Health Through Digital Intelligence",
@@ -15,10 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body className="min-h-full flex flex-col antialiased">
-        <Navbar />
-        <main className="flex-1 pt-24">{children}</main>
+    <html lang="en" className={`h-full ${dmSans.variable}`}>
+      <body className={`${dmSans.className} min-h-full flex flex-col antialiased`}>
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <TopBar />
+          <Navbar />
+        </div>
+        <main className="flex-1 pt-[7.5rem]">{children}</main>
         <Footer />
       </body>
     </html>

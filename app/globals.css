@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand (DHAIOH) */
   --navy: #0d1b35;
   --navy-light: #162548;
   --blue: #164076;
@@ -9,14 +10,30 @@
   --gold-light: #c9a84c;
   --red: #d22d20;
   --red-dark: #b8251a;
-  --foreground: #1a1a1a;
-  --muted: #6b7280;
+
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg2: #f5f8fa;
+  --bg3: #eef3f7;
+  --bd: #d8e3ec;
+
+  /* Text */
+  --tx: #0d1b2a;
+  --txm: #2c3e50;
+  --txmu: #5a7184;
+  --foreground: #0d1b2a;
+  --muted: #5a7184;
+
+  /* UI */
+  --rad: 10px;
+  --sh1: 0 4px 20px rgba(13, 27, 53, 0.1);
+  --sh2: 0 8px 32px rgba(13, 27, 53, 0.14);
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--foreground);
-  background: #ffffff;
+  font-family: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  color: var(--tx);
+  background: var(--bg);
 }
 
 html {
@@ -24,11 +41,79 @@ html {
 }
 
 @layer components {
+  .sec {
+    @apply px-6 py-16 md:px-12 md:py-20;
+  }
+
+  .sec-in {
+    @apply mx-auto w-full max-w-[1200px];
+  }
+
+  .slbl {
+    @apply mb-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8962e];
+  }
+
+  .slbl::before {
+    content: "";
+    @apply h-0.5 w-6 shrink-0 bg-[#b8962e];
+  }
+
+  .stit {
+    @apply mb-4 text-[clamp(1.5rem,3vw,2.375rem)] font-bold leading-tight text-[#0d1b35];
+  }
+
+  .ssub {
+    @apply mb-8 max-w-xl text-base leading-relaxed text-[#5a7184];
+  }
+
+  .bt {
+    @apply inline-flex items-center gap-2 rounded-md bg-[#d22d20] px-6 py-3 text-sm font-bold text-white no-underline transition-all hover:bg-[#b8251a] hover:-translate-y-px;
+  }
+
+  .bt-blue {
+    @apply inline-flex items-center gap-2 rounded-md bg-[#164076] px-6 py-3 text-sm font-bold text-white no-underline transition-all hover:bg-[#0d1b35] hover:-translate-y-px;
+  }
+
+  .bot {
+    @apply inline-flex items-center gap-1.5 rounded-md border-[1.5px] border-[#164076] bg-transparent px-[22px] py-[11px] text-sm font-semibold text-[#164076] no-underline transition-colors hover:bg-[rgba(22,64,118,0.08)];
+  }
+
+  .bna {
+    @apply inline-flex items-center gap-2 rounded-md bg-[#0d1b35] px-6 py-3 text-sm font-bold text-white no-underline transition-colors hover:bg-[#162548];
+  }
+
+  /* Legacy aliases */
   .btn-cta {
-    @apply inline-block bg-[#d22d20] text-white text-sm font-bold px-8 py-3 tracking-widest uppercase hover:bg-[#b8251a] transition-colors;
+    @apply inline-flex items-center gap-2 rounded-md bg-[#d22d20] px-6 py-3 text-sm font-bold text-white no-underline transition-all hover:bg-[#b8251a] hover:-translate-y-px;
   }
 
   .btn-cta-sm {
-    @apply inline-block bg-[#d22d20] text-white text-sm font-bold px-6 py-3 tracking-widest uppercase hover:bg-[#b8251a] transition-colors;
+    @apply inline-flex items-center gap-2 rounded-md bg-[#d22d20] px-5 py-2.5 text-sm font-bold text-white no-underline transition-all hover:bg-[#b8251a] hover:-translate-y-px;
+  }
+
+  .card-soft {
+    @apply rounded-[10px] border-[1.5px] border-[#d8e3ec] bg-white;
+    box-shadow: var(--sh1);
+  }
+
+  .info-card {
+    @apply flex h-full flex-col rounded-[10px] border-[1.5px] border-[#d8e3ec] bg-white p-6 no-underline;
+    box-shadow: var(--sh1);
+  }
+
+  .info-card-tag {
+    @apply mb-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#b8962e];
+  }
+
+  .info-card-title {
+    @apply mb-2 text-[17px] font-bold leading-snug text-[#0d1b35];
+  }
+
+  .info-card-desc {
+    @apply text-sm leading-relaxed text-[#5a7184];
+  }
+
+  .info-card-link {
+    @apply mt-3 text-sm font-semibold text-[#164076] hover:text-[#b8962e];
   }
 }

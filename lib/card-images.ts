@@ -19,10 +19,22 @@ export const bannerImages = {
 } as const;
 
 export const innovationCards = {
-  ip: img("/cards/card-innovation-ip-patents.jpg", "Innovation lab team developing mining health IP"),
-  sensor: img("/cards/card-innovation-sensor-integration.jpg", "Wearable health sensors on miner in underground tunnel"),
-  pathway: img("/cards/card-innovation-impact-pathway.jpg", "Sunset aerial of connected South African mining site"),
-  ai: img("/cards/card-innovation-ai-solutions.jpg", "Wireframe digital twin haul truck with AI analytics"),
+  ip: img(
+    "/cards/card-theme-08-innovation-commercialisation.jpg",
+    "Innovation lab team developing mining health IP"
+  ),
+  sensor: img(
+    "/cards/card-innovation-sensor-integration.jpg",
+    "Wearable health sensors on miner in underground tunnel"
+  ),
+  pathway: img(
+    "/banners/hero-innovation.jpg",
+    "Sunset aerial of connected South African mining site"
+  ),
+  ai: img(
+    "/cards/card-theme-02-ai-analytics-alt.jpg",
+    "Wireframe digital twin haul truck with AI analytics"
+  ),
 } as const;
 
 export const themeCards = [

@@ -137,7 +137,11 @@ export default function InnovationPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* IP Development & Patents */}
             <div className="card-soft overflow-hidden flex flex-col" id="ip">
-              <CardImageHeader src={portfolioCards.ip.image.src} alt={portfolioCards.ip.image.alt} />
+              <CardImageHeader
+                src={portfolioCards.ip.image.src}
+                alt={portfolioCards.ip.image.alt}
+                className="aspect-[16/10] min-h-[300px]"
+              />
               <div className="p-6 flex flex-col flex-1">
                 <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,7 +155,11 @@ export default function InnovationPage() {
 
             {/* Sensor Integration */}
             <div className="card-soft overflow-hidden flex flex-col" id="sensor">
-              <CardImageHeader src={portfolioCards.sensor.image.src} alt={portfolioCards.sensor.image.alt} />
+              <CardImageHeader
+                src={portfolioCards.sensor.image.src}
+                alt={portfolioCards.sensor.image.alt}
+                className="aspect-[16/10] min-h-[300px]"
+              />
               <div className="p-6 flex flex-col flex-1">
                 <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -165,7 +173,11 @@ export default function InnovationPage() {
 
             {/* Strategic Impact Pathway */}
             <div className="card-soft overflow-hidden flex flex-col" id="pathway">
-              <CardImageHeader src={portfolioCards.pathway.image.src} alt={portfolioCards.pathway.image.alt} />
+              <CardImageHeader
+                src={portfolioCards.pathway.image.src}
+                alt={portfolioCards.pathway.image.alt}
+                className="aspect-[16/10] min-h-[300px]"
+              />
               <div className="p-6 flex flex-col flex-1">
                 <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,7 +197,11 @@ export default function InnovationPage() {
 
             {/* AI Solutions */}
             <div className="card-soft overflow-hidden flex flex-col" id="ai-hub">
-              <CardImageHeader src={portfolioCards.ai.image.src} alt={portfolioCards.ai.image.alt} />
+              <CardImageHeader
+                src={portfolioCards.ai.image.src}
+                alt={portfolioCards.ai.image.alt}
+                className="aspect-[16/10] min-h-[300px]"
+              />
               <div className="p-6 flex flex-col flex-1">
                 <div className="w-10 h-10 flex items-center justify-center mb-4 rounded-md bg-[#164076] text-[#b8962e]">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

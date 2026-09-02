@@ -21,9 +21,9 @@ export default function CardImageHeader({
         alt={alt}
         fill
         loading="lazy"
-        quality={70}
+        quality={100}
         className="object-cover"
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 480px"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 960px"
       />
     </div>
   );
